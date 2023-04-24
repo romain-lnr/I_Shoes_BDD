@@ -1,0 +1,30 @@
+[
+    {
+        "username": "admin",
+        "firstname": "admin",
+        "name": "admin",
+        "Email": "admin@cpnv.ch",
+        "password": "$2y$10$kIYN5IZvit5uaVSFGwTefecHb2s7DYQ9VFFnkPczt84avk46lG97S"
+    },
+    {
+        "username": "SachaBgDu47",
+        "firstname": "Sacha",
+        "name": "Jaccard",
+        "Email": "sacha.jaccard@cpnv.ch",
+        "password": "$2y$10$ONfUNCksn.5dJ.q2JzjJKO51APztCmUf4q2n\/nvxYUOk68UphuS\/G"
+    },
+    {
+        "username": "RomWhomp",
+        "firstname": "Romain",
+        "name": "Lenoir",
+        "Email": "romain.lenoir@cpnv.ch",
+        "password": "$2y$10$ew9LLekzjibTHnvwDT12NO1T4k0w68I4VDQTZ7ptyVEh4jtWhva2K"
+    },
+    {
+        "username": "Alexouille",
+        "firstname": "Alex",
+        "name": "Barreira-videira",
+        "Email": "alex.barreira-videira@cpnv.ch",
+        "password": "$2y$10$HvqttCVh6y97esC7jncuTecD2k1mcySlat4e4xd635q\/A7EvdUkQq"
+    }
+]
