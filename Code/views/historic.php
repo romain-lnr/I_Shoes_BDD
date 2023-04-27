@@ -19,8 +19,8 @@ $title="IShoes - historic page";
     <br>
     <?php $topnav = ob_get_clean();
     ob_start();
-    for ($i = 0; $i < $nb_article; $i++) {
-        echo "<h1>".$msg[$i]."</h1>";
+    for ($j = 0; $j < $i; $j++) {
+        echo "<h1>".$msg[$j]."</h1>";
     }
     $content = ob_get_clean();
     ob_start(); ?>

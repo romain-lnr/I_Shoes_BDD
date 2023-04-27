@@ -80,5 +80,5 @@ ob_start(); ?>
     </div>
 </footer>
 <?php $footer = ob_get_clean();
-require "layout.php"; ?>
+require "layout.php";
 

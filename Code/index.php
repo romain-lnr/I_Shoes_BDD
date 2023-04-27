@@ -1,13 +1,19 @@
 <?php
 session_start();
 require "controllers/navigation.php";
+require "controllers/admin.php";
+require "controllers/articles.php";
+require "controllers/basket.php";
+require "controllers/login.php";
+require "controllers/purchases.php";
+require "controllers/users.php";
 
 // Actions
 if (isset($_GET['action'])) {
     $action = $_GET['action'];
     switch ($action) {
         case 'home' :
-            Home_page();
+            HomePage();
             break;
         case 'login' :
             Login();
@@ -16,16 +22,16 @@ if (isset($_GET['action'])) {
             Register();
             break;
         case 'logged' :
-            Check_login();
+            CheckLogin();
             break;
         case 'admin' :
-            Admin_page();
+            AdminPage();
             break;
         case 'TDC' :
-            Create_article();
+            CreateArticle();
             break;
         case 'purchase' :
-            Add_purchase();
+            AddPurchase();
             break;
         case 'historic' :
             Historic();
@@ -37,10 +43,10 @@ if (isset($_GET['action'])) {
             Account();
             break;
         case 'create_article' :
-            New_article();
+            NewArticle();
             break;
         case 'update_articles' :
-            Update_articles();
+            UpdateArticles();
             break;
         case 'basket' :
             Basket();
@@ -52,7 +58,7 @@ if (isset($_GET['action'])) {
             Flag();
             break;
         default :
-            Lost_page();
+            LostPage();
     }
 }
 else {
@@ -64,7 +70,7 @@ else {
                 require "views/TDC_admin.php";
                 break;
             case 'not_even_stock':
-                Home_page();
+                HomePage();
                 break;
             case 'not_login':
                 require "views/login.php";
@@ -88,11 +94,11 @@ else {
         $id = $_GET['receive_basket'];
         $number = $_GET['value'];
         $id_article = $_GET['id_article'];
-        Remove_basket($id, $number, $id_article);
+        RemoveBasket($id, $number, $id_article);
     }
     else if (isset($_GET['receive_admin'])) {
         $id = $_GET['receive_admin'];
-        Remove_article($id);
+        RemoveArticle($id);
     }
     else if (isset($_GET['receive_show_article'])) {
         $id = $_GET['receive_show_article'];
@@ -100,7 +106,6 @@ else {
         Add($id, $value);
     } else {
         if ((isset($_SESSION['logged'])) && $_SESSION['logged']) Home_page();
-        else Default_page();
+        else DefaultPage();
     }
 }
-?>

@@ -14,7 +14,7 @@ function DefaultPage() {
  *
 */
 function HomePage() {
-    require "models/model.php";
+    require "models/articles.php";
     DisplayArticles('home');
 }
 

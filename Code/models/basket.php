@@ -12,7 +12,7 @@ function AddBasket($id_user, $id, $number) {
     // Decode the JSON data into a PHP array.
     $json = json_decode($contents, true);
 
-    $boolValue = Test_value($id, $number);
+    $boolValue = TestValue($id, $number);
 
     if ($boolValue) {
 
@@ -80,11 +80,28 @@ function AffectValueInArray($id, $number) {
 }
 
 /*
+ * RemoveArrayInJSON Function
+ * Do: remove a line in a json file
+ *
+*/
+function RemoveArrayInJSON($id, $path) {
+
+    // Load the file
+    $data = file_get_contents($path);
+
+    // Decode JSON flow
+    $obj = json_decode($data);
+    array_splice($obj, $id, 1);
+    $json = json_encode($obj, JSON_PRETTY_PRINT);
+    file_put_contents($path, $json);
+}
+
+/*
  * DisplayBasket Function
  * Do: load the basket for basket page
  *
 */
-function DisplayBasket() {
+function DisplayBasket($i) {
 
     // Load the file
     $JSONfile = 'data/dataBasket.json';
@@ -93,22 +110,21 @@ function DisplayBasket() {
     // DECODE JSON flow
     $obj = json_decode($data);
     $nb_article = count($obj);
-    $tab = 0;
-    $isArticle = false;
 
     // access the appropriate element
-    for ($i = 0; $i < $nb_article; $i++) {
 
-        // Load the file
-        $JSONfile = 'data/dataBasket.json';
-        $data = file_get_contents($JSONfile);
+    // Load the file
+    $JSONfile = 'data/dataBasket.json';
+    $data = file_get_contents($JSONfile);
 
-        // DECODE JSON flow
-        $obj = json_decode($data);
+    // DECODE JSON flow
+    $obj = json_decode($data);
+
+    if ($i != $nb_article) {
+        $id_article = $obj[$i]->id_article;
+        $number = $obj[$i]->number;
 
         if ($obj[$i]->username == $_SESSION['id_user']) {
-            $id[$i] = $obj[$i]->id_article;
-            $number[$tab] = $obj[$i]->number;
 
             // Load the file
             $JSONfile = 'data/dataArticles.json';
@@ -116,19 +132,9 @@ function DisplayBasket() {
 
             // DECODE JSON flow
             $obj = json_decode($data);
-
-            // access the appropriate element
-            $img_article[$tab] = $obj[$id[$i]]->imagepath;
-            $name_article[$tab] = $obj[$id[$i]]->article;
-            $mark_article[$tab] = $obj[$id[$i]]->mark;
-            $desc_article[$tab] = $obj[$id[$i]]->description;
-            $price_article[$tab] = $obj[$id[$i]]->price;
-            $stock_article[$tab] = $obj[$id[$i]]->stock;
-
-            $tab++;
-
-            if (!$isArticle) $isArticle = true;
+            $article_specs[] = [$id_article, $obj[$id_article]->imagepath, $obj[$id_article]->article, $obj[$id_article]->mark, $obj[$id_article]->description, $obj[$id_article]->price, $number];
         }
+        return $article_specs[0];
     }
-    require "views/basket.php";
+    return null;
 }

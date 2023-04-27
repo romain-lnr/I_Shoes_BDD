@@ -20,27 +20,27 @@ ob_start(); ?>
     <br>
     <?php $topnav = ob_get_clean();
     ob_start(); ?>
-    <?php if ($isArticle) { ?>
-        <?php for ($i = 0; $i < $tab; $i++) { ?>
+    <?php if ($is_article) { ?>
+        <?php for ($j = 0; $j < $i; $j++) { ?>
             <div id="content">
                 <div class="row">
                     <div class="col-sm-3">
                         <div class="case basket">
-                            <div id="image_article_case"><img src="<?=$img_article[$i]?>" id="image_article"></div>
+                            <div id="image_article_case"><img src="<?=$article_specs[$j][1]?>" id="image_article"></div>
                             <hr>
                             <div class="body_case">
-                                <div id="nom_article"><?="<em>".$name_article[$i]."</em>"?></div>
-                                <div id="mark_article"><?="<em>".$mark_article[$i]."</em>"?></div>
-                                <div id="price_article"><?="<em>".$price_article[$i]." CHF"."</em>"?></div>
+                                <div id="nom_article"><?="<em>".$article_specs[$j][2]."</em>"?></div>
+                                <div id="mark_article"><?="<em>".$article_specs[$j][3]."</em>"?></div>
+                                <div id="price_article"><?="<em>".$article_specs[$j][5]." CHF"."</em>"?></div>
                                 <br>
-                                <div id="value_article"><?="<em>"."X".$number[$i]."</em>"?></div>
-                                <div id="remove_object"><a href="index.php?receive_basket=<?=$i?>&value=<?=$number[$i]?>&id_article=<?=$id[$i]?>"><input type="button" class="form-control" value="Supprimer"></a></div>
+                                <div id="value_article"><?="<em>"."X".$article_specs[$j][6]."</em>"?></div>
+                                <div id="remove_object"><a href="index.php?receive_basket=<?=$j?>&value=<?=$article_specs[$j][6]?>&id_article=<?=$article_specs[$j][0]?>"><input type="button" class="form-control" value="Supprimer"></a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-8">
                         <div class="case case_desc basket">
-                            <p><?=$desc_article[$i]?></p>
+                            <p><?=$article_specs[$j][4]?></p>
                         </div>
                     </div>
                 </div>
@@ -92,5 +92,5 @@ ob_start(); ?>
         </div>
     </footer>
     <?php $footer = ob_get_clean();
-    require "layout.php"; ?>
+    require "layout.php";
 

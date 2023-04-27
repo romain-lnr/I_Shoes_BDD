@@ -37,18 +37,18 @@ ob_start();
         <div class="row">
             <div class="col-sm-3">
                 <div class="case">
-                    <div id="image_article_case"><img src="<?=$img_article?>" id="image_article"></div>
+                    <div id="image_article_case"><img src="<?=$article_specs[0][0]?>" id="image_article"></div>
                     <hr>
                     <div class="body_case">
-                        <div id="nom_article"><?="<em>".$name_article."</em>"?></div>
-                        <div id="mark_article"><?="<em>".$mark_article."</em>"?></div>
-                        <div id="price_article"><?="<em>".$price_article." CHF"."</em>"?></div>
+                        <div id="nom_article"><?="<em>".$article_specs[0][1]."</em>"?></div>
+                        <div id="mark_article"><?="<em>".$article_specs[0][2]."</em>"?></div>
+                        <div id="price_article"><?="<em>".$article_specs[0][4]." CHF"."</em>"?></div>
                     </div>
                 </div>
             </div>
             <div class="col-sm-8">
                 <div class="case case_desc">
-                    <p><?=$desc_article?></p>
+                    <p><?=$article_specs[0][3]?></p>
                     <div id="container">
                         <input type="submit" class="form-control" name="insert" id="insert" value="Ajouter au panier">
                         <input type="number" name="value" class="form-control" placeholder="value">

@@ -5,8 +5,17 @@
  *
 */
 function Basket() {
-    require "models/model.php";
-    DisplayBasket();
+    require "models/basket.php";
+    $i = -1;
+    $is_article = true;
+    do {
+        $i++;
+        $article_specs[$i] = DisplayBasket($i);
+    } while ($article_specs[$i] != null);
+
+    if (!$i) $is_article = false;
+    else $is_article = true;
+    require "views/basket.php";
 }
 
 /*
@@ -22,8 +31,8 @@ function Add($id, $value) {
         header("Location:index.php?error=not_login");
         return;
     }
-    require "models/model.php";
-    Add_basket($id_user, $id, $value);
+    require "models/basket.php";
+    AddBasket($id_user, $id, $value);
 }
 
 /*
@@ -32,7 +41,7 @@ function Add($id, $value) {
  *
 */
 function RemoveBasket($id, $number, $id_article) {
-    require "models/model.php";
+    require "models/basket.php";
     AffectValueInArray($id_article, $number);
     RemoveArrayInJSON($id, 'data/dataBasket.json');
     header("Location:index.php?action=basket");

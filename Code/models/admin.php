@@ -4,7 +4,7 @@
  * Do: create the users historic
  *
 */
-function HistoricModel() {
+function HistoricModel($i) {
 
     // Load the file
     $JSONfile = 'data/dataPurchases.json';
@@ -14,8 +14,8 @@ function HistoricModel() {
     $obj = json_decode($data);
     $nb_article = count($obj);
 
-    for ($i = 0; $i < $nb_article; $i++) {
-        $msg[$i] = "L'utilisateur {".$obj[$i]->username. "} a acheté l'article numéro ".$obj[$i]->id_article. ", ". $obj[$i]->number. " fois";
+    if ($i != $nb_article) {
+        return "L'utilisateur {".$obj[$i]->username. "} a acheté l'article numéro ".$obj[$i]->id_article. ", ". $obj[$i]->number. " fois";
     }
-    require "views/historic.php";
+    return null;
 }

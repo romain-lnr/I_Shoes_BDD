@@ -5,7 +5,7 @@
  *
 */
 function Purchase() {
-    require "models/model.php";
+    require "models/purchases.php";
     DisplayPurchase();
 }
 
@@ -15,7 +15,7 @@ function Purchase() {
  *
 */
 function AddPurchase() {
-    require "models/model.php";
+    require "models/purchases.php";
     AddPurchaseToJSON();
 }
 
@@ -25,7 +25,7 @@ function AddPurchase() {
  *
 */
 function Flag() {
-    require "models/model.php";
+    require "models/purchases.php";
     FlagPurchase();
     header("Location:index.php?action=home");
     exit();

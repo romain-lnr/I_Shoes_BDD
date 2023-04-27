@@ -5,7 +5,7 @@
  *
 */
 function AdminPage() {
-    require "models/model.php";
+    require "models/articles.php";
     DisplayArticles('admin');
 }
 
@@ -15,7 +15,12 @@ function AdminPage() {
  *
 */
 function Historic() {
-    require "models/model.php";
-    HistoricModel();
+    require "models/admin.php";
+    $i = -1;
+    do {
+        $i++;
+        $msg[$i] = HistoricModel($i);
+    } while ($msg[$i] != null);
+    require "views/historic.php";
 }
 

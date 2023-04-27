@@ -62,7 +62,7 @@ function DisplayArticles($exit) {
         case 'update_articles':
             for ($i = 0; $i < $nb_article; $i++) {
                 $stock[$i] = $_POST["stock_number_".strval($i)];
-                Add_article($name_article[$i], $mark_article[$i], $desc_article[$i], $price_article[$i], $stock[$i], $imgpath_article[$i], $img_article[$i]);
+                AddArticle($name_article[$i], $mark_article[$i], $desc_article[$i], $price_article[$i], $stock[$i], $imgpath_article[$i], $img_article[$i]);
             }
             header("Location:index.php?action=home");
             exit();
@@ -83,32 +83,8 @@ function ShowArticle($id) {
     // DECODE JSON flux
     $obj = json_decode($data);
 
-    // access the appropriate element
-    $img_article = $obj[$id]->imagepath;
-    $name_article = $obj[$id]->article;
-    $mark_article = $obj[$id]->mark;
-    $desc_article = $obj[$id]->description;
-    $price_article = $obj[$id]->price;
-    $stock_article = $obj[$id]->stock;
-
-    require "views/show_article.php";
-}
-
-/*
- * RemoveArrayInJSON Function
- * Do: remove a line in a json file
- *
-*/
-function RemoveArrayInJSON($id, $path) {
-
-    // Load the file
-    $data = file_get_contents($path);
-
-    // Decode JSON flow
-    $obj = json_decode($data);
-    array_splice($obj, $id, 1);
-    $json = json_encode($obj, JSON_PRETTY_PRINT);
-    file_put_contents($path, $json);
+    $article_specs[] = [$obj[$id]->imagepath, $obj[$id]->article, $obj[$id]->mark, $obj[$id]->description, $obj[$id]->price];
+    return $article_specs[0];
 }
 
 /*

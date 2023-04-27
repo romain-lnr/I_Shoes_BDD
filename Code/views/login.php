@@ -33,4 +33,4 @@ ob_start();
             </form>
         </div>
 <?php $content = ob_get_clean();
-require "layout_form.php"; ?>
+require "layout_form.php";

@@ -14,14 +14,14 @@ function Login() {
  *
 */
 function CheckLogin() {
-    require "models/model.php";
+    require "models/login.php";
     if(isset($_POST['insert'])) {
 
         // Retrieves values
         $id_user = $_POST['id_user'];
         $password = $_POST['password'];
     }
-    Test_login($id_user, $password);
+    TestLogin($id_user, $password);
 }
 
 /*
@@ -30,7 +30,7 @@ function CheckLogin() {
  *
 */
 function Account() {
-    require "models/model.php";
+    require "models/users.php";
 
     if(isset($_POST['insert'])) {
 
@@ -41,5 +41,5 @@ function Account() {
         $email = $_POST['email'];
         $password = $_POST['password'];
     }
-    Insert_user($id_user, $prenom, $nom, $email, $password);
+    InsertUser($id_user, $prenom, $nom, $email, $password);
 }

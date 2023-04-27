@@ -6,7 +6,7 @@
 */
 function NewArticle()
 {
-    require "models/model.php";
+    require "models/articles.php";
 
     if (isset($_POST['insert'])) {
 
@@ -43,7 +43,7 @@ function NewArticle()
         $filename = $fileNewName . "." . $ext;
         move_uploaded_file($file, './media/img/articles/' . $filename);
     }
-    Add_article($id_article, $mark, $desc, $price, $stock_number, $imagepath, $filename);
+    AddArticle($id_article, $mark, $desc, $price, $stock_number, $imagepath, $filename);
     header("Location:index.php?action=admin");
     exit();
 }
@@ -63,8 +63,9 @@ function CreateArticle() {
  *
 */
 function Show($id) {
-    require "models/model.php";
-    Show_article($id);
+    require "models/articles.php";
+    $article_specs[0] = ShowArticle($id);
+    require "views/show_article.php";
 }
 
 /*
@@ -74,7 +75,7 @@ function Show($id) {
 */
 function UpdateArticles() {
     if(isset($_POST['insert'])) {
-        require "models/model.php";
+        require "models/articles.php";
         DisplayArticles('update_articles');
     }
 }
@@ -85,7 +86,7 @@ function UpdateArticles() {
  *
 */
 function RemoveArticle($id) {
-    require "models/model.php";
+    require "models/articles.php";
     RemoveImgInJSON($id);
     RemoveArrayInJSON($id, 'data/dataArticles.json');
     header("Location:index.php?action=admin");

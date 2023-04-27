@@ -4,7 +4,7 @@
         "mark": "Nike",
         "description": "Le charme continue d'op\u00e9rer avec la Nike Air Force 1 \u201907. Cette chaussure de basketball OG revisite ses \u00e9l\u00e9ments les plus c\u00e9l\u00e8bres : les renforts cousus r\u00e9sistants, les finitions sobres et juste ce qu'il faut d'\u00e9clat pour vous faire briller.",
         "price": "120",
-        "stock": 63,
+        "stock": 61,
         "imagepath": "..\/media\/img\/articles\/Air Force 1 '07.png",
         "image": "Air Force 1 '07.png"
     },
@@ -13,7 +13,7 @@
         "mark": "Adidas",
         "description": "L'adidas Yeezy Foam RNR Onyx est dot\u00e9e d'une construction en mousse ovale Onyx compos\u00e9e en partie d'EVA et d'algues. \u00c0 la base, une assise plantaire matelass\u00e9e offre confort et soutien, tandis qu'une semelle sculpturale avec de profondes bandes de roulement assure l'adh\u00e9rence.",
         "price": "200",
-        "stock": 79,
+        "stock": 83,
         "imagepath": "..\/media\/img\/articles\/Yeezy FoamRunners.png",
         "image": "Yeezy FoamRunners.png"
     },
@@ -22,7 +22,7 @@
         "mark": "Adidas",
         "description": "Lanc\u00e9e en 2017, la adidas Yeezy Boost 350 V2 Zebra est connue comme l'un des colorways les plus renomm\u00e9s de la gamme Yeezy. Elle pr\u00e9sente une tige Primeknit marbr\u00e9e blanche et noire avec une bande lat\u00e9rale blanche et un texte rouge \" SPLY-350 \". \u00c0 la base, une semelle Boost rembourr\u00e9e apporte confort et soutien.",
         "price": "369",
-        "stock": 100,
+        "stock": 144,
         "imagepath": "..\/media\/img\/articles\/Yeezy boost 350 v2 Zebra.png",
         "image": "Yeezy boost 350 v2 Zebra.png"
     },
@@ -40,7 +40,7 @@
         "mark": "Travis Scott",
         "description": "Premi\u00e8re version du partenariat monumental entre Travis Scott et Nike, la Air Jordan 1 Travis Scott brise les r\u00e8gles conventionnelles du design de la Air Jordan 1. Pour commencer, les Swooshes lat\u00e9raux sont invers\u00e9s, chaque queue faisant face \u00e0 l'orteil. Les \u00e9tiquettes de la languette tiss\u00e9e sont d\u00e9plac\u00e9es et cousues sur le c\u00f4t\u00e9 de la languette plut\u00f4t que sur le dessus. Le col comporte \u00e9galement une poche cach\u00e9e. Un design unique pour un artiste unique. La Air Jordan 1 Travis Scott pr\u00e9sente une tige en cuir blanc avec des superpositions en daim Mocha et des Swooshes invers\u00e9s en cuir noir.",
         "price": "1284",
-        "stock": "1",
+        "stock": 1,
         "imagepath": "..\/media\/img\/articles\/Air Jordan REtro High TravisScott CactusJack.png",
         "image": "Air Jordan REtro High TravisScott CactusJack.png"
     },
@@ -49,7 +49,7 @@
         "mark": "Jordan",
         "description": "Jordan Brand a ajout\u00e9 un nouveau colorway \u00e0 la silhouette qui a tout commenc\u00e9 avec la Jordan 1 Retro High Court Purple White, maintenant disponible sur StockX. Cette version reprend les m\u00eames \u00e9l\u00e9ments de design que la Chicago 1, mais en rempla\u00e7ant cette fois le rouge par du Court Purple.\n\nCette Jordan 1 est compos\u00e9e d'une tige en cuir blanc avec des superpositions Court Purple et des d\u00e9tails noirs. Le logo Swoosh et Wings noir, la semelle interm\u00e9diaire blanche et la semelle ext\u00e9rieure Court Purple compl\u00e8tent le design. Ces baskets sont sorties en avril 2020 au prix de 170 $.",
         "price": "195",
-        "stock": "1",
+        "stock": 12,
         "imagepath": "..\/media\/img\/articles\/Air Jordan purple High.png",
         "image": "Air Jordan purple High.png"
     },
@@ -67,7 +67,7 @@
         "mark": "Off-White Sail (Women's)",
         "description": "Jordan Brand et Virgil Abloh se sont associ\u00e9s une fois de plus pour sortir la troisi\u00e8me silhouette de leur histoire de collaboration avec la Jordan 4 Retro Off-White Sail (W) pour femme, d\u00e9sormais disponible sur StockX. Apr\u00e8s avoir teas\u00e9 la sortie de la Off-White 4 avec des \u00e9chantillons dans son exposition MCA et les avoir pr\u00e9sent\u00e9s dans son Off-White FW2020 Women\u2019s Show, Virgil Abloh a finalement livr\u00e9 ce qui pourrait \u00eatre la sortie la plus attendue de 2020. La Air Jordan 4 Sail pr\u00e9sente une empeigne en cuir pleine fleur avec des touches de mesh et de mat\u00e9riaux translucides sur la toebox et le talon de la chaussure.",
         "price": "1512",
-        "stock": "1",
+        "stock": "2",
         "imagepath": "..\/media\/img\/articles\/Air jordan 4 off white.png",
         "image": "Air jordan 4 off white.png"
     }

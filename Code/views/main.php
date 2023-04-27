@@ -88,4 +88,4 @@ ob_start();
     <script src="../media/scripts/slider.js">
     </script>
 <?php $footer = ob_get_clean();
-require "layout.php"; ?>
+require "layout.php";
