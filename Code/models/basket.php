@@ -5,6 +5,7 @@
 *
 */
 function AddBasket($id_user, $id, $number) {
+
     // Load the file
     $JSONfile = 'data/dataBasket.json';
     $contents = file_get_contents($JSONfile);
@@ -31,6 +32,7 @@ function AddBasket($id_user, $id, $number) {
             $_SESSION['value'][$id] = $number;
         }
     } else {
+        // Change error
         header("Location:index.php?error=not_even_stock");
         return;
     }
@@ -40,8 +42,6 @@ function AddBasket($id_user, $id, $number) {
 
     // Save the file.
     file_put_contents('data/dataBasket.json', $encode);
-    header("Location:index.php?action=home");
-    exit();
 }
 
 /*

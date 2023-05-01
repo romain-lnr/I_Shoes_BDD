@@ -32,7 +32,7 @@ function AddArticle($id_article, $mark, $desc, $price, $stock_number, $imagepath
  * Do: Show articles and update in home and admin page
  *
 */
-function DisplayArticles($exit) {
+function DisplayArticles($i) {
 
     // Load the file
     $JSONfile = 'data/dataArticles.json';
@@ -42,30 +42,27 @@ function DisplayArticles($exit) {
     $obj = json_decode($data);
     $nb_article = count($obj);
 
-    // access the appropriate element
-    for ($i = 0; $i < $nb_article; $i++) {
-        $name_article[$i] = $obj[$i]->article;
-        $mark_article[$i] = $obj[$i]->mark;
-        $desc_article[$i] = $obj[$i]->description;
-        $price_article[$i] = $obj[$i]->price;
-        $stock_article[$i] = $obj[$i]->stock;
-        $imgpath_article[$i] = $obj[$i]->imagepath;
-        $img_article[$i] = $obj[$i]->image;
+    if ($i != $nb_article) {
+
+        // access the appropriate element
+        $article_specs[] = [$obj[$i]->article, $obj[$i]->mark, $obj[$i]->description, $obj[$i]->price, $obj[$i]->stock, $obj[$i]->imagepath, $obj[$i]->image];
+        return $article_specs[0];
     }
-    switch ($exit) {
-        case 'home':
-            require "views/home.php";
-            break;
-        case 'admin':
-            require "views/admin.php";
-            break;
-        case 'update_articles':
-            for ($i = 0; $i < $nb_article; $i++) {
-                $stock[$i] = $_POST["stock_number_".strval($i)];
-                AddArticle($name_article[$i], $mark_article[$i], $desc_article[$i], $price_article[$i], $stock[$i], $imgpath_article[$i], $img_article[$i]);
-            }
-            header("Location:index.php?action=home");
-            exit();
+    return null;
+}
+
+function UpArticles() {
+    // Load the file
+    $JSONfile = 'data/dataArticles.json';
+    $data = file_get_contents($JSONfile);
+
+    // DECODE JSON flow
+    $obj = json_decode($data);
+    $nb_article = count($obj);
+
+    for ($i = 0; $i < $nb_article; $i++) {
+        $stock[$i] = $_POST["stock_number_" . strval($i)];
+        AddArticle($obj[$i]->article, $obj[$i]->mark, $obj[$i]->description, $obj[$i]->price, $stock[$i], $obj[$i]->imagepath, $obj[$i]->image);
     }
 }
 
@@ -103,4 +100,21 @@ function RemoveImgInJSON($id) {
     $obj = json_decode($data);
     $filename = $obj[$id]->image;
     unlink("media/img/articles/".$filename);
+}
+
+/*
+ * RemoveArrayInJSON Function
+ * Do: remove a line in a json file
+ *
+*/
+function RemoveArrayInJSON($id, $path) {
+
+    // Load the file
+    $data = file_get_contents($path);
+
+    // Decode JSON flow
+    $obj = json_decode($data);
+    array_splice($obj, $id, 1);
+    $json = json_encode($obj, JSON_PRETTY_PRINT);
+    file_put_contents($path, $json);
 }

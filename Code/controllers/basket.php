@@ -33,6 +33,7 @@ function Add($id, $value) {
     }
     require "models/basket.php";
     AddBasket($id_user, $id, $value);
+    header("Location:index.php?action=home");
 }
 
 /*

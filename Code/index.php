@@ -105,7 +105,7 @@ else {
         $value = $_POST['value'];
         Add($id, $value);
     } else {
-        if ((isset($_SESSION['logged'])) && $_SESSION['logged']) Home_page();
+        if ((isset($_SESSION['logged'])) && $_SESSION['logged']) HomePage();
         else DefaultPage();
     }
 }

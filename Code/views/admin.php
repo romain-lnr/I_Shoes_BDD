@@ -24,22 +24,22 @@ ob_start();?>
     <form action="index.php?action=update_articles" method="POST">
         <div id="content">
             <div class="row">
-                <?php for ($i = 0; $i < $nb_article; $i++) { ?>
-                    <?php $stock_number[$i] = "stock_number_".strval($i);
-                    $button[$i] = "button_".strval($i);
-                    $number[$i] = "number_".strval($i);?>
+                <?php for ($j = 0; $j < $i; $j++) { ?>
+                    <?php $stock_number[$j] = "stock_number_".strval($j);
+                    $button[$j] = "button_".strval($j);
+                    $number[$j] = "number_".strval($j);?>
                     <div class="col-sm-3">
                         <div class="case case_admin">
-                            <div id="image_article_case"><img src="<?=$imgpath_article[$i]?>" id="image_article"></div>
+                            <div id="image_article_case"><img src="<?=$article_specs[$j][5]?>" id="image_article"></div>
                             <hr>
                             <div class="body_case">
-                                <div id="nom_article"><?="<em>".$name_article[$i]."</em>"?></div>
-                                <div id="mark_article"><?="<em>".$mark_article[$i]."</em>"?></div>
-                                <div id="price_article"><?="<em>".$price_article[$i]." CHF"."</em>"?></div><br><br>
-                                <div class="stock"><h3>Stock : </h3><input name="<?=$stock_number[$i]?>" type="number" class="form-control" value="<?=$stock_article[$i]?>" style="background-color: #8F8F8F;" id="<?=$stock_number[$i]?>" readonly></div>
-                                <input type="number" class="form-control" id="<?=$number[$i]?>">
-                                <div id="submit_case"><input type="button" class="btn btn-info" onclick="document.querySelector('#<?=$stock_number[$i]?>').value = document.querySelector('#<?=$number[$i]?>').value" id=<?=$button[$i]?> value="Submit"></div>
-                                <div id="remove_object" style="float: right;"><a href="index.php?receive_admin=<?=$i?>"><input type="button" class="form-control" value="Supprimer"></a></div>
+                                <div id="nom_article"><?="<em>".$article_specs[$j][0]."</em>"?></div>
+                                <div id="mark_article"><?="<em>".$article_specs[$j][1]."</em>"?></div>
+                                <div id="price_article"><?="<em>".$article_specs[$j][3]." CHF"."</em>"?></div><br><br>
+                                <div class="stock"><h3>Stock : </h3><input name="<?=$stock_number[$j]?>" type="number" class="form-control" value="<?=$article_specs[$j][4]?>" style="background-color: #8F8F8F;" id="<?=$stock_number[$j]?>" readonly></div>
+                                <input type="number" class="form-control" id="<?=$number[$j]?>">
+                                <div id="submit_case"><input type="button" class="btn btn-info" onclick="document.querySelector('#<?=$stock_number[$j]?>').value = document.querySelector('#<?=$number[$j]?>').value" id=<?=$button[$j]?> value="Submit"></div>
+                                <div id="remove_object" style="float: right;"><a href="index.php?receive_admin=<?=$j?>"><input type="button" class="form-control" value="Supprimer"></a></div>
                             </div>
                         </div>
                     </div>

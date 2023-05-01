@@ -21,7 +21,10 @@ function CheckLogin() {
         $id_user = $_POST['id_user'];
         $password = $_POST['password'];
     }
-    TestLogin($id_user, $password);
+    $isAdmin = TestLogin($id_user, $password);
+
+    if ($isAdmin) header("Location:index.php?action=admin");
+    else header("Location:index.php?action=home");
 }
 
 /*

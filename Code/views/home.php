@@ -38,15 +38,15 @@ if (!isset($_SESSION['logged']) ||  !$_SESSION['logged']) {
         }?>
         <div class="row">
             <?php
-            for ($i = 0; $i < $nb_article; $i++) { ?>
+            for ($j = 0; $j < $i; $j++) { ?>
                 <div class="col-sm-3">
-                    <div class="case" onclick="UseArticle(<?=strval($i)?>)">
-                        <div id="image_article_case"><img src="<?=$imgpath_article[$i]?>" id="image_article"></div>
+                    <div class="case" onclick="UseArticle(<?=strval($j)?>)">
+                        <div id="image_article_case"><img src="<?=$article_specs[$j][5]?>" id="image_article"></div>
                         <hr>
                         <div class="body_case">
-                            <div id="nom_article"><?="<em>".$name_article[$i]."</em>"?></div>
-                            <div id="mark_article"><?="<em>".$mark_article[$i]."</em>"?></div>
-                            <div id="price_article"><?="<em>".$price_article[$i]." CHF"."</em>"?></div>
+                            <div id="nom_article"><?="<em>".$article_specs[$j][0]."</em>"?></div>
+                            <div id="mark_article"><?="<em>".$article_specs[$j][1]."</em>"?></div>
+                            <div id="price_article"><?="<em>".$article_specs[$j][3]." CHF"."</em>"?></div>
                         </div>
                     </div>
                 </div>

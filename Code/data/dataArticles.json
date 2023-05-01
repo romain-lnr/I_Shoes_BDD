@@ -4,7 +4,7 @@
         "mark": "Nike",
         "description": "Le charme continue d'op\u00e9rer avec la Nike Air Force 1 \u201907. Cette chaussure de basketball OG revisite ses \u00e9l\u00e9ments les plus c\u00e9l\u00e8bres : les renforts cousus r\u00e9sistants, les finitions sobres et juste ce qu'il faut d'\u00e9clat pour vous faire briller.",
         "price": "120",
-        "stock": 61,
+        "stock": "61",
         "imagepath": "..\/media\/img\/articles\/Air Force 1 '07.png",
         "image": "Air Force 1 '07.png"
     },
@@ -13,7 +13,7 @@
         "mark": "Adidas",
         "description": "L'adidas Yeezy Foam RNR Onyx est dot\u00e9e d'une construction en mousse ovale Onyx compos\u00e9e en partie d'EVA et d'algues. \u00c0 la base, une assise plantaire matelass\u00e9e offre confort et soutien, tandis qu'une semelle sculpturale avec de profondes bandes de roulement assure l'adh\u00e9rence.",
         "price": "200",
-        "stock": 83,
+        "stock": "83",
         "imagepath": "..\/media\/img\/articles\/Yeezy FoamRunners.png",
         "image": "Yeezy FoamRunners.png"
     },
@@ -22,7 +22,7 @@
         "mark": "Adidas",
         "description": "Lanc\u00e9e en 2017, la adidas Yeezy Boost 350 V2 Zebra est connue comme l'un des colorways les plus renomm\u00e9s de la gamme Yeezy. Elle pr\u00e9sente une tige Primeknit marbr\u00e9e blanche et noire avec une bande lat\u00e9rale blanche et un texte rouge \" SPLY-350 \". \u00c0 la base, une semelle Boost rembourr\u00e9e apporte confort et soutien.",
         "price": "369",
-        "stock": 144,
+        "stock": "144",
         "imagepath": "..\/media\/img\/articles\/Yeezy boost 350 v2 Zebra.png",
         "image": "Yeezy boost 350 v2 Zebra.png"
     },
@@ -40,7 +40,7 @@
         "mark": "Travis Scott",
         "description": "Premi\u00e8re version du partenariat monumental entre Travis Scott et Nike, la Air Jordan 1 Travis Scott brise les r\u00e8gles conventionnelles du design de la Air Jordan 1. Pour commencer, les Swooshes lat\u00e9raux sont invers\u00e9s, chaque queue faisant face \u00e0 l'orteil. Les \u00e9tiquettes de la languette tiss\u00e9e sont d\u00e9plac\u00e9es et cousues sur le c\u00f4t\u00e9 de la languette plut\u00f4t que sur le dessus. Le col comporte \u00e9galement une poche cach\u00e9e. Un design unique pour un artiste unique. La Air Jordan 1 Travis Scott pr\u00e9sente une tige en cuir blanc avec des superpositions en daim Mocha et des Swooshes invers\u00e9s en cuir noir.",
         "price": "1284",
-        "stock": 1,
+        "stock": "1",
         "imagepath": "..\/media\/img\/articles\/Air Jordan REtro High TravisScott CactusJack.png",
         "image": "Air Jordan REtro High TravisScott CactusJack.png"
     },
@@ -49,7 +49,7 @@
         "mark": "Jordan",
         "description": "Jordan Brand a ajout\u00e9 un nouveau colorway \u00e0 la silhouette qui a tout commenc\u00e9 avec la Jordan 1 Retro High Court Purple White, maintenant disponible sur StockX. Cette version reprend les m\u00eames \u00e9l\u00e9ments de design que la Chicago 1, mais en rempla\u00e7ant cette fois le rouge par du Court Purple.\n\nCette Jordan 1 est compos\u00e9e d'une tige en cuir blanc avec des superpositions Court Purple et des d\u00e9tails noirs. Le logo Swoosh et Wings noir, la semelle interm\u00e9diaire blanche et la semelle ext\u00e9rieure Court Purple compl\u00e8tent le design. Ces baskets sont sorties en avril 2020 au prix de 170 $.",
         "price": "195",
-        "stock": 12,
+        "stock": "12",
         "imagepath": "..\/media\/img\/articles\/Air Jordan purple High.png",
         "image": "Air Jordan purple High.png"
     },
@@ -58,7 +58,7 @@
         "mark": "Dior",
         "description": "Jordan Brand s'est associ\u00e9 \u00e0 la maison de couture parisienne Dior pour entrer dans l'histoire avec la Jordan 1 Retro High Dior, d\u00e9sormais disponible sur StockX. C'est la premi\u00e8re fois que Jordan collabore avec une marque de mode aussi prestigieuse que Dior, ce qui fait de cette version une r\u00e9f\u00e9rence. Cette version a \u00e9t\u00e9 limit\u00e9e \u00e0 seulement 8 500 paires, chaque paire \u00e9tant num\u00e9rot\u00e9e individuellement.\n\nCette Jordan 1 Retro High est compos\u00e9e d'une tige en cuir blanc et gris avec le traditionnel Swoosh imprim\u00e9 du monogramme Dior. Ces chaussures sont fabriqu\u00e9es en Italie avec des mat\u00e9riaux de premi\u00e8re qualit\u00e9.",
         "price": "6607",
-        "stock": "1",
+        "stock": "4000",
         "imagepath": "..\/media\/img\/articles\/Air Jordan Dior.png",
         "image": "Air Jordan Dior.png"
     },
@@ -70,5 +70,14 @@
         "stock": "2",
         "imagepath": "..\/media\/img\/articles\/Air jordan 4 off white.png",
         "image": "Air jordan 4 off white.png"
+    },
+    {
+        "article": "Fortinite",
+        "mark": "Ila babaji",
+        "description": "Ekesbokes seri ekes",
+        "price": "2077",
+        "stock": 69,
+        "imagepath": "..\/media\/img\/articles\/Fortinite.png",
+        "image": "Fortinite.png"
     }
 ]

@@ -6,7 +6,12 @@
 */
 function AdminPage() {
     require "models/articles.php";
-    DisplayArticles('admin');
+    $i = -1;
+    do {
+        $i++;
+        $article_specs[$i] = DisplayArticles($i);
+    } while ($article_specs[$i] != null);
+    require "views/admin.php";
 }
 
 /*

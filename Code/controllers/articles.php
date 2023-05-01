@@ -76,8 +76,9 @@ function Show($id) {
 function UpdateArticles() {
     if(isset($_POST['insert'])) {
         require "models/articles.php";
-        DisplayArticles('update_articles');
+        UpArticles();
     }
+    header("Location:index.php?action=home");
 }
 
 /*
@@ -90,6 +91,5 @@ function RemoveArticle($id) {
     RemoveImgInJSON($id);
     RemoveArrayInJSON($id, 'data/dataArticles.json');
     header("Location:index.php?action=admin");
-    exit();
 }
 

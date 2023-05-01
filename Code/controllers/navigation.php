@@ -15,6 +15,11 @@ function DefaultPage() {
 */
 function HomePage() {
     require "models/articles.php";
-    DisplayArticles('home');
+    $i = -1;
+    do {
+        $i++;
+        $article_specs[$i] = DisplayArticles($i);
+    } while ($article_specs[$i] != null);
+    require "views/home.php";
 }
 
