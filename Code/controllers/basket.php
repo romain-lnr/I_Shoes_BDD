@@ -7,7 +7,7 @@
 function Basket() {
     require "models/basket.php";
     $i = -1;
-    $is_article = true;
+    $is_article = false;
     do {
         $i++;
         $article_specs[$i] = DisplayBasket($i);
@@ -18,23 +18,6 @@ function Basket() {
     require "views/basket.php";
 }
 
-/*
- * Add Function
- * Do: update the basket json file by the requested article by user
- *
-*/
-function Add($id, $value) {
-    if (isset($_SESSION['id_user']) && $_SESSION['id_user']) {
-        $id_user = $_SESSION['id_user'];
-    }
-    else {
-        header("Location:index.php?error=not_login");
-        return;
-    }
-    require "models/basket.php";
-    AddBasket($id_user, $id, $value);
-    header("Location:index.php?action=home");
-}
 
 /*
  * RemoveBasket Function

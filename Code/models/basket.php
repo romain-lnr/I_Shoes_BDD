@@ -21,10 +21,10 @@ function AddBasket($id_user, $id, $number) {
         AffectValueInArray($id, -$number);
 
         // Write in JSON
-        $user_basket = array_search($id_user, array_column($json, 'username'));
-        $id_basket = array_search($id, array_column($json, 'id_article'));
+        $user_basket[0] = array_search($id_user, array_column($json, 'username'));
+        $id_basket[0] = array_search($id, array_column($json, 'id_article'));
 
-        if ($user_basket !== false && $id_basket !== false) {
+        if ($user_basket[0] !== false && $id_basket[0] !== false) {
             $json[$id_basket] = array("username" => $id_user, "id_article" => $id, "number" => $_SESSION['value'][$id] + $number);
             $_SESSION['value'][$id] += $number;
         } else {
@@ -111,15 +111,6 @@ function DisplayBasket($i) {
     $obj = json_decode($data);
     $nb_article = count($obj);
 
-    // access the appropriate element
-
-    // Load the file
-    $JSONfile = 'data/dataBasket.json';
-    $data = file_get_contents($JSONfile);
-
-    // DECODE JSON flow
-    $obj = json_decode($data);
-
     if ($i != $nb_article) {
         $id_article = $obj[$i]->id_article;
         $number = $obj[$i]->number;
@@ -133,8 +124,8 @@ function DisplayBasket($i) {
             // DECODE JSON flow
             $obj = json_decode($data);
             $article_specs[] = [$id_article, $obj[$id_article]->imagepath, $obj[$id_article]->article, $obj[$id_article]->mark, $obj[$id_article]->description, $obj[$id_article]->price, $number];
+            return $article_specs[0];
         }
-        return $article_specs[0];
     }
     return null;
 }

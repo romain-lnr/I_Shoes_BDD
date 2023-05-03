@@ -4,7 +4,7 @@
         "mark": "Nike",
         "description": "Le charme continue d'op\u00e9rer avec la Nike Air Force 1 \u201907. Cette chaussure de basketball OG revisite ses \u00e9l\u00e9ments les plus c\u00e9l\u00e8bres : les renforts cousus r\u00e9sistants, les finitions sobres et juste ce qu'il faut d'\u00e9clat pour vous faire briller.",
         "price": "120",
-        "stock": 6,
+        "stock": 78,
         "imagepath": "..\/media\/img\/articles\/Air Force 1 '07.png",
         "image": "Air Force 1 '07.png"
     },
@@ -13,7 +13,7 @@
         "mark": "Adidas",
         "description": "L'adidas Yeezy Foam RNR Onyx est dot\u00e9e d'une construction en mousse ovale Onyx compos\u00e9e en partie d'EVA et d'algues. \u00c0 la base, une assise plantaire matelass\u00e9e offre confort et soutien, tandis qu'une semelle sculpturale avec de profondes bandes de roulement assure l'adh\u00e9rence.",
         "price": "200",
-        "stock": 15,
+        "stock": 75,
         "imagepath": "..\/media\/img\/articles\/Yeezy FoamRunners.png",
         "image": "Yeezy FoamRunners.png"
     },
@@ -22,7 +22,7 @@
         "mark": "Adidas",
         "description": "Lanc\u00e9e en 2017, la adidas Yeezy Boost 350 V2 Zebra est connue comme l'un des colorways les plus renomm\u00e9s de la gamme Yeezy. Elle pr\u00e9sente une tige Primeknit marbr\u00e9e blanche et noire avec une bande lat\u00e9rale blanche et un texte rouge \" SPLY-350 \". \u00c0 la base, une semelle Boost rembourr\u00e9e apporte confort et soutien.",
         "price": "369",
-        "stock": 83,
+        "stock": 64,
         "imagepath": "..\/media\/img\/articles\/Yeezy boost 350 v2 Zebra.png",
         "image": "Yeezy boost 350 v2 Zebra.png"
     },
@@ -31,7 +31,7 @@
         "mark": "Jordan",
         "description": "Clin d'\u0153il \u00e0 la Air Jordan 1 High Travis Scott Mocha, la Air Jordan 1 Low Travis Scott Reverse Mocha offre une palette similaire de moka et de blanc cass\u00e9, mais avec des couleurs invers\u00e9es. L'empeigne est compos\u00e9e d'une base en Durabuck moka, de superpositions en cuir blanc et de Swooshes invers\u00e9s caract\u00e9ristiques. Les touches de rouge sur la broderie du logo Wings au talon et l'\u00e9tiquette tiss\u00e9e sur la languette contrastent fortement avec l'aspect neutre de la chaussure. De l\u00e0, une semelle Air jaunie ajoute une touche vintage.",
         "price": "1044",
-        "stock": "0",
+        "stock": 0,
         "imagepath": "..\/media\/img\/articles\/Jordan 1 Retro Low OG SP.png",
         "image": "Jordan 1 Retro Low OG SP.png"
     },
@@ -76,7 +76,7 @@
         "mark": "Ila babaji",
         "description": "Ekesbokes seri ekes",
         "price": "2077",
-        "stock": 69,
+        "stock": "69",
         "imagepath": "..\/media\/img\/articles\/Fortinite.png",
         "image": "Fortinite.png"
     }
