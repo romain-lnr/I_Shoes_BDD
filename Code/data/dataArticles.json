@@ -4,7 +4,7 @@
         "mark": "Nike",
         "description": "Le charme continue d'op\u00e9rer avec la Nike Air Force 1 \u201907. Cette chaussure de basketball OG revisite ses \u00e9l\u00e9ments les plus c\u00e9l\u00e8bres : les renforts cousus r\u00e9sistants, les finitions sobres et juste ce qu'il faut d'\u00e9clat pour vous faire briller.",
         "price": "120",
-        "stock": "61",
+        "stock": 6,
         "imagepath": "..\/media\/img\/articles\/Air Force 1 '07.png",
         "image": "Air Force 1 '07.png"
     },
@@ -13,7 +13,7 @@
         "mark": "Adidas",
         "description": "L'adidas Yeezy Foam RNR Onyx est dot\u00e9e d'une construction en mousse ovale Onyx compos\u00e9e en partie d'EVA et d'algues. \u00c0 la base, une assise plantaire matelass\u00e9e offre confort et soutien, tandis qu'une semelle sculpturale avec de profondes bandes de roulement assure l'adh\u00e9rence.",
         "price": "200",
-        "stock": "83",
+        "stock": 15,
         "imagepath": "..\/media\/img\/articles\/Yeezy FoamRunners.png",
         "image": "Yeezy FoamRunners.png"
     },
@@ -22,7 +22,7 @@
         "mark": "Adidas",
         "description": "Lanc\u00e9e en 2017, la adidas Yeezy Boost 350 V2 Zebra est connue comme l'un des colorways les plus renomm\u00e9s de la gamme Yeezy. Elle pr\u00e9sente une tige Primeknit marbr\u00e9e blanche et noire avec une bande lat\u00e9rale blanche et un texte rouge \" SPLY-350 \". \u00c0 la base, une semelle Boost rembourr\u00e9e apporte confort et soutien.",
         "price": "369",
-        "stock": "144",
+        "stock": 83,
         "imagepath": "..\/media\/img\/articles\/Yeezy boost 350 v2 Zebra.png",
         "image": "Yeezy boost 350 v2 Zebra.png"
     },

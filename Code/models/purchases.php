@@ -1,10 +1,6 @@
 <?php
-/*
- * AddPurchaseToJSON Function
- * Do: create an array or arrays to the purchase page
- *
-*/
-function AddPurchaseToJSON() {
+function LoadBasket()
+{
 
     // Load the file
     $JSONfile = 'data/dataBasket.json';
@@ -20,37 +16,50 @@ function AddPurchaseToJSON() {
         $number[$i] = $obj[$i]->number;
         $flag[$i] = false;
     }
-    for ($i = 0; $i < $nb_article; $i++) {
+    for ($j = 0; $j < $i; $j++) {
+        AddPurchaseToJSON($id_user[$j], $id_article[$j], $number[$j], $flag[$j]);
+    }
+}
+
+/*
+ * AddPurchaseToJSON Function
+ * Do: create an array or arrays to the purchase page
+ *
+*/
+function AddPurchaseToJSON($id_user, $id_article, $number, $flag)
+{
+
+    // Load the file
+    $JSONfile = 'data/dataPurchases.json';
+    $contents = file_get_contents($JSONfile);
+
+    // Decode the JSON data into a PHP array.
+    $json = json_decode($contents, true);
+
+    // Write in JSON
+    if ($_SESSION['id_user'] == $id_user) {
+        $json[] = array("username" => $id_user, "id_article" => $id_article, "number" => $number, "flag" => $flag);
+
+        // Encode the array back into a JSON string.
+        $encode = json_encode($json, JSON_PRETTY_PRINT);
+
+        // Save the file.
+        file_put_contents('data/dataPurchases.json', $encode);
 
         // Load the file
-        $JSONfile = 'data/dataPurchases.json';
-        $contents = file_get_contents($JSONfile);
+        $data = file_get_contents('data/dataBasket.json');
 
-        // Decode the JSON data into a PHP array.
-        $json = json_decode($contents, true);
+        // Decode JSON flow
+        $obj = json_decode($data);
 
-        // Write in JSON
-        if ($_SESSION['id_user'] == $id_user[$i]) {
-            $json[] = array("username" => $id_user[$i], "id_article" => $id_article[$i], "number" => $number[$i], "flag" => $flag[$i]);
+        // Remove the object from the array using splice.
+        array_splice($obj, 0, 1);
 
-            // Encode the array back into a JSON string.
-            $encode = json_encode($json, JSON_PRETTY_PRINT);
-
-            // Save the file.
-            file_put_contents('data/dataPurchases.json', $encode);
-
-            // Load the file
-            $data = file_get_contents('data/dataBasket.json');
-
-            // Decode JSON flow
-            $obj = json_decode($data);
-            array_splice($obj, $i);
-            $json = json_encode($obj, JSON_PRETTY_PRINT);
-            file_put_contents('data/dataBasket.json', $json);
-        }
+        $json = json_encode($obj, JSON_PRETTY_PRINT);
+        file_put_contents('data/dataBasket.json', $json);
+        return false;
     }
-    header("Location:index.php?action=purchase_articles");
-    exit();
+    return true;
 }
 
 /*
@@ -58,7 +67,8 @@ function AddPurchaseToJSON() {
  * Do: load the purchased articles for purchase page
  *
 */
-function DisplayPurchase() {
+function DisplayPurchase()
+{
 
     // Load the file
     $JSONfile = 'data/dataPurchases.json';

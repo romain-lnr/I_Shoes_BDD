@@ -16,7 +16,9 @@ function Purchase() {
 */
 function AddPurchase() {
     require "models/purchases.php";
-    AddPurchaseToJSON();
+
+    LoadBasket();
+    header("Location:index.php?action=purchase_articles");
 }
 
 /*
