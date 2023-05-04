@@ -21,30 +21,32 @@ ob_start(); ?>
     <?php $topnav = ob_get_clean();
     ob_start(); ?>
     <?php if ($is_article) { ?>
-        <?php for ($j = 0; $j < $i; $j++) { ?>
+        <?php for ($m = 0; $m < $i; $m++) { ?>
+            <?php if ($article_good[$m]) { ?>
             <div id="content">
                 <div class="row">
                     <div class="col-sm-3">
                         <div class="case basket">
-                            <div id="image_article_case"><img src="<?=$article_specs[$j][1]?>" id="image_article"></div>
+                            <div id="image_article_case"><img src="<?=$article_specs[$m][1]?>" id="image_article"></div>
                             <hr>
                             <div class="body_case">
-                                <div id="nom_article"><?="<em>".$article_specs[$j][2]."</em>"?></div>
-                                <div id="mark_article"><?="<em>".$article_specs[$j][3]."</em>"?></div>
-                                <div id="price_article"><?="<em>".$article_specs[$j][5]." CHF"."</em>"?></div>
+                                <div id="nom_article"><?="<em>".$article_specs[$m][2]."</em>"?></div>
+                                <div id="mark_article"><?="<em>".$article_specs[$m][3]."</em>"?></div>
+                                <div id="price_article"><?="<em>".$article_specs[$m][5]." CHF"."</em>"?></div>
                                 <br>
-                                <div id="value_article"><?="<em>"."X".$article_specs[$j][6]."</em>"?></div>
-                                <div id="remove_object"><a href="index.php?receive_basket=<?=$j?>&value=<?=$article_specs[$j][6]?>&id_article=<?=$article_specs[$j][0]?>"><input type="button" class="form-control" value="Supprimer"></a></div>
+                                <div id="value_article"><?="<em>"."X".$article_specs[$m][6]."</em>"?></div>
+                                <div id="remove_object"><a href="index.php?receive_basket=<?=$m?>&value=<?=$article_specs[$m][6]?>&id_article=<?=$article_specs[$m][0]?>"><input type="button" class="form-control" value="Supprimer"></a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-8">
                         <div class="case case_desc basket">
-                            <p><?=$article_specs[$j][4]?></p>
+                            <p><?=$article_specs[$m][4]?></p>
                         </div>
                     </div>
                 </div>
             </div>
+            <?php } ?>
         <?php } ?>
         <div id="container">
             <a href="index.php?action=purchase"><input type="submit" name="insert" id="insert" value="Passer en caisse"></a>

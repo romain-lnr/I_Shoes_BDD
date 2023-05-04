@@ -26,23 +26,3 @@ function CheckLogin() {
     if ($isAdmin) header("Location:index.php?action=admin");
     else header("Location:index.php?action=home");
 }
-
-/*
- * Account Function
- * Do: Create a new account
- *
-*/
-function Account() {
-    require "models/users.php";
-
-    if(isset($_POST['insert'])) {
-
-        // Retrieves values
-        $id_user = $_POST['id_user'];
-        $prenom = $_POST['prenom'];
-        $nom = $_POST['nom'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-    }
-    InsertUser($id_user, $prenom, $nom, $email, $password);
-}

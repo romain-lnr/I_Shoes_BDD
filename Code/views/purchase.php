@@ -21,18 +21,18 @@ ob_start(); ?>
 <h3 style="padding-left: 55px;">Récapitulatif de la commande : </h3>
     <div id="content">
         <div class="row">
-            <?php for ($i = 0; $i < $tab; $i++) {
-                if (!$flag[$i]) {?>
+            <?php for ($j = 0; $j < $i; $j++) {
+                if (!$article_specs[$j][5]) {?>
                     <div class="col-sm-3">
                         <div class="case basket">
-                            <div id="image_article_case"><img src="<?=$imgpath_article[$i]?>" id="image_article"></div>
+                            <div id="image_article_case"><img src="<?=$article_specs[$j][0]?>" id="image_article"></div>
                             <hr>
                             <div class="body_case">
-                                <div id="nom_article"><?="<em>".$name_article[$i]."</em>"?></div>
-                                <div id="mark_article"><?="<em>".$mark_article[$i]."</em>"?></div>
-                                <div id="price_article"><?="<em>".$price_article[$i]." CHF"."</em>"?></div>
+                                <div id="nom_article"><?="<em>".$article_specs[$j][1]."</em>"?></div>
+                                <div id="mark_article"><?="<em>".$article_specs[$j][2]."</em>"?></div>
+                                <div id="price_article"><?="<em>".$article_specs[$j][3]." CHF"."</em>"?></div>
                                 <br>
-                                <div id="value_article"><?="<em>"."X".$number[$i]."</em>"?></div>
+                                <div id="value_article"><?="<em>"."X".$article_specs[$j][4]."</em>"?></div>
                             </div>
                         </div>
                     </div>

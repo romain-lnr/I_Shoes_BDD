@@ -6,7 +6,13 @@
 */
 function Purchase() {
     require "models/purchases.php";
-    DisplayPurchase();
+    $i = -1;
+
+    do {
+        $i++;
+        $article_specs[$i] = DisplayPurchase($i);
+    } while ($article_specs[$i] != null);
+    require "views/purchase.php";
 }
 
 /*

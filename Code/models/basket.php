@@ -4,45 +4,46 @@
 * Do: create an array when the user take an article in the basket
 *
 */
-function AddBasket($id_user, $id, $number) {
-
-    // Load the file
-    $JSONfile = 'data/dataBasket.json';
-    $contents = file_get_contents($JSONfile);
+function AddBasket($id_user, $id_article, $number) {
+    // Load the JSON file
+    $jsonfile = 'data/dataBasket.json';
+    $contents = file_get_contents($jsonfile);
 
     // Decode the JSON data into a PHP array.
     $json = json_decode($contents, true);
 
-    $boolValue = TestValue($id, $number);
+    // Check if the user is unique and the article ID is unique for the user
+    $boolValue = TestValue($id_article, $number);
 
     if ($boolValue) {
+        // Decrement the stock of the item by the requested number
+        AffectValueInArray($id_article, -$number);
 
-        // Affect the value
-        AffectValueInArray($id, -$number);
+        // Search for the user's basket and article ID in the JSON array
+        $userBasketIndex = array_search($id_user, array_column($json, 'username'));
+        $articleIndex = array_search($id_article, array_column($json, 'id_article'));
 
-        // Write in JSON
-        $user_basket[0] = array_search($id_user, array_column($json, 'username'));
-        $id_basket[0] = array_search($id, array_column($json, 'id_article'));
-
-        if ($user_basket[0] !== false && $id_basket[0] !== false) {
-            $json[$id_basket] = array("username" => $id_user, "id_article" => $id, "number" => $_SESSION['value'][$id] + $number);
-            $_SESSION['value'][$id] += $number;
+        if ($userBasketIndex !== false && $articleIndex !== false) {
+            // Update existing basket item with the requested number of items
+            $json[$articleIndex]['number'] += $number;
         } else {
-            $json[] = array("username" => $id_user, "id_article" => $id, "number" => $number);
-            $_SESSION['value'][$id] = $number;
+            // Create new basket item for the user and article
+            $json[] = array("username" => $id_user, "id_article" => $id_article, "number" => $number);
         }
     } else {
-        // Change error
+        // Redirect to the homepage with an error message
         header("Location:index.php?error=not_even_stock");
         return;
     }
 
-    // Encode the array back into a JSON string
-    $encode = json_encode($json, JSON_PRETTY_PRINT);
+    // Encode the updated array back into a JSON string
+    $encodedJson = json_encode($json, JSON_PRETTY_PRINT);
 
-    // Save the file.
-    file_put_contents('data/dataBasket.json', $encode);
+    // Save the updated JSON data to the file.
+    file_put_contents($jsonfile, $encodedJson);
 }
+
+
 
 /*
  * TestValue Function
@@ -50,8 +51,8 @@ function AddBasket($id_user, $id, $number) {
  *
 */
 function TestValue($id, $number) {
-    $JSONfile = 'data/dataArticles.json';
-    $data = file_get_contents($JSONfile);
+    $jsonfile = 'data/dataArticles.json';
+    $data = file_get_contents($jsonfile);
     $obj = json_decode($data);
 
     if ($obj[$id]->stock >= $number && $number >= 1) return true;
@@ -66,8 +67,8 @@ function TestValue($id, $number) {
 function AffectValueInArray($id, $number) {
 
     // Load the file
-    $JSONfile = 'data/dataArticles.json';
-    $data = file_get_contents($JSONfile);
+    $jsonfile = 'data/dataArticles.json';
+    $data = file_get_contents($jsonfile);
     $obj = json_decode($data);
 
     $obj[$id]->stock += $number;
@@ -104,8 +105,8 @@ function RemoveArrayInJSON($id, $path) {
 function DisplayBasket($i) {
 
     // Load the file
-    $JSONfile = 'data/dataBasket.json';
-    $data = file_get_contents($JSONfile);
+    $jsonfile = 'data/dataBasket.json';
+    $data = file_get_contents($jsonfile);
 
     // DECODE JSON flow
     $obj = json_decode($data);
@@ -118,14 +119,16 @@ function DisplayBasket($i) {
         if ($obj[$i]->username == $_SESSION['id_user']) {
 
             // Load the file
-            $JSONfile = 'data/dataArticles.json';
-            $data = file_get_contents($JSONfile);
+            $jsonfile = 'data/dataArticles.json';
+            $data = file_get_contents($jsonfile);
 
             // DECODE JSON flow
             $obj = json_decode($data);
             $article_specs[] = [$id_article, $obj[$id_article]->imagepath, $obj[$id_article]->article, $obj[$id_article]->mark, $obj[$id_article]->description, $obj[$id_article]->price, $number];
             return $article_specs[0];
         }
+        return 1;
+
     }
     return null;
 }

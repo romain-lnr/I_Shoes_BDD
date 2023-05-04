@@ -8,11 +8,20 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/articles.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/articles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/basket.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/basket.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/purchases.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/purchases.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/users.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/dataArticles.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataArticles.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/dataBasket.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataBasket.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/dataPurchases.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataPurchases.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/articles.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/articles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/basket.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/basket.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/purchases.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/purchases.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/basket.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/basket.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/new_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/new_user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/purchase.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/purchase.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,6 +154,11 @@
       <workItem from="1683127990636" duration="188000" />
       <workItem from="1683137965987" duration="2409000" />
       <workItem from="1683140634807" duration="773000" />
+      <workItem from="1683176645351" duration="2268000" />
+      <workItem from="1683189486077" duration="5752000" />
+      <workItem from="1683196537626" duration="2795000" />
+      <workItem from="1683199958556" duration="5590000" />
+      <workItem from="1683206540144" duration="1192000" />
     </task>
     <servers />
   </component>

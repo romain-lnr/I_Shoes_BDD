@@ -7,8 +7,8 @@
 function TestLogin($id_user, $password)  {
 
     // Load the file
-    $JSONfile = 'data/dataUsers.json';
-    $data = file_get_contents($JSONfile);
+    $jsonfile = 'data/dataUsers.json';
+    $data = file_get_contents($jsonfile);
     // DECODE JSON flow
     $obj = json_decode($data);
 

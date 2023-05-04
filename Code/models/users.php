@@ -4,11 +4,11 @@
  * Do: Create an account in dataUsers json file
  *
 */
-function InsertUser($id_user, $prenom, $nom, $email, $password) {
+function InsertUser($id_user, $firstname, $name, $email, $password) {
 
     // Load the file
-    $JSONfile = 'data/dataUsers.json';
-    $contents = file_get_contents($JSONfile);
+    $jsonfile = 'data/dataUsers.json';
+    $contents = file_get_contents($jsonfile);
 
     // HASH Password
     $passhash = password_hash($password, PASSWORD_DEFAULT);
@@ -21,7 +21,7 @@ function InsertUser($id_user, $prenom, $nom, $email, $password) {
         return;
     }
     else {
-        $json[] = array("username" => $id_user, "firstname" => $prenom, "name" => $nom, "Email" => $email, "password" => $passhash);
+        $json[] = array("username" => $id_user, "firstname" => $firstname, "name" => $name, "Email" => $email, "password" => $passhash);
     }
 
     // Encode the array back into a JSON string.
@@ -29,6 +29,4 @@ function InsertUser($id_user, $prenom, $nom, $email, $password) {
 
     // Save the file.
     file_put_contents('data/dataUsers.json', $encode);
-    header("Location:index.php?action=login");
-    exit();
 }

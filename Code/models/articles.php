@@ -7,8 +7,8 @@
 function AddArticle($id_article, $mark, $desc, $price, $stock_number, $imagepath, $filename) {
 
     // Load the file
-    $JSONfile = 'data/dataArticles.json';
-    $contents = file_get_contents($JSONfile);
+    $jsonfile = 'data/dataArticles.json';
+    $contents = file_get_contents($jsonfile);
 
     // Decode the JSON data into a PHP array.
     $json = json_decode($contents, true);
@@ -35,8 +35,8 @@ function AddArticle($id_article, $mark, $desc, $price, $stock_number, $imagepath
 function DisplayArticles($i) {
 
     // Load the file
-    $JSONfile = 'data/dataArticles.json';
-    $data = file_get_contents($JSONfile);
+    $jsonfile = 'data/dataArticles.json';
+    $data = file_get_contents($jsonfile);
 
     // DECODE JSON flow
     $obj = json_decode($data);
@@ -53,8 +53,8 @@ function DisplayArticles($i) {
 
 function UpArticles() {
     // Load the file
-    $JSONfile = 'data/dataArticles.json';
-    $data = file_get_contents($JSONfile);
+    $jsonfile = 'data/dataArticles.json';
+    $data = file_get_contents($jsonfile);
 
     // DECODE JSON flow
     $obj = json_decode($data);
@@ -74,8 +74,8 @@ function UpArticles() {
 function ShowArticle($id) {
 
     // Load the file
-    $JSONfile = 'data/dataArticles.json';
-    $data = file_get_contents($JSONfile);
+    $jsonfile = 'data/dataArticles.json';
+    $data = file_get_contents($jsonfile);
 
     // DECODE JSON flux
     $obj = json_decode($data);
@@ -92,9 +92,9 @@ function ShowArticle($id) {
 function RemoveImgInJSON($id) {
 
     // Load the file
-    $JSONfile = 'data/dataArticles.json';
+    $jsonfile = 'data/dataArticles.json';
 
-    $data = file_get_contents($JSONfile);
+    $data = file_get_contents($jsonfile);
 
     // Decode JSON flow
     $obj = json_decode($data);

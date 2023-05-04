@@ -3,8 +3,8 @@ function LoadBasket()
 {
 
     // Load the file
-    $JSONfile = 'data/dataBasket.json';
-    $data = file_get_contents($JSONfile);
+    $jsonfile = 'data/dataBasket.json';
+    $data = file_get_contents($jsonfile);
 
     // DECODE JSON flow
     $obj = json_decode($data);
@@ -30,8 +30,8 @@ function AddPurchaseToJSON($id_user, $id_article, $number, $flag)
 {
 
     // Load the file
-    $JSONfile = 'data/dataPurchases.json';
-    $contents = file_get_contents($JSONfile);
+    $jsonfile = 'data/dataPurchases.json';
+    $contents = file_get_contents($jsonfile);
 
     // Decode the JSON data into a PHP array.
     $json = json_decode($contents, true);
@@ -67,53 +67,42 @@ function AddPurchaseToJSON($id_user, $id_article, $number, $flag)
  * Do: load the purchased articles for purchase page
  *
 */
-function DisplayPurchase()
+function DisplayPurchase($i)
 {
 
     // Load the file
-    $JSONfile = 'data/dataPurchases.json';
-    $data = file_get_contents($JSONfile);
+    $jsonfile = 'data/dataPurchases.json';
+    $data = file_get_contents($jsonfile);
 
     // DECODE JSON flow
     $obj = json_decode($data);
     $nb_purchase = count($obj);
-    $tab = 0;
 
-    $id_user = $_SESSION['id_user'];
-
-    for ($i = 0; $i < $nb_purchase; $i++) {
+    if ($i != $nb_purchase) {
+        $id_user = $_SESSION['id_user'];
 
         // Load the file
-        $JSONfile = 'data/dataPurchases.json';
-        $data = file_get_contents($JSONfile);
+        $jsonfile = 'data/dataPurchases.json';
+        $data = file_get_contents($jsonfile);
 
         // Decode JSON flow
         $obj = json_decode($data);
-        $flag[$tab] = $obj[$i]->flag;
+        $flag[$i] = $obj[$i]->flag;
         if ($obj[$i]->username == $id_user) {
 
             $id = $obj[$i]->id_article;
-            $number[$tab] = $obj[$i]->number;
-
+            $number[$i] = $obj[$i]->number;
             // Load the file
-            $JSONfile = 'data/dataArticles.json';
-            $data = file_get_contents($JSONfile);
+            $jsonfile = 'data/dataArticles.json';
+            $data = file_get_contents($jsonfile);
 
             // DECODE JSON flow
             $obj = json_decode($data);
-
-            // access the appropriate element
-            $imgpath_article[$tab] = $obj[$id]->imagepath;
-            $name_article[$tab] = $obj[$id]->article;
-            $mark_article[$tab] = $obj[$id]->mark;
-            $desc_article[$tab] = $obj[$id]->description;
-            $price_article[$tab] = $obj[$id]->price;
-            $stock_article[$tab] = $obj[$id]->stock;
-
-            $tab++;
+            $article_specs[] = [$obj[$id]->imagepath, $obj[$id]->article, $obj[$id]->mark, $obj[$id]->price, $number[$i], $flag[$i]];
+            return $article_specs[0];
         }
     }
-    require "views/purchase.php";
+    return null;
 }
 
 /*
@@ -125,8 +114,8 @@ function FlagPurchase()
 {
 
     // Load the file
-    $JSONfile = 'data/dataPurchases.json';
-    $data = file_get_contents($JSONfile);
+    $jsonfile = 'data/dataPurchases.json';
+    $data = file_get_contents($jsonfile);
 
     // Decode JSON flow
     $obj = json_decode($data);
