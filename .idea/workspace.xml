@@ -5,49 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55021f64-2d06-4d8e-b522-ff5d1ee43f4e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Code.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/scripts/slider.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/admin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/articles.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/basket.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/login.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/purchases.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/users.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Documentation/.$Diagramme de flux I-Shoes.drawio.bkp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Documentation/Cahier des charges Projet I Shoes.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Documentation/Cahier des charges Projet I Shoes.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Documentation/Documentation I Shoes.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Documentation/Journaux_de_travail/JournalTravailAlex/Journal_de_travail_I_Shoes_ALEX.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Documentation/Journaux_de_travail/JournalTravailAlex/screen journal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Documentation/Journaux_de_travail/Romain Lenoir/Journal_de_travail_I_Shoes.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Documentation/Journaux_de_travail/Sacha Jaccard/Journal de travail Sacha.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Documentation/Maquettes/.$Diagramme de flux I-Shoes.drawio.bkp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Documentation/Maquettes/.$Use case.drawio.bkp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Documentation/Maquettes/AccueilMaquette.bmpr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Documentation/Maquettes/Diagramme de flux I-Shoes.drawio" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Documentation/Maquettes/I Shoes Wireframe.bmpr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Documentation/Maquettes/Use case.drawio" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Documentation/Maquettes/Use case.drawio.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Documentation/Maquettes/Wireframe.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Documentation/~$cumentation I Shoes.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/views/TDC_admin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/views/admin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/views/basket.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/views/historic.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/views/home.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/views/layout.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/views/layout_form.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/views/login.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/views/lost.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/views/main.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/views/new_user.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/views/purchases.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/views/show_article.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/purchases.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/purchases.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/dataArticles.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataArticles.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/dataBasket.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataBasket.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/dataPurchases.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataPurchases.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +147,6 @@
       <workItem from="1683196537626" duration="2795000" />
       <workItem from="1683199958556" duration="5590000" />
       <workItem from="1683206540144" duration="2358000" />
-      <workItem from="1683525745907" duration="750000" />
     </task>
     <servers />
   </component>
