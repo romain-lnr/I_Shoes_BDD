@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55021f64-2d06-4d8e-b522-ff5d1ee43f4e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/auth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dispatcher.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/purchases.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/purchases.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataArticles.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataArticles.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataBasket.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataBasket.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataPurchases.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataPurchases.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/slider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/Journaux_de_travail/Romain Lenoir/Journal_de_travail_I_Shoes.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/doc/Journaux_de_travail/Romain Lenoir/Journal_de_travail_I_Shoes.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +24,7 @@
     <execution />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -37,7 +41,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/romai/Romain/GitHub_DATA/I_Shoes/php/php.exe&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/romai/Romain/GitHub_DATA/I_Shoes_BDD&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -147,6 +151,8 @@
       <workItem from="1683196537626" duration="2795000" />
       <workItem from="1683199958556" duration="5590000" />
       <workItem from="1683206540144" duration="2358000" />
+      <workItem from="1683527243808" duration="1944000" />
+      <workItem from="1683724409750" duration="5716000" />
     </task>
     <servers />
   </component>
