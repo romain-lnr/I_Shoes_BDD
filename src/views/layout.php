@@ -14,8 +14,6 @@
 </head>
 
 <body id="snow">
-<?= $topnav ?>
 <?= $content ?>
-<?= $footer ?>
 </body>
 </html>

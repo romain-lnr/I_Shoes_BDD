@@ -5,7 +5,7 @@
 // Date:    2022-08-27, 03-05-2014
 //=============================================================================
 
-require SOURCE_DIR.'/auth.php';
+//require SOURCE_DIR.'/auth.php';
 
 function handle($bag)
 {

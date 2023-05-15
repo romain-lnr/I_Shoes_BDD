@@ -14,11 +14,11 @@ function dispatch($bag)
     $matches = [];
 
     // If any match defines a 'view', it should use our one and only layout.
-    $bag['layout'] = 'views/layout';
+    //$bag['layout'] = 'views/layout';
 
     //-----------------------------------------------------------------------------
-    if (preg_match('/^\/?$/', $bag['route'])) {
-        $bag['view'] = 'views/site/index';
+    if (preg_match('/^\/$/', $bag['route'])) {
+        $bag['view'] = 'views/site/main';
     }
     //-----------------------------------------------------------------------------
     elseif (preg_match('/^\/(login|register)$/', $bag['route'], $matches)) {
@@ -33,6 +33,10 @@ function dispatch($bag)
         $bag['handler'] = 'controllers/site/logout';
     }
     //-----------------------------------------------------------------------------
+    else if (preg_match('/^\/articles\/(\d+)$/', $bag['route'])) {
+        $bag['handler'] = 'controllers/articles/show';
+        $bag['articleId'] = $matches[1];
+    }
     else {
         $bag['status_code'] = 404;
     }
