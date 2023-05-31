@@ -1,30 +1,13 @@
 <?php
 function TestLogin($id_user, $password) {
 
-    // Load the file
-    $jsonfile = "../data/dataUsers.json";
-    $data = file_get_contents($jsonfile);
-    // DECODE JSON flow
-    $obj = json_decode($data);
-
-    $isAdmin = false;
-    // access the appropriate element
-    for ($i = 0; $i < count($obj); $i++) {
-        if ($obj[$i]->username == $id_user) {
-            if (password_verify($password, $obj[$i]->password)) {
-                $_SESSION['id_user'] = $obj[$i]->username;
-                $_SESSION['logged'] = true;
-                if ($id_user == "admin" && $password == "admin") {
-                    $isAdmin = true;
-                    $_SESSION['admin_logged'] = true;
-                }
-                else {
-                    $isAdmin = false;
-                    $_SESSION['admin_logged'] = false;
-                }
-                return $isAdmin;
-            } else header("Location:index.php?error=password_not_correct");
-        } else header("Location:index.php?error=user_not_correct");
+require_once SOURCE_DIR. "/models/dbconnector.php";
+try {
+    $query = executeQuerySelect("SELECT * FROM users LIKE '%$id_user'");
+}
+catch (PDOException $exception){
+        error_log('Duplicate Entry: ' . $exception->getMessage() . "\r\n", 3, ERROR_LOG);
+        $queryResult = false;
     }
-    return $isAdmin;
+
 }

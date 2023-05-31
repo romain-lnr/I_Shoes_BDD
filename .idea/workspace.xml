@@ -34,7 +34,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/romai/Romain/GitHub_DATA/I_Shoes_BDD",
+    "last_opened_file_path": "C:/Users/Sacha.JACCARD/Documents/GitHub/I_Shoes_BDD",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -42,6 +42,11 @@
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "web.server",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -49,6 +54,17 @@
       <recent name="C:\Users\romai\Romain\GitHub_DATA\I_Shoes_BDD\src\views" />
       <recent name="C:\Users\romai\Romain\GitHub_DATA\I_Shoes\Code\media\img\articles" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="I_Shoes_BDD" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner directory="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.I_Shoes_BDD" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -152,7 +168,11 @@
       <workItem from="1684735488041" duration="2283000" />
       <workItem from="1684737995731" duration="675000" />
       <workItem from="1684738730551" duration="2136000" />
-      <workItem from="1685540350549" duration="2805000" />
+      <workItem from="1685539978965" duration="1400000" />
+      <workItem from="1685541397703" duration="1321000" />
+      <workItem from="1685542794681" duration="121000" />
+      <workItem from="1685544041211" duration="199000" />
+      <workItem from="1685544257910" duration="557000" />
     </task>
     <servers />
   </component>
@@ -174,16 +194,5 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/src/models/dbconnector.php</url>
-          <line>62</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
