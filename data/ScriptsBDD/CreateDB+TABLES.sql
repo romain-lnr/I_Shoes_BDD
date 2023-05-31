@@ -6,10 +6,9 @@
 -- --------------------------------------------------------
 
 -- Dumping database structure for I_Shoes
-DROP DATABASE IF EXISTS I_Shoes;
-CREATE DATABASE IF NOT EXISTS I_Shoes;
-USE I_Shoes;
-
+DROP DATABASE IF EXISTS i_Shoes;
+CREATE DATABASE IF NOT EXISTS i_Shoes;
+USE i_Shoes;
 
 -- Dumping structure for table users
 DROP TABLE IF EXISTS users;
@@ -22,7 +21,7 @@ CREATE TABLE IF NOT EXISTS users (
   Password VARCHAR(50) NOT NULL,
   PRIMARY KEY (id),
   UNIQUE KEY (Email)
-  )
+  );
   
   
 -- Dumping structure for table basket
@@ -31,7 +30,7 @@ CREATE TABLE IF NOT EXISTS basket (
   id INT(11) NOT NULL AUTO_INCREMENT,
   TotPrice INT(11) NOT NULL,
   PRIMARY KEY (id)
-  )  
+  );  
 
 -- Dumping structure for table articles
 DROP TABLE IF EXISTS articles;
@@ -45,4 +44,4 @@ CREATE TABLE IF NOT EXISTS articles (
   Image VARCHAR(255) NOT NULL,
   PRIMARY KEY (id),
   UNIQUE KEY (NumArticle)
-  )
+  );
