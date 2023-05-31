@@ -37,8 +37,8 @@ function render($bag)
             include SOURCE_DIR.'/'.$bag['view'].'.php';
             $content = ob_get_clean();
 
-            // Finally render the layout by passing the $content variable
-            //include SOURCE_DIR.'/'.$bag['layout'].'.php';
+            //Finally render the layout by passing the $content variable
+            include SOURCE_DIR.'/'.$bag['layout'].'.php';
         } else {
             // Render bare view
             include SOURCE_DIR.'/'.$bag['view'].'.php';

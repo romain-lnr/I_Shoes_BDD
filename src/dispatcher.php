@@ -13,14 +13,18 @@ function dispatch($bag)
 {
     $matches = [];
 
-    // If any match defines a 'view', it should use our one and only layout.
-    //$bag['layout'] = 'views/layout';
-
-    //-----------------------------------------------------------------------------
     if (preg_match('/^\/$/', $bag['route'])) {
-        $bag['view'] = 'views/site/main';
+        $bag['view'] = 'views/site/index';
+        $bag['layout'] = 'views/layout';
     }
-    //-----------------------------------------------------------------------------
+    else if (preg_match('/^\/users\/login\/$/', $bag['route'])) {
+        $bag['view'] = 'views/site/users/login';
+        $bag['layout'] = 'views/layout_form';
+    }
+    else if (preg_match('/^\/users\/logged\/$/', $bag['route'])) {
+        $bag['handler'] = 'controllers/site/users/login_check';
+    }
+    /* //-----------------------------------------------------------------------------
     elseif (preg_match('/^\/(login|register)$/', $bag['route'], $matches)) {
         if ($bag['method'] == 'POST') {
             $bag['handler'] = 'controllers/site/'.$matches[1];
@@ -39,7 +43,7 @@ function dispatch($bag)
     }
     else {
         $bag['status_code'] = 404;
-    }
+    } */
 
     return $bag;
 }
