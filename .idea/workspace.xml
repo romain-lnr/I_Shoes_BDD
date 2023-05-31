@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55021f64-2d06-4d8e-b522-ff5d1ee43f4e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/layout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/site/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/site/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/site/users.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +34,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/romai/Romain/temp/projwebbdd",
+    "last_opened_file_path": "C:/Users/romai/Romain/GitHub_DATA/I_Shoes_BDD",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -156,6 +152,7 @@
       <workItem from="1684735488041" duration="2283000" />
       <workItem from="1684737995731" duration="675000" />
       <workItem from="1684738730551" duration="2136000" />
+      <workItem from="1685540350549" duration="2805000" />
     </task>
     <servers />
   </component>
@@ -177,5 +174,16 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/models/dbconnector.php</url>
+          <line>62</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
