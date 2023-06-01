@@ -1,60 +1,66 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../../public/css/style.css" media="screen" type="text/css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-</head>
 <?php
 /**
  * Created by Romain Lenoir.
  * Date: 12.03.2023
- * Desc: main page for displays slider and welcome the user.
+ * Desc: show_article page for displays the user request article.
  */
 
 // tampon de flux stocké en mémoire
-$title="IShoes - main page";
+$title="IShoes - show_article page";
+ob_start();
 ?>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<div class="topnav">
+    <?php if (!isset($_SESSION['logged']) ||  !$_SESSION['logged']) {
+    ob_start(); ?>
+    <div class="topnav">
         <a href="index.php?action=login"><img src="../media/img/login.png" height="50"><br>login</a>
-        <a href="index.php?error=not_login"><img src="../media/img/basket.png" height="50"><br>Basket</a>
-        <a href="index.php?action=home" id="logo"><img src="../media/img/logo.png" height="90"></a>
+        <a href="index.php?action=login"><img src="../media/img/basket.png" height="50"><br>Basket</a>
+        <img src="../media/img/logo.png" height="90">
     </div>
-        <br><br>
-        <div class="w3-container w3-center w3-animate-zoom">
-            <div class="slideshow-container">
-
-                <div class="mySlides fadeSlide">
-                    <div class="numbertext">1 / 3</div>
-                    <img src="../media/img/articles/Air%20Jordan%20Dior.png" style="width:100%" height="700">
-                    <div class="text">Caption Text</div>
+    <br>
+<?php $topnav = ob_get_clean();
+} else {
+    ob_start(); ?>
+    <div class="topnav">
+        <a href="index.php?action=logout">logout</a>
+        <a href="#user" style="height: 10px"><?php echo $_SESSION['id_user']?></a>
+        <a href="index.php?action=basket"><img src="../media/img/basket.png" height="50"><br>Basket</a>
+        <?php if (isset($_SESSION['admin_logged']) && $_SESSION['admin_logged']) { ?>
+            <a href="index.php?action=admin"><img src="../media/img/admin.png" height="50"><br>Admin</a>
+        <?php } ?>
+        <img src="../media/img/logo.png" height="90">
+    </div>
+    <br>
+    <?php $topnav = ob_get_clean();
+}   ob_start();?>
+    <div id="content">
+        <form action="index.php?receive_show_article=<?=strval($id)?>" method="POST">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="case">
+                    <div id="image_article_case"><img src="<?=$article_specs[0][0]?>" id="image_article"></div>
+                    <hr>
+                    <div class="body_case">
+                        <div id="nom_article"><?="<em>".$article_specs[0][1]."</em>"?></div>
+                        <div id="mark_article"><?="<em>".$article_specs[0][2]."</em>"?></div>
+                        <div id="price_article"><?="<em>".$article_specs[0][4]." CHF"."</em>"?></div>
+                    </div>
                 </div>
-
-                <div class="mySlides fadeSlide">
-                    <div class="numbertext">2 / 3</div>
-                    <img src="../media/img/articles/Air%20jordan%204%20off%20white.png" style="width:100%" height="700">
-                    <div class="text">Caption Two</div>
-                </div>
-
-                <div class="mySlides fadeSlide">
-                    <div class="numbertext">3 / 3</div>
-                    <img src="../media/img/articles/Air%20Jordan%20REtro%20High%20TravisScott%20CactusJack.png" style="width:100%" height="700">
-                    <div class="text">Caption Three</div>
-                </div>
-
-                <a class="prev" onclick="plusSlides(-1)">❮</a>
-                <a class="next" onclick="plusSlides(1)">❯</a>
             </div>
-            <br>
-
-            <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
+            <div class="col-sm-8">
+                <div class="case case_desc">
+                    <p><?=$article_specs[0][3]?></p>
+                    <div id="container">
+                        <input type="submit" class="form-control" name="insert" id="insert" value="Ajouter au panier">
+                        <input type="number" name="value" class="form-control" placeholder="value">
+                    </div>
+                </div>
             </div>
         </div>
+      </form>
+    </div>
+    <?php $content = ob_get_clean();
+    ob_start(); ?>
+    <br>
     <footer>
         <div id="contrainer">
             <div class="row">
@@ -88,5 +94,5 @@ $title="IShoes - main page";
             </div>
         </div>
     </footer>
-    <script src="../media/scripts/slider.js">
-    </script>
+<?php $footer = ob_get_clean();
+require "layout.php";

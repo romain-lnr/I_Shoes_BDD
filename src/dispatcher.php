@@ -21,6 +21,9 @@ function dispatch($bag)
         $bag['view'] = 'views/site/users/login';
         $bag['layout'] = 'views/layout_form';
     }
+    else if (preg_match('/^\/articles\/home\/$/', $bag['route'])) {
+        $bag['handler'] = 'controllers/site/articles/showArticles';
+    }
     else if (preg_match('/^\/users\/logged\/$/', $bag['route'])) {
         $bag['handler'] = 'controllers/site/users/login_check';
     }

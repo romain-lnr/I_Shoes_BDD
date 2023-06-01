@@ -16,7 +16,7 @@ function authorize($bag)
 //=============================================================================
 // User session functions
 
-//require_once SOURCE_DIR.'/models/users.php';
+require_once SOURCE_DIR.'/models/users.php';
 
 function getCurrentUser()
 {

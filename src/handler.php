@@ -13,7 +13,7 @@ function handle($bag)
     if (array_key_exists('status_code', $bag)) return $bag;
 
     // Pass the request to the auth layer
-    //$bag = authorize($bag);
+    $bag = authorize($bag);
 
     // Once again, short circuit if status_code defined by the auth layer
     if (array_key_exists('status_code', $bag)) return $bag;
