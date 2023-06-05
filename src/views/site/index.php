@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../../public/css/style.css" media="screen" type="text/css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-</head>
 <?php
 /**
  * Created by Romain Lenoir.
@@ -18,9 +10,9 @@ $title="IShoes - main page";
 ?>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<div class="topnav">
-        <a href="index.php?action=login"><img src="../media/img/login.png" height="50"><br>login</a>
-        <a href="index.php?error=not_login"><img src="../media/img/basket.png" height="50"><br>Basket</a>
-        <a href="index.php?action=home" id="logo"><img src="../media/img/logo.png" height="90"></a>
+        <a href="<?=route('users/login/')?>"><img src="/images/login.png" height="50"><br>login</a>
+        <a href="<?=route('users/basket/')?>"><img src="/images/basket.png" height="50"><br>Basket</a>
+        <a href="<?=route('users/home/')?>" id="logo"><img src="/images/logo.png" height="90"></a>
     </div>
         <br><br>
         <div class="w3-container w3-center w3-animate-zoom">
@@ -28,24 +20,21 @@ $title="IShoes - main page";
 
                 <div class="mySlides fadeSlide">
                     <div class="numbertext">1 / 3</div>
-                    <img src="../media/img/articles/Air%20Jordan%20Dior.png" style="width:100%" height="700">
-                    <div class="text">Caption Text</div>
+                    <img src="/images/articles/Air%20Jordan%20Dior.png" style="width:100%" height="700">
                 </div>
 
                 <div class="mySlides fadeSlide">
                     <div class="numbertext">2 / 3</div>
-                    <img src="../media/img/articles/Air%20jordan%204%20off%20white.png" style="width:100%" height="700">
-                    <div class="text">Caption Two</div>
+                    <img src="/images/articles/Air%20jordan%204%20off%20white.png" style="width:100%" height="700">
                 </div>
 
                 <div class="mySlides fadeSlide">
                     <div class="numbertext">3 / 3</div>
-                    <img src="../media/img/articles/Air%20Jordan%20REtro%20High%20TravisScott%20CactusJack.png" style="width:100%" height="700">
-                    <div class="text">Caption Three</div>
+                    <img src="/images/articles/Air%20Jordan%20REtro%20High%20TravisScott%20CactusJack.png" style="width:100%" height="700">
                 </div>
 
-                <a class="prev" onclick="plusSlides(-1)">❮</a>
-                <a class="next" onclick="plusSlides(1)">❯</a>
+                <h1 class="prev" onclick="plusSlides(-1)">❮</h1>
+                <h1 class="next" onclick="plusSlides(1)">❯</h1>
             </div>
             <br>
 
@@ -88,5 +77,5 @@ $title="IShoes - main page";
             </div>
         </div>
     </footer>
-    <script src="../media/scripts/slider.js">
+    <script src="/js/slider.js">
     </script>

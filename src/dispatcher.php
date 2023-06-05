@@ -17,9 +17,17 @@ function dispatch($bag)
         $bag['view'] = 'views/site/index';
         $bag['layout'] = 'views/layout';
     }
+    else if (preg_match('/^\/users\/home\/$/', $bag['route'])) {
+        $bag['handler'] = 'controllers/home/articles';
+        $bag['layout'] = 'views/layout';
+    }
     else if (preg_match('/^\/users\/login\/$/', $bag['route'])) {
-        $bag['view'] = 'views/site/users/login';
+        $bag['view'] = 'views/site/login';
         $bag['layout'] = 'views/layout_form';
+    }
+    else if (preg_match('/^\/users\/basket\/$/', $bag['route'])) {
+        $bag['view'] = 'views/site/basket';
+        $bag['layout'] = 'views/layout';
     }
     else if (preg_match('/^\/articles\/home\/$/', $bag['route'])) {
         $bag['handler'] = 'controllers/site/articles/showArticles';

@@ -6,31 +6,31 @@
  */
 
 $title="IShoes - home page";
-?>
-<?php
+
 if (!isset($_SESSION['logged']) ||  !$_SESSION['logged']) {
-    ob_start(); ?>
+    ?>
     <div class="topnav">
-        <a href="index.php?action=login"><img src="../media/img/login.png" height="50"><br>login</a>
-        <a href="index.php?error=not_login"><img src="../media/img/basket.png" height="50"><br>Basket</a>
-        <img src="../media/img/logo.png" height="90">
+        <a href="index.php?action=login"><img src="/images/login.png" height="50"><br>login</a>
+        <a href="index.php?error=not_login"><img src="/images/basket.png" height="50"><br>Basket</a>
+        <img src="/images/logo.png" height="90">
     </div>
     <br>
-    <?php $topnav = ob_get_clean();
+    <?php
 } else {
-    ob_start(); ?>
+    ?>
     <div class="topnav">
         <a href="index.php?action=logout">logout</a>
         <a href="#user" style="height: 10px"><?php echo $_SESSION['id_user']?></a>
-        <a href="index.php?action=basket"><img src="../media/img/basket.png" height="50"><br>Basket</a>
+        <a href="index.php?action=basket"><img src="/images/basket.png" height="50"><br>Basket</a>
         <?php if (isset($_SESSION['admin_logged']) && $_SESSION['admin_logged']) { ?>
-            <a href="index.php?action=admin"><img src="../media/img/admin.png" height="50"><br>Admin</a>
+            <a href="index.php?action=admin"><img src="/images/admin.png" height="50"><br>Admin</a>
         <?php } ?>
-        <img src="../media/img/logo.png" height="90">
+        <img src="/images/logo.png" height="90">
     </div>
     <br>
-    <?php $topnav = ob_get_clean();
-}   ob_start();?>
+    <?php
+}
+?>
     <div id="content">
         <?php if(isset($_GET['error'])) {
             $error = $_GET['error'];
@@ -58,9 +58,7 @@ if (!isset($_SESSION['logged']) ||  !$_SESSION['logged']) {
             window.location="index.php?receive_home=" + (id);
         }
     </script>
-    <?php $content = ob_get_clean(); ?>
 <br><br>
-<?php ob_start(); ?>
 <footer>
     <div id="contrainer">
         <div class="row">
@@ -94,5 +92,3 @@ if (!isset($_SESSION['logged']) ||  !$_SESSION['logged']) {
         </div>
     </div>
 </footer>
-<?php $footer = ob_get_clean();
-require "layout.php";

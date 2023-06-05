@@ -7,7 +7,6 @@
 
 // tampon de flux stocké en mémoire
 $title="IShoes - login page";
-ob_start();
 ?>
         <div id="container">
             <form action="index.php?action=logged" method="POST">
@@ -32,5 +31,3 @@ ob_start();
                 ?>
             </form>
         </div>
-<?php $content = ob_get_clean();
-require "layout_form.php";

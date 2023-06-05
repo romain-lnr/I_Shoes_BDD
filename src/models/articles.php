@@ -11,7 +11,7 @@ function AddArticle($id_article, $mark, $desc, $price, $stock_number, $imagepath
     $contents = file_get_contents($jsonfile);
 
     // Decode the JSON data into a PHP array.
-    $json = json_decode($contents, true);
+    $json = json_decode($contents, t    rue);
     $article = array_search($id_article, array_column( $json, 'article' ) );
     if ($article !== false) {
         $json[$article] = array("article" => $id_article, "mark" => $mark, "description" => $desc, "price" => $price, "stock" => $stock_number, "imagepath" => $imagepath, "image" => $filename);

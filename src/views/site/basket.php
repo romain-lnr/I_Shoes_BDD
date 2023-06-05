@@ -6,20 +6,18 @@
  */
 
 // tampon de flux stocké en mémoire
-$title="IShoes - basket page";
-ob_start(); ?>
+$title="IShoes - basket page"
+?>
     <div class="topnav">
         <a href="index.php?action=logout">logout</a>
         <a href="#user" style="height: 10px"><?php echo $_SESSION['id_user']?></a>
-        <a href="index.php?action=home"><img src="../media/img/home.png" height="50"><br>Home</a>
+        <a href="index.php?action=home"><img src="/images/home.png" height="50"><br>Home</a>
         <?php if (isset($_SESSION['admin_logged']) && $_SESSION['admin_logged']) { ?>
-            <a href="index.php?action=admin"><img src="../media/img/admin.png" height="50"><br>Admin</a>
+            <a href="index.php?action=admin"><img src="/images/admin.png" height="50"><br>Admin</a>
         <?php } ?>
-        <img src="../media/img/logo.png" height="90">
+        <img src="/images/logo.png" height="90">
     </div>
     <br>
-    <?php $topnav = ob_get_clean();
-    ob_start(); ?>
     <?php if ($is_article) { ?>
         <?php for ($m = 0; $m < $i; $m++) { ?>
             <?php if ($article_good[$m]) { ?>
@@ -57,8 +55,6 @@ ob_start(); ?>
         <a href="index.php?action=home"><input type="submit" name="insert" id="insert" value="revenir sur la page d'accueil"></a>
     </div>
     <?php } ?>
-        <?php $content = ob_get_clean();
-        ob_start(); ?>
         <br>
           <footer>
         <div id="contrainer">
@@ -93,6 +89,3 @@ ob_start(); ?>
             </div>
         </div>
     </footer>
-    <?php $footer = ob_get_clean();
-    require "layout.php";
-
