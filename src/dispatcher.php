@@ -29,6 +29,14 @@ function dispatch($bag)
         $bag['view'] = 'views/site/login';
         $bag['layout'] = 'views/layout_form';
     }
+    else if (preg_match('/^\/users\/register\/$/', $bag['route'])) {
+        $bag['view'] = 'views/site/new_user';
+        $bag['layout'] = 'views/layout_form';
+    }
+    else if (preg_match('/^\/users\/insert_user\/$/', $bag['route'])) {
+        $bag['handler'] = 'controllers/users/insert_user';
+        $bag['layout'] = 'views/layout_form';
+    }
     else if (preg_match('/^\/users\/basket\/$/', $bag['route'])) {
         $bag['view'] = 'views/site/basket';
         $bag['layout'] = 'views/layout';

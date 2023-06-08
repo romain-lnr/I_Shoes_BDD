@@ -7,10 +7,9 @@
 
 // tampon de flux stocké en mémoire
 $title="IShoes - new_user page";
-ob_start();
 ?>
     <div id="container">
-        <form action="index.php?action=insert_user" method="POST" enctype="multipart/form-data">
+        <form action="<?=route("users/insert_user")?>" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <h1>Nouvel Utilisateur</h1>
                 <label for="id_user"><b>Pseudo</b></label>
@@ -33,5 +32,3 @@ ob_start();
         }
         ?>
     </div>
-<?php $content = ob_get_clean();
-require "layout_form.php";

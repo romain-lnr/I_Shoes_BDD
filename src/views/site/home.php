@@ -32,17 +32,17 @@ if (!isset($_SESSION['logged']) ||  !$_SESSION['logged']) {
 }
 ?>
 <?php if(isset($bag['data'])):?>
-    <?php foreach ($bag['data'] as $row => $article) : ?>
-    <?php $row++; ?>
     <div id="content">
         <?php if(isset($_GET['error'])) {
             $error = $_GET['error'];
             if ($error == "not_even_stock") echo "<br><p style='color:red'>Pas assez de stock</p>";
         }?>
         <div class="row">
+            <?php foreach ($bag['data'] as $row => $article) : ?>
+            <?php $row++; ?>
             <div class="col-sm-3">
                 <div class="case" onclick="<?=route('articles/show')?>">
-                    <div id="image_article_case"><img src="<?=$article['Image'];?>" id="image_article"></div>
+                    <div id="image_article_case"><img src="<?=$article['Imagepath'];?>" id="image_article"></div>
                     <hr>
                     <div class="body_case">
                         <div id="nom_article"><?="<em>".$article['Name']."</em>";?></div>
@@ -50,9 +50,9 @@ if (!isset($_SESSION['logged']) ||  !$_SESSION['logged']) {
                     </div>
                 </div>
             </div>
+            <?php endforeach ?>
         </div>
     </div>
-    <?php endforeach ?>
 <?php endif ?>
 <br><br>
 <footer>
