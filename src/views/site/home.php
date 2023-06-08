@@ -10,8 +10,8 @@ $title="IShoes - home page";
 if (!isset($_SESSION['logged']) ||  !$_SESSION['logged']) {
     ?>
     <div class="topnav">
-        <a href="index.php?action=login"><img src="/images/login.png" height="50"><br>login</a>
-        <a href="index.php?error=not_login"><img src="/images/basket.png" height="50"><br>Basket</a>
+        <a href="<?=route('users/login/')?>"><img src="/images/login.png" height="50"><br>login</a>
+        <a href="<?=route('users/basket/')?>"><img src="/images/basket.png" height="50"><br>Basket</a>
         <img src="/images/logo.png" height="90">
     </div>
     <br>
@@ -31,33 +31,29 @@ if (!isset($_SESSION['logged']) ||  !$_SESSION['logged']) {
     <?php
 }
 ?>
+<?php if(isset($bag['data'])):?>
+    <?php foreach ($bag['data'] as $row => $article) : ?>
+    <?php $row++; ?>
     <div id="content">
         <?php if(isset($_GET['error'])) {
             $error = $_GET['error'];
             if ($error == "not_even_stock") echo "<br><p style='color:red'>Pas assez de stock</p>";
         }?>
         <div class="row">
-            <?php
-            for ($j = 0; $j < $i; $j++) { ?>
-                <div class="col-sm-3">
-                    <div class="case" onclick="UseArticle(<?=strval($j)?>)">
-                        <div id="image_article_case"><img src="<?=$article_specs[$j][5]?>" id="image_article"></div>
-                        <hr>
-                        <div class="body_case">
-                            <div id="nom_article"><?="<em>".$article_specs[$j][0]."</em>"?></div>
-                            <div id="mark_article"><?="<em>".$article_specs[$j][1]."</em>"?></div>
-                            <div id="price_article"><?="<em>".$article_specs[$j][3]." CHF"."</em>"?></div>
-                        </div>
+            <div class="col-sm-3">
+                <div class="case" onclick="<?=route('articles/show')?>">
+                    <div id="image_article_case"><img src="<?=$article['Image'];?>" id="image_article"></div>
+                    <hr>
+                    <div class="body_case">
+                        <div id="nom_article"><?="<em>".$article['Name']."</em>";?></div>
+                        <div id="mark_article"><?="<em>".$article['Mark']."</em>";?></div>
                     </div>
                 </div>
-            <?php } ?>
+            </div>
         </div>
     </div>
-    <script>
-        function UseArticle(id) {
-            window.location="index.php?receive_home=" + (id);
-        }
-    </script>
+    <?php endforeach ?>
+<?php endif ?>
 <br><br>
 <footer>
     <div id="contrainer">

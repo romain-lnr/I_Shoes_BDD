@@ -7,11 +7,11 @@
 function AddArticle($id_article, $mark, $desc, $price, $stock_number, $imagepath, $filename) {
 
     // Load the file
-    $jsonfile = 'data/dataArticles.json';
+    $jsonfile = '../data/dataArticles.json';
     $contents = file_get_contents($jsonfile);
 
     // Decode the JSON data into a PHP array.
-    $json = json_decode($contents, t    rue);
+    $json = json_decode($contents, true);
     $article = array_search($id_article, array_column( $json, 'article' ) );
     if ($article !== false) {
         $json[$article] = array("article" => $id_article, "mark" => $mark, "description" => $desc, "price" => $price, "stock" => $stock_number, "imagepath" => $imagepath, "image" => $filename);
@@ -24,7 +24,7 @@ function AddArticle($id_article, $mark, $desc, $price, $stock_number, $imagepath
     $encode = json_encode($json, JSON_PRETTY_PRINT);
 
     // Save the file.
-    file_put_contents('data/dataArticles.json', $encode);
+    file_put_contents('../data/dataArticles.json', $encode);
 }
 
 /*
@@ -35,7 +35,7 @@ function AddArticle($id_article, $mark, $desc, $price, $stock_number, $imagepath
 function DisplayArticles($i) {
 
     // Load the file
-    $jsonfile = 'data/dataArticles.json';
+    $jsonfile = '../data/dataArticles.json';
     $data = file_get_contents($jsonfile);
 
     // DECODE JSON flow
@@ -53,7 +53,7 @@ function DisplayArticles($i) {
 
 function UpArticles() {
     // Load the file
-    $jsonfile = 'data/dataArticles.json';
+    $jsonfile = '../data/dataArticles.json';
     $data = file_get_contents($jsonfile);
 
     // DECODE JSON flow

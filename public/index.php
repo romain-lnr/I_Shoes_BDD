@@ -111,6 +111,8 @@ else {
 } */
 session_start();
 
+define("ERROR_LOG", dirname(__FILE__). "\\error.log");
+
 define('BASE_DIR', dirname( __FILE__ ).'/..');
 define('SOURCE_DIR', BASE_DIR.'/src');
 

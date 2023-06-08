@@ -58,15 +58,16 @@ function openDBConnexion (){
     $hostname = 'localhost';
     $port = 3306;
     $charset = 'utf8';
-    $dbName = 'snows';
+    $dbName = 'i_shoes';
     $userName = 'user';
-    $userPwd = 'password';
+    $userPwd = 'pa$$w0rd';
     $dsn = $sqlDriver . ':host=' . $hostname . ';dbname=' . $dbName . ';port=' . $port . ';charset=' . $charset;
 
     try{
         $tempDbConnexion = new PDO($dsn, $userName, $userPwd);
     }
     catch (PDOException $exception) {
+        var_dump($exception);
         error_log('Connection failed: ' . $exception->getMessage()  . "\r\n", 3, ERROR_LOG);
     }
     return $tempDbConnexion;

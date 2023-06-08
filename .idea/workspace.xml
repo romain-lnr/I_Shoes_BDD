@@ -5,20 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55021f64-2d06-4d8e-b522-ff5d1ee43f4e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/controllers/home/articles.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dbconnector.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/site/articles.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/site/users/home.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/users/login_check.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/js/slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/slider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ScriptsBDD/CreateDB+TABLES.sql" beforeDir="false" afterPath="$PROJECT_DIR$/data/ScriptsBDD/CreateDB+TABLES.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/articles/show.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/articles/show.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/home/articles.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/home/articles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dbconnector.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbconnector.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dispatcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/dispatcher.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/articles.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/articles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/layout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/layout_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/layout_form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/site/basket.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/basket.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/site/articles.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/site/articles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/site/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/site/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/site/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/login.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,23 +40,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/romai/Romain/temp/projwebbdd&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;web.server&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Sacha.JACCARD/Desktop/Nouveau dossier/ExaBlanc-master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "web.server",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sacha.JACCARD\Documents\GitHub\I_Shoes_BDD\temp" />
       <recent name="C:\Users\Sacha.JACCARD\Documents\GitHub\I_Shoes_BDD\public" />
       <recent name="C:\Users\romai\Romain\GitHub_DATA\I_Shoes_BDD\src\views" />
       <recent name="C:\Users\romai\Romain\GitHub_DATA\I_Shoes\Code\media\img\articles" />
@@ -167,6 +171,8 @@
       <workItem from="1684737995731" duration="675000" />
       <workItem from="1684738730551" duration="2136000" />
       <workItem from="1685946554387" duration="3974000" />
+      <workItem from="1686144346470" duration="5336000" />
+      <workItem from="1686222197750" duration="10526000" />
     </task>
     <servers />
   </component>

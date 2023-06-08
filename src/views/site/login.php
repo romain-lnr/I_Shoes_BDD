@@ -9,7 +9,7 @@
 $title="IShoes - login page";
 ?>
         <div id="container">
-            <form action="index.php?action=logged" method="POST">
+            <form action="<?=route('users/logged/')?>" method="POST">
                 <div class="form-group">
                     <h1>Connexion</h1>
                     <label><b>Nom d'utilisateur</b></label>

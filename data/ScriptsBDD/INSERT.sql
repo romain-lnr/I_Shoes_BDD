@@ -1,0 +1,2 @@
+USE i_shoes;
+INSERT INTO articles (NumArticle, NAME, DESCRIPTION, Price, Stock, Image) VALUES (1,"Air Force 1 '07", "Le charme continue d'op\u00e9rer avec la Nike Air Force 1 \u201907. Cette chaussure de basketball OG revisite ses \u00e9l\u00e9ments les plus c\u00e9l\u00e8bres : les renforts cousus r\u00e9sistants, les finitions sobres et juste ce qu'il faut d'\u00e9clat pour vous faire briller.", 120, 0, "/images/Air Force 1 '07.png");
