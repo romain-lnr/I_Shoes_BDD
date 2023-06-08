@@ -13,6 +13,22 @@ function executeQuerySelect($query):array{
     return $queryResult;
 }
 
+function executeQuerySelectSingle($query) {
+
+    $dbConnexion = openDBConnexion();
+    if ($dbConnexion!= null) {
+        $result = $dbConnexion->query($query);
+        if ($result) {
+            $row = $result->fetch(PDO::FETCH_NUM);
+            if ($row && count($row) > 0) {
+                return $row[0];
+            }
+        }
+        $dbConnection = null;
+    }
+    return null;
+}
+
 function executeQueryInsert($query):bool{
     $queryResult = null;
 

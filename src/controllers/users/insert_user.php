@@ -1,4 +1,5 @@
 <?php
+
 require SOURCE_DIR. "/models/site/users.php";
 
 if (isset($_POST)) {
