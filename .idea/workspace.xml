@@ -6,9 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="55021f64-2d06-4d8e-b522-ff5d1ee43f4e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/users/insert_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/users/insert_user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/users/login_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/users/login_check.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dbconnector.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbconnector.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/layout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/site/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/site/basket.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/basket.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/site/historic.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/historic.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/site/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/site/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/site/lost.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/lost.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/site/purchases.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/purchases.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/site/show_article.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/show_article.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
