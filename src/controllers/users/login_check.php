@@ -13,12 +13,9 @@ if (isset($_POST)) {
     if ($bag['data']) {
 
         $bag['layout'] = 'views/layout';
-        if ($id_user == "admin" && $password == "admin") $bag['view'] = 'views/site/admin';
-        else {
-            // Redirection vers la page d'accueil
-            header("Location: " . route("users/home/"));
+        if ($id_user == "admin" && $password == "admin") header("Location: " . route("users/admin/"));
+        else header("Location: " . route("users/home/"));
 
-        }
     } else {
         // erreur ici
         $bag['view'] = 'views/site/login';

@@ -237,6 +237,8 @@ footer {
 #price_article {
     float: right;
     font-size: 40px;
+    color: grey;
+    font-style: italic;
 }
 #submit_case {
     float: left;

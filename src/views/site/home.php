@@ -23,7 +23,7 @@ if (!isset($_SESSION['logged']) ||  !$_SESSION['logged']) {
         <a href="#user" style="height: 10px"><?php echo $_SESSION['id_user']?></a>
         <a href="index.php?action=basket"><img src="/images/basket.png" height="50"><br>Basket</a>
         <?php if (isset($_SESSION['admin_logged']) && $_SESSION['admin_logged']) { ?>
-            <a href="index.php?action=admin"><img src="/images/admin.png" height="50"><br>Admin</a>
+            <a href="<?=route('users/admin/')?>"><img src="/images/admin.png" height="50"><br>Admin</a>
         <?php } ?>
         <img src="/images/logo.png" height="90">
     </div>
@@ -41,12 +41,13 @@ if (!isset($_SESSION['logged']) ||  !$_SESSION['logged']) {
             <?php foreach ($bag['data'] as $row => $article) : ?>
             <?php $row++; ?>
             <div class="col-sm-3">
-                <div class="case" onclick="<?=route('articles/show')?>">
+                <div class="case" onclick="<?=route('articles/show/')?>">
                     <div id="image_article_case"><img src="<?=$article['Imagepath'];?>" id="image_article"></div>
                     <hr>
                     <div class="body_case">
                         <div id="nom_article"><?="<em>".$article['Name']."</em>";?></div>
                         <div id="mark_article"><?="<em>".$article['Mark']."</em>";?></div>
+                        <div id="price_article"><?="<em>".$article['Price']. " CHF". "</em>";?></div>
                     </div>
                 </div>
             </div>

@@ -32,6 +32,14 @@ function dispatch($bag)
     else if (preg_match('/^\/users\/logged\/$/', $bag['route'])) {
         $bag['handler'] = 'controllers/users/login_check';
     }
+    else if (preg_match('/^\/users\/admin\/$/', $bag['route'])) {
+        $bag['handler'] = 'controllers/users/admin';
+        $bag['layout'] = 'views/layout';
+    }
+    else if (preg_match('/^\/articles\/stock_review\/$/', $bag['route'])) {
+        $bag['handler'] = 'controllers/articles/review';
+        $bag['layout'] = 'views/layout';
+    }
     else if (preg_match('/^\/users\/register\/$/', $bag['route'])) {
         $bag['view'] = 'views/site/new_user';
         $bag['layout'] = 'views/layout_form';
