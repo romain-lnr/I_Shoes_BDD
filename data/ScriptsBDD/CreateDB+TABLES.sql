@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS users (
   Username VARCHAR(50) NOT NULL,
   Firstname VARCHAR(50) NOT NULL,
   Email VARCHAR(50) NOT NULL,
-  Password VARCHAR(50) NOT NULL,
+  Password VARCHAR(150) NOT NULL,
   PRIMARY KEY (id),
   UNIQUE KEY (Email)
   );

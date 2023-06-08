@@ -83,3 +83,14 @@ Connection failed: could not find driver
 Connection failed: could not find driver
 Connection failed: could not find driver
 Connection failed: could not find driver
+Duplicate Entry: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'b@b' for key 'users.Email'
+Duplicate Entry: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'b@b' for key 'users.Email'
+Duplicate Entry: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'b@b' for key 'users.Email'
+Duplicate Entry: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'b@b' for key 'users.Email'
+Duplicate Entry: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'o@o' for key 'users.Email'
+Duplicate Entry: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'o@o' for key 'users.Email'
+Duplicate Entry: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'o@o' for key 'users.Email'
+Duplicate Entry: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'o@o' for key 'users.Email'
+Duplicate Entry: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'o@o' for key 'users.Email'
+Duplicate Entry: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'o@o' for key 'users.Email'
+Duplicate Entry: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'b@b' for key 'users.Email'

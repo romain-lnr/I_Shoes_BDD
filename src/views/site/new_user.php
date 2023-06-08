@@ -9,7 +9,7 @@
 $title="IShoes - new_user page";
 ?>
     <div id="container">
-        <form action="<?=route("users/insert_user")?>" method="POST" enctype="multipart/form-data">
+        <form action="<?=route("users/insert_user/")?>" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <h1>Nouvel Utilisateur</h1>
                 <label for="id_user"><b>Pseudo</b></label>
