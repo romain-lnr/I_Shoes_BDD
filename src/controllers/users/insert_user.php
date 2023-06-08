@@ -2,7 +2,7 @@
 
 require SOURCE_DIR. "/models/site/users.php";
 
-if (isset($_POST)) {
+if ($bag['method'] == 'POST') {
     $id_user = $_POST['id_user'];
     $name = $_POST['name'];
     $firstname = $_POST['firstname'];

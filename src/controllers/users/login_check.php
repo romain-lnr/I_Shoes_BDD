@@ -3,7 +3,7 @@
 require_once SOURCE_DIR. "/models/site/users.php";
 require_once SOURCE_DIR. "/dispatcher.php";
 
-if (isset($_POST)) {
+if ($bag['method'] == 'POST') {
 
     $id_user = $_POST['id_user'];
     $password = $_POST['password'];

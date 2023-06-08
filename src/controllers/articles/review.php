@@ -9,10 +9,8 @@ if ($bag['method'] == 'POST') {
             echo ">";
             $articleId++;
             $newStock = $_POST['stock_number_' . $articleId];
-            $bag['data'] = UpdateArticlesStockInDatabase($articleId, $newStock);
+            UpdateArticlesStockInDatabase($articleId, $newStock);
         }
     }
-    // Faire quelque chose avec les articles mis à jour (par exemple, afficher un message de succès)
 }
 header("Location: " . route("users/home/"));
-return $bag;

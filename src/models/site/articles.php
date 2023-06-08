@@ -13,5 +13,5 @@ function GetArticlesForAdmin(){
 
 function UpdateArticlesStockInDatabase($articleId, $newStock) {
     $query = "UPDATE articles SET Stock = '$newStock' WHERE id = '$articleId'";
-    return executeQueryUpdate($query);
+    executeQueryUpdate($query);
 }
