@@ -13,4 +13,5 @@ if ($bag['method'] == 'POST') {
         }
     }
 }
-header("Location: " . route("users/home/"));
+$bag['view'] = header("Location: " . route("articles/home/"));
+return $bag;

@@ -5,17 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55021f64-2d06-4d8e-b522-ff5d1ee43f4e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/controllers/articles/create_in_basket.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/articles/create.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/articles/delete.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ScriptsBDD/CreateDB+TABLES.sql" beforeDir="false" afterPath="$PROJECT_DIR$/data/ScriptsBDD/CreateDB+TABLES.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ScriptsBDD/INSERT.sql" beforeDir="false" afterPath="$PROJECT_DIR$/data/ScriptsBDD/INSERT.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/public/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/articles/show.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/articles/show.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/articles/create_in_basket.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/articles/review.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/articles/review.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/home/articles.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/users/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/articles/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dbconnector.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbconnector.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dispatcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/dispatcher.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/site/admin.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/site/articles.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/site/articles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/site/TDC_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/TDC_admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/site/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/site/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/site/show_article.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/show_article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/site/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/site/users/home.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +56,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;web.server&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -60,6 +67,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\romai\Romain\GitHub_DATA\I_Shoes_BDD\src\controllers\articles" />
       <recent name="C:\Users\Sacha.JACCARD\Documents\GitHub\I_Shoes_BDD\temp" />
       <recent name="C:\Users\Sacha.JACCARD\Documents\GitHub\I_Shoes_BDD\public" />
       <recent name="C:\Users\romai\Romain\GitHub_DATA\I_Shoes_BDD\src\views" />
@@ -175,6 +183,9 @@
       <workItem from="1686297318671" duration="5729000" />
       <workItem from="1686303154074" duration="38000" />
       <workItem from="1686306344495" duration="1143000" />
+      <workItem from="1686319511543" duration="2211000" />
+      <workItem from="1686328285042" duration="1733000" />
+      <workItem from="1686337160886" duration="8137000" />
     </task>
     <servers />
   </component>

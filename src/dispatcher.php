@@ -17,8 +17,17 @@ function dispatch($bag)
         $bag['view'] = 'views/site/index';
         $bag['layout'] = 'views/layout';
     }
-    else if (preg_match('/^\/users\/home\/$/', $bag['route'])) {
-        $bag['handler'] = 'controllers/home/articles';
+    else if (preg_match('/^\/articles\/home\/$/', $bag['route'])) {
+        $bag['handler'] = 'controllers/articles/home';
+        $bag['layout'] = 'views/layout';
+    }
+    else if (preg_match('/^\/articles\/admin\/$/', $bag['route'])) {
+        $bag['handler'] = 'controllers/articles/admin';
+        $bag['layout'] = 'views/layout';
+    }
+    else if (preg_match('/^\/articles\/delete\/(\d+)$/', $bag['route'], $matches)) {
+        $bag['articleID'] = $matches[1];
+        $bag['handler'] = 'controllers/articles/delete';
         $bag['layout'] = 'views/layout';
     }
     else if (preg_match('/^\/articles\/show\/(\d+)$/', $bag['route'], $matches)) {
@@ -31,6 +40,14 @@ function dispatch($bag)
         $bag['handler'] = 'controllers/articles/create_in_basket';
         $bag['layout'] = 'views/layout';
     }
+    else if (preg_match('/^\/articles\/stock_review\/$/', $bag['route'])) {
+        $bag['handler'] = 'controllers/articles/review';
+        $bag['layout'] = 'views/layout';
+    }
+    else if (preg_match('/^\/articles\/create_article\/$/', $bag['route'])) {
+        $bag['handler'] = 'controllers/articles/create';
+        $bag['layout'] = 'views/layout';
+    }
     else if (preg_match('/^\/users\/login\/$/', $bag['route'])) {
         $bag['view'] = 'views/site/login';
         $bag['layout'] = 'views/layout_form';
@@ -38,13 +55,9 @@ function dispatch($bag)
     else if (preg_match('/^\/users\/logged\/$/', $bag['route'])) {
         $bag['handler'] = 'controllers/users/login_check';
     }
-    else if (preg_match('/^\/users\/admin\/$/', $bag['route'])) {
-        $bag['handler'] = 'controllers/users/admin';
-        $bag['layout'] = 'views/layout';
-    }
-    else if (preg_match('/^\/articles\/stock_review\/$/', $bag['route'])) {
-        $bag['handler'] = 'controllers/articles/review';
-        $bag['layout'] = 'views/layout';
+    else if (preg_match('/^\/users\/TDC\/$/', $bag['route'])) {
+        $bag['view'] = 'views/site/TDC_admin';
+        $bag['layout'] = 'views/layout_form';
     }
     else if (preg_match('/^\/users\/register\/$/', $bag['route'])) {
         $bag['view'] = 'views/site/new_user';
@@ -54,33 +67,10 @@ function dispatch($bag)
         $bag['handler'] = 'controllers/users/insert_user';
         $bag['layout'] = 'views/layout_form';
     }
-    else if (preg_match('/^\/users\/basket\/$/', $bag['route'])) {
+    else if (preg_match('/^\/articles\/basket\/$/', $bag['route'])) {
         $bag['view'] = 'views/site/basket';
         $bag['layout'] = 'views/layout';
     }
-    else if (preg_match('/^\/articles\/home\/$/', $bag['route'])) {
-        $bag['handler'] = 'controllers/site/articles/showArticles';
-    }
-    /* //-----------------------------------------------------------------------------
-    elseif (preg_match('/^\/(login|register)$/', $bag['route'], $matches)) {
-        if ($bag['method'] == 'POST') {
-            $bag['handler'] = 'controllers/site/'.$matches[1];
-        } elseif ($bag['method'] == 'GET') {
-            $bag['view'] = 'views/site/'.$matches[1];
-        }
-    }
-    //-----------------------------------------------------------------------------
-    elseif (preg_match('/^\/logout$/', $bag['route']) && $bag['method'] == 'POST') {
-        $bag['handler'] = 'controllers/site/logout';
-    }
-    //-----------------------------------------------------------------------------
-    else if (preg_match('/^\/articles\/(\d+)$/', $bag['route'])) {
-        $bag['handler'] = 'controllers/articles/show';
-        $bag['articleId'] = $matches[1];
-    }
-    else {
-        $bag['status_code'] = 404;
-    } */
 
     return $bag;
 }

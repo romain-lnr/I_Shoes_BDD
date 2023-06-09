@@ -145,3 +145,18 @@ Duplicate Entry: SQLSTATE[22001]: String data, right truncated: 1406 Data too lo
 Duplicate Entry: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'Password' at row 1
 Duplicate Entry: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'Password' at row 1
 Duplicate Entry: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'a@a' for key 'users.Email'
+Duplicate Entry: SQLSTATE[HY000]: General error: 1364 Field 'NumArticle' doesn't have a default value
+Duplicate Entry: SQLSTATE[HY000]: General error: 1364 Field 'NumArticle' doesn't have a default value
+Duplicate Entry: SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1
+Duplicate Entry: SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1
+Duplicate Entry: SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1
+Duplicate Entry: SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1
+Duplicate Entry: SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1
+Duplicate Entry: SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1
+Duplicate Entry: SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1
+Duplicate Entry: SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1
+Duplicate Entry: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'a.png, 'a.png')' at line 1
+Duplicate Entry: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.b.jpg, 'b.jpg')' at line 1
+Duplicate Entry: SQLSTATE[HY000]: General error: 1364 Field 'NumArticle' doesn't have a default value
+Duplicate Entry: SQLSTATE[HY000]: General error: 1364 Field 'NumArticle' doesn't have a default value
+Duplicate Entry: SQLSTATE[HY000]: General error: 1364 Field 'NumArticle' doesn't have a default value

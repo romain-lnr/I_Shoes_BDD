@@ -11,8 +11,8 @@ $title="IShoes - main page";
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<div class="topnav">
         <a href="<?=route('users/login/')?>"><img src="/images/login.png" height="50"><br>login</a>
-        <a href="<?=route('users/basket/')?>"><img src="/images/basket.png" height="50"><br>Basket</a>
-        <a href="<?=route('users/home/')?>" id="logo"><img src="/images/logo.png" height="90"></a>
+        <a href="<?=route('articles/basket/')?>"><img src="/images/basket.png" height="50"><br>Basket</a>
+        <a href="<?=route('articles/home/')?>" id="logo"><img src="/images/logo.png" height="90"></a>
     </div>
         <br><br>
         <div class="w3-container w3-center w3-animate-zoom">

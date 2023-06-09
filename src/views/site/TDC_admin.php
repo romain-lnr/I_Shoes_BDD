@@ -6,15 +6,13 @@
  */
 
 // tampon de flux stocké en mémoire
-$title="IShoes - TDC_admin page";
-ob_start();
-?>
+$title="IShoes - TDC_admin page"; ?>
 <div id="container">
-    <form action="index.php?action=create_article" method="POST" enctype="multipart/form-data">
+    <form action="<?=route('articles/create_article/')?>" method="POST" enctype="multipart/form-data">
         <div class="form-group">
             <h1>Table de création</h1>
             <label for="id_article"><b>Nom d'article</b></label>
-            <input type="text" class="form-control" placeholder="Entrer le nom de l'article" name="id_article" maxlength="50" required>
+            <input type="text" class="form-control" placeholder="Entrer le nom de l'article" name="name" maxlength="50" required>
             <label for="mark"><b>Nom de la marque</b></label>
             <input type="text" class="form-control" placeholder="Entrer le nom de la marque de l'article" name="mark" maxlength="20" required>
             <label for="desc"><b>Description</b></label>
@@ -22,7 +20,7 @@ ob_start();
             <label for="price"><b>Prix</b></label>
             <input type="number" class="form-control" placeholder="Entrer le prix à établir" name="price" maxlength="6" required>
             <label for="img_article"><b>Image de l'article</b></label>
-            <input type="file" class="form-control" placeholder="Entrer une image pour l'article" name="img_article" required>
+            <input type="file" class="form-control" placeholder="Entrer une image pour l'article" name="image" required>
             <input type="submit" class="form-control" name="insert" value='AJOUTER' >
 
             <?php
@@ -34,5 +32,3 @@ ob_start();
         </div>
     </form>
 </div>
-<?php $content = ob_get_clean();
-require "layout_form.php";

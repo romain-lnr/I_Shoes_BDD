@@ -10,9 +10,9 @@ $title="IShoes - admin page"; ?>
     <div class="topnav">
         <a href="#">logout</a>
         <a href="#user" style="height: 10px"><?php echo $_SESSION['id_user']?></a>
-        <a href="index.php?action=TDC"><img src="/images/TDC_admin.png" height="50"><br>TDC</a>
+        <a href="<?=route("users/TDC/")?>"><img src="/images/TDC_admin.png" height="50"><br>TDC</a>
         <a href="index.php?action=historic"><img src="/images/historique.png" height="50"><br>Historic</a>
-        <a href="<?=route('users/home/')?>"> <img src="/images/home.png" height="50"><br>Home</a>
+        <a href="<?=route('articles/home/')?>"> <img src="/images/home.png" height="50"><br>Home</a>
 
         <img src="/images/logo.png" height="90">
     </div>
@@ -37,7 +37,7 @@ $title="IShoes - admin page"; ?>
                                 <div class="stock"><h3>Stock : </h3><input name="<?=$stock_number[$row]?>" type="number" class="form-control" value="<?=$article['Stock'];?>" style="background-color: #8F8F8F;" id="<?=$stock_number[$row]?>" readonly></div>
                                 <input type="number" class="form-control" id="<?=$number[$row]?>">
                                 <div id="submit_case"><input type="button" class="btn btn-info" onclick="document.querySelector('#<?=$stock_number[$row]?>').value = document.querySelector('#<?=$number[$row]?>').value" id=<?=$button[$row]?> value="Submit"></div>
-                                <div id="remove_object" style="float: right;"><a href="index.php?receive_admin=<?=$row?>"><input type="button" class="form-control" value="Supprimer"></a></div>
+                                <div id="remove_object" style="float: right;"><a href="<?=route("articles/delete/"). $row?>"><input type="button" class="form-control" value="Supprimer"></a></div>
                             </div>
                         </div>
                     </div>
