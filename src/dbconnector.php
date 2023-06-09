@@ -39,7 +39,8 @@ function executeQueryInsert($query):bool{
             $statement = $dbConnexion->prepare($query);
             $queryResult = $statement->execute();
         }
-        catch (PDOException $exception){
+        catch (PDOException $exception) {
+            var_dump($exception);
             error_log('Duplicate Entry: ' . $exception->getMessage() . "\r\n", 3, ERROR_LOG);
             $queryResult = false;
         }

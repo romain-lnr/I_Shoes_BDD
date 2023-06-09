@@ -21,8 +21,14 @@ function dispatch($bag)
         $bag['handler'] = 'controllers/home/articles';
         $bag['layout'] = 'views/layout';
     }
-    else if (preg_match('/^\/articles\/show\/$/', $bag['route'])) {
+    else if (preg_match('/^\/articles\/show\/(\d+)$/', $bag['route'], $matches)) {
+        $bag['articleID'] = $matches[1];
         $bag['handler'] = 'controllers/articles/show';
+        $bag['layout'] = 'views/layout';
+    }
+    else if (preg_match('/^\/articles\/create_basket\/(\d+)$/', $bag['route'], $matches)) {
+        $bag['articleID'] = $matches[1];
+        $bag['handler'] = 'controllers/articles/create_in_basket';
         $bag['layout'] = 'views/layout';
     }
     else if (preg_match('/^\/users\/login\/$/', $bag['route'])) {

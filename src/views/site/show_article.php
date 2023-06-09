@@ -6,56 +6,57 @@
  */
 
 // tampon de flux stocké en mémoire
-$title = "IShoes - show_article page";
-ob_start();
-?>
-<?php if (!isset($_SESSION['logged']) || !$_SESSION['logged']) {
-    ob_start(); ?>
+$title = "IShoes - show_article page"; ?>
+
+<?php if (!isset($_SESSION['logged']) || !$_SESSION['logged']) { ?>
     <div class="topnav">
-        <a href="index.php?action=login"><img src="../media/img/login.png" height="50"><br>login</a>
-        <a href="index.php?action=login"><img src="../media/img/basket.png" height="50"><br>Basket</a>
-        <img src="../media/img/logo.png" height="90">
+        <a href="<?=route('users/login/')?>"><img src="/images/login.png" height="50"><br>login</a>
+        <a href="<?=route('users/login/')?>"><img src="/images/basket.png" height="50"><br>Basket</a>
+        <img src="/images/logo.png" height="90">
     </div>
     <br>
-    <?php $topnav = ob_get_clean();
-} else {
-    ob_start(); ?>
+    <?php
+} else { ?>
     <div class="topnav">
         <a href="index.php?action=logout">logout</a>
         <a href="#user" style="height: 10px"><?php echo $_SESSION['id_user'] ?></a>
-        <a href="index.php?action=basket"><img src="../media/img/basket.png" height="50"><br>Basket</a>
+        <a href="index.php?action=basket"><img src="/images/basket.png" height="50"><br>Basket</a>
         <?php if (isset($_SESSION['admin_logged']) && $_SESSION['admin_logged']) { ?>
-            <a href="index.php?action=admin"><img src="../media/img/admin.png" height="50"><br>Admin</a>
+            <a href="<?=route('users/admin/')?>"><img src="/images/admin.png" height="50"><br>Admin</a>
         <?php } ?>
-        <img src="../media/img/logo.png" height="90">
+        <img src="/images/logo.png" height="90">
     </div>
     <br>
-    <?php $topnav = ob_get_clean();
-}
-ob_start(); ?>
+    <?php
+} ?>
+<?php if(isset($bag['data'])):?>
 <div id="content">
-    <form action="index.php?receive_show_article=<?= strval($id) ?>" method="POST">
+    <form action="<?=route('articles/create_basket/'). $bag['articleID']?>" method="POST">
         <div class="row">
+            <?php foreach ($bag['data'] as $row => $article) : ?>
+            <?php $row++; ?>
             <div class="col-sm-3">
                 <div class="case">
-                    <div id="image_article_case"><img src="<?= $article_specs[0][0] ?>" id="image_article"></div>
+                    <div id="image_article_case"><img src="<?= $article['Imagepath'] ?>" id="image_article"></div>
                     <hr>
                     <div class="body_case">
-                        <div id="nom_article"><?= "<em>" . $article_specs[0][1] . "</em>" ?></div>
-                        <div id="mark_article"><?= "<em>" . $article_specs[0][2] . "</em>" ?></div>
-                        <div id="price_article"><?= "<em>" . $article_specs[0][4] . " CHF" . "</em>" ?></div>
+                        <div id="nom_article"><?= "<em>" . $article['Name']  . "</em>" ?></div>
+                        <div id="mark_article"><?= "<em>" . $article['Mark']  . "</em>" ?></div>
+                        <div id="price_article"><?= "<em>" . $article['Price']  . " CHF" . "</em>" ?></div>
                     </div>
                 </div>
             </div>
             <div class="col-sm-8">
                 <div class="case case_desc">
-                    <p><?= $article_specs[0][3] ?></p>
+                    <p><?= $article['Description']  ?></p>
                     <div id="container">
                         <input type="submit" class="form-control" name="insert" id="insert" value="Ajouter au panier">
-                        <input type="number" name="value" class="form-control" placeholder="value">
+                        <input type="number" name="value" class="form-control" placeholder="value" required>
                     </div>
                 </div>
             </div>
+            <?php endforeach; ?>
         </div>
     </form>
 </div>
+<?php endif; ?>

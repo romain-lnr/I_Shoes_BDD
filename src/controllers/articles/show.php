@@ -1,7 +1,7 @@
 <?php
 
-require_once SOURCE_DIR.'/models/articles.php';
+require_once SOURCE_DIR.'/models/site/articles.php';
 
-$bag['data'] = ['article' => ShowArticle($bag['articleId'])];
-$bag['view'] = 'views/site/show_articles.php';
+$bag['data'] = ShowArticle($bag['articleID']);
+$bag['view'] = 'views/site/show_article';
 return $bag;

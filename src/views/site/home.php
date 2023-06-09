@@ -41,7 +41,7 @@ if (!isset($_SESSION['logged']) ||  !$_SESSION['logged']) {
             <?php foreach ($bag['data'] as $row => $article) : ?>
             <?php $row++; ?>
             <div class="col-sm-3">
-                <div class="case" onclick="<?=route('articles/show/')?>">
+                <div class="case" onclick="RedirectWithID(<?=$article['id']?>)">
                     <div id="image_article_case"><img src="<?=$article['Imagepath'];?>" id="image_article"></div>
                     <hr>
                     <div class="body_case">
@@ -51,6 +51,11 @@ if (!isset($_SESSION['logged']) ||  !$_SESSION['logged']) {
                     </div>
                 </div>
             </div>
+                <script>
+                    function RedirectWithID($id) {
+                        window.location.href = "<?=route("articles/show/")?>"+$id;
+                    }
+                </script>
             <?php endforeach ?>
         </div>
     </div>
