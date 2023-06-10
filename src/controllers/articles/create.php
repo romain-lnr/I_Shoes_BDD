@@ -31,5 +31,5 @@ if ($bag['method'] == 'POST') {
 
     $bag['data'] = Create($name, $mark, $description, $price, $filename);
 }
-header("Location: " . route("articles/admin/"));
+$bag['view'] = header("Location: " . route("articles/admin/"));
 return $bag;

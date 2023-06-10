@@ -37,7 +37,7 @@ function dispatch($bag)
     }
     else if (preg_match('/^\/articles\/create_basket\/(\d+)$/', $bag['route'], $matches)) {
         $bag['articleID'] = $matches[1];
-        $bag['handler'] = 'controllers/articles/create_in_basket';
+        $bag['handler'] = 'controllers/basket/create_in_basket';
         $bag['layout'] = 'views/layout';
     }
     else if (preg_match('/^\/articles\/stock_review\/$/', $bag['route'])) {

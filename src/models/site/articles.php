@@ -7,8 +7,10 @@ function GetArticlesForHome(){
 }
 
 function GetArticlesForAdmin(){
-    $articlesQuery = 'SELECT Name, Mark, Price, Stock, Imagepath FROM articles;';
+    $articlesQuery = 'SELECT id, Name, Mark, Price, Stock, Imagepath FROM articles;';
     return executeQuerySelect($articlesQuery);
+
+
 }
 
 function ShowArticle($id) {
@@ -16,11 +18,39 @@ function ShowArticle($id) {
     return executeQuerySelect($articlesQuery);
 }
 
-function PutInBasket($id, $value) {
-    $id_user = $_SESSION['id_user'];
-    $articlesQuery = "INSERT INTO basket (Username, Article_ID, Number) VALUES ('$id_user', '$id', '$value');";
-    executeQueryInsert($articlesQuery);
+function PutInBasket($username, $articleID, $number) {
+    // Vérifier si une ligne correspondante existe déjà dans la table basket
+    $selectQuery = "SELECT * FROM basket WHERE Username = '$username'";
+    $result = executeQuerySelect($selectQuery);
+
+    if (!empty($result)) {
+        // Mettre à jour la ligne existante
+        $existingArticleIDs = explode(',', $result[0]['Article_ID']);
+        $existingNumbers = explode(',', $result[0]['Number']);
+
+        $index = array_search($articleID, $existingArticleIDs);
+        if ($index !== false) {
+            // L'article existe déjà, mettre à jour le nombre correspondant
+            $existingNumbers[$index] += $number;
+        } else {
+            // Ajouter un nouvel article et son nombre
+            $existingArticleIDs[] = $articleID;
+            $existingNumbers[] = $number;
+        }
+
+        $newArticleID = implode(',', $existingArticleIDs);
+        $newNumber = implode(',', $existingNumbers);
+
+        $updateQuery = "UPDATE basket SET Number = '$newNumber', Article_ID = '$newArticleID' WHERE Username = '$username'";
+        executeQueryUpdate($updateQuery);
+    } else {
+        // Insérer une nouvelle ligne
+        $insertQuery = "INSERT INTO basket (Username, Article_ID, Number) VALUES ('$username', '$articleID', '$number')";
+        executeQueryUpdate($insertQuery);
+    }
 }
+
+
 
 function UpdateArticlesStockInDatabase($id, $newStock) {
     $query = "UPDATE articles SET Stock = '$newStock' WHERE id = '$id'";
@@ -34,11 +64,13 @@ function Create($name, $mark, $desc, $price, $image) {
 }
 
 function Delete($id) {
-    $query = "DELETE FROM articles WHERE id = '$id'";
-    executeQueryUpdate($query);
 
     $imageQuery = "SELECT Image FROM articles WHERE id = '$id'";
     $imageResult = executeQuerySelectSingle($imageQuery);
-    $imagePath = '../../../public/images/articles/' . $imageResult['Image'];
-        unlink('../../../public/images/articles/' . $imageResult['Image']);
+    $imagepath = 'images/articles/' . $imageResult;
+    unlink($imagepath);
+
+   $query = "DELETE FROM articles WHERE id = '$id'";
+   executeQueryUpdate($query);
+
 }
