@@ -37,7 +37,7 @@ $title="IShoes - admin page"; ?>
                                 <div class="stock"><h3>Stock : </h3><input name="<?=$stock_number[$row]?>" type="number" class="form-control" value="<?=$article['Stock'];?>" style="background-color: #8F8F8F;" id="<?=$stock_number[$row]?>" readonly></div>
                                 <input type="number" class="form-control" id="<?=$number[$row]?>">
                                 <div id="submit_case"><input type="button" class="btn btn-info" onclick="document.querySelector('#<?=$stock_number[$row]?>').value = document.querySelector('#<?=$number[$row]?>').value" id=<?=$button[$row]?> value="Submit"></div>
-                                <div id="remove_object" style="float: right;"><a href="<?=route("articles/delete/"). $article['id']?>"><input type="button" class="form-control" value="Supprimer"></a></div>
+                                <div id="remove_object" style="float: right;"><a href="<?=route("articles/delete/article="). $article['id']?>"><input type="button" class="form-control" value="Supprimer"></a></div>
                             </div>
                         </div>
                     </div>

@@ -31,7 +31,7 @@ $title = "IShoes - show_article page"; ?>
 } ?>
 <?php if(isset($bag['data'])):?>
 <div id="content">
-    <form action="<?=route('articles/create_basket/'). $bag['articleID']?>" method="POST">
+    <form action="<?=route('articles/create_basket/article='). $bag['articleID']?>" method="POST">
         <div class="row">
             <?php foreach ($bag['data'] as $row => $article) : ?>
             <?php $row++; ?>

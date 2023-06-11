@@ -53,7 +53,7 @@ if (!isset($_SESSION['logged']) ||  !$_SESSION['logged']) {
             </div>
                 <script>
                     function RedirectWithID($id) {
-                        window.location.href = "<?=route("articles/show/")?>"+$id;
+                        window.location.href = "<?=route("articles/show/article=")?>"+$id;
                     }
                 </script>
             <?php endforeach ?>

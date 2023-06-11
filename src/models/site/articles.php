@@ -1,12 +1,12 @@
 <?php
 require SOURCE_DIR. "/dbconnector.php";
 
-function GetArticlesForHome(){
+function GetArticlesForHome() {
     $articlesQuery = 'SELECT id, Name, Mark, Price, Imagepath FROM articles;';
     return executeQuerySelect($articlesQuery);
 }
 
-function GetArticlesForAdmin(){
+function GetArticlesForAdmin() {
     $articlesQuery = 'SELECT id, Name, Mark, Price, Stock, Imagepath FROM articles;';
     return executeQuerySelect($articlesQuery);
 

@@ -30,19 +30,26 @@ function dispatch($bag)
         $bag['handler'] = 'controllers/articles/admin';
         $bag['layout'] = 'views/layout';
     }
-    else if (preg_match('/^\/articles\/delete\/(\d+)$/', $bag['route'], $matches)) {
+    else if (preg_match('/^\/articles\/delete\/article=(\d+)$/', $bag['route'], $matches)) {
         $bag['articleID'] = $matches[1];
         $bag['handler'] = 'controllers/articles/delete';
         $bag['layout'] = 'views/layout';
     }
-    else if (preg_match('/^\/articles\/show\/(\d+)$/', $bag['route'], $matches)) {
+    else if (preg_match('/^\/articles\/show\/article=(\d+)$/', $bag['route'], $matches)) {
         $bag['articleID'] = $matches[1];
         $bag['handler'] = 'controllers/articles/show';
         $bag['layout'] = 'views/layout';
     }
-    else if (preg_match('/^\/articles\/create_basket\/(\d+)$/', $bag['route'], $matches)) {
+    else if (preg_match('/^\/articles\/create_basket\/article=(\d+)$/', $bag['route'], $matches)) {
         $bag['articleID'] = $matches[1];
         $bag['handler'] = 'controllers/basket/create_in_basket';
+        $bag['layout'] = 'views/layout';
+    }
+    else if (preg_match('/^\/basket\/remove_object\/basketID=(\d+)\/value=(\d+)\/articleID=(\d+)$/', $bag['route'], $matches)) {
+        $bag['basketID'] = $matches[1];
+        $bag['value'] = $matches[2];
+        $bag['articleID'] = $matches[3];
+        $bag['handler'] = 'controllers/basket/remove';
         $bag['layout'] = 'views/layout';
     }
     else if (preg_match('/^\/articles\/stock_review\/$/', $bag['route'])) {
