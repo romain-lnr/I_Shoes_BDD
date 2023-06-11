@@ -1,7 +1,6 @@
 <?php
 
 require_once SOURCE_DIR. "/models/site/users.php";
-require_once SOURCE_DIR. "/dispatcher.php";
 
 if ($bag['method'] == 'POST') {
 
@@ -13,8 +12,8 @@ if ($bag['method'] == 'POST') {
     if ($bag['data']) {
 
         $bag['layout'] = 'views/layout';
-        if ($id_user == "admin" && $password == "admin") header("Location: " . route("users/admin/"));
-        else header("Location: " . route("users/home/"));
+        if ($id_user == "admin" && $password == "admin") $bag['view'] = header("Location: " . route("articles/admin/"));
+        else $bag['view'] = header("Location: " . route("articles/home/"));
 
     } else {
         // erreur ici

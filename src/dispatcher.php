@@ -14,7 +14,12 @@ function dispatch($bag)
     $matches = [];
 
     if (preg_match('/^\/$/', $bag['route'])) {
-        $bag['view'] = 'views/site/index';
+
+        if (!isset($_SESSION['logged']) || !$_SESSION['logged']) {
+            $bag['view'] = 'views/site/index';
+        } else {
+            $bag['handler'] = 'controllers/articles/home';
+        }
         $bag['layout'] = 'views/layout';
     }
     else if (preg_match('/^\/articles\/home\/$/', $bag['route'])) {
@@ -48,6 +53,10 @@ function dispatch($bag)
         $bag['handler'] = 'controllers/articles/create';
         $bag['layout'] = 'views/layout';
     }
+    else if (preg_match('/^\/articles\/basket\/$/', $bag['route'])) {
+        $bag['handler'] = 'controllers/basket/display';
+        $bag['layout'] = 'views/layout';
+    }
     else if (preg_match('/^\/users\/login\/$/', $bag['route'])) {
         $bag['view'] = 'views/site/login';
         $bag['layout'] = 'views/layout_form';
@@ -66,10 +75,6 @@ function dispatch($bag)
     else if (preg_match('/^\/users\/insert_user\/$/', $bag['route'])) {
         $bag['handler'] = 'controllers/users/insert_user';
         $bag['layout'] = 'views/layout_form';
-    }
-    else if (preg_match('/^\/articles\/basket\/$/', $bag['route'])) {
-        $bag['view'] = 'views/site/basket';
-        $bag['layout'] = 'views/layout';
     }
 
     return $bag;
