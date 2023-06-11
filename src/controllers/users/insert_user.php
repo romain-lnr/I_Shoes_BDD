@@ -1,6 +1,6 @@
 <?php
 
-require SOURCE_DIR. "/models/site/users.php";
+require SOURCE_DIR. "/models/site/usersService.php";
 
 if ($bag['method'] == 'POST') {
     $id_user = $_POST['id_user'];

@@ -1,5 +1,5 @@
 <?php
-require SOURCE_DIR . "/models/site/articles.php";
+require SOURCE_DIR . "/models/site/articlesService.php";
 
 if ($bag['method'] == 'POST') {
 

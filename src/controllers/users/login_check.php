@@ -1,6 +1,6 @@
 <?php
 
-require_once SOURCE_DIR. "/models/site/users.php";
+require_once SOURCE_DIR. "/models/site/usersService.php";
 
 if ($bag['method'] == 'POST') {
 
