@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55021f64-2d06-4d8e-b522-ff5d1ee43f4e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/controllers/basket/remove.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/public/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/basket/create_in_basket.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/basket/create_in_basket.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/basket/remove.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/basket/remove.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dispatcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/dispatcher.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/site/articles.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/site/articles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/site/basket.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/site/basket.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/site/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/site/basket.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/basket.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/site/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/home.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/site/show_article.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/show_article.php" afterDir="false" />
     </list>
@@ -182,6 +177,9 @@
       <workItem from="1686427954123" duration="7783000" />
       <workItem from="1686471656351" duration="5493000" />
       <workItem from="1686491024224" duration="9061000" />
+      <workItem from="1686508755954" duration="1007000" />
+      <workItem from="1686510821418" duration="4010000" />
+      <workItem from="1686516462891" duration="687000" />
     </task>
     <servers />
   </component>
