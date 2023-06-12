@@ -10,7 +10,7 @@ $title = "IShoes - basket page";
 ?>
 
 <div class="topnav">
-    <a href="index.php?action=logout">logout</a>
+    <a href="<?=route('users/logout/')?>">logout</a>
     <a href="#user" style="height: 10px"><?php echo $_SESSION['id_user'] ?></a>
     <a href="<?= route("articles/home/") ?>"><img src="/images/home.png" height="50"><br>Home</a>
     <?php if (isset($_SESSION['admin_logged']) && $_SESSION['admin_logged']) { ?>

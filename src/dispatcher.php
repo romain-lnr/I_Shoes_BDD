@@ -83,6 +83,15 @@ function dispatch($bag)
         $bag['handler'] = 'controllers/users/insert_user';
         $bag['layout'] = 'views/layout_form';
     }
+    else if (preg_match('/^\/users\/logout\/$/', $bag['route'])) {
+        $bag['handler'] = 'controllers/users/logout';
+        $bag['layout'] = 'views/layout';
+    }
+
+    else if (preg_match('/^\/historic\/$/', $bag['route'])) {
+        $bag['handler'] = 'controllers/users/logout';
+        $bag['layout'] = 'views/layout';
+    }
 
     return $bag;
 }

@@ -116,7 +116,6 @@ define("ERROR_LOG", dirname(__FILE__). "\\error.log");
 define('BASE_DIR', dirname( __FILE__ ).'/..');
 define('SOURCE_DIR', BASE_DIR.'/src');
 
-require "../src/auth.php";
 //=============================================================================
 // Create the BAG which will contain the request/response meta data
 
