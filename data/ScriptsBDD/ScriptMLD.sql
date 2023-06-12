@@ -8,32 +8,35 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema i_shoes
+-- Schema mydb
 -- -----------------------------------------------------
-DROP DATABASE IF EXISTS i_Shoes;
-CREATE SCHEMA IF NOT EXISTS `i_shoes` DEFAULT CHARACTER SET utf8 ;
-USE `i_shoes` ;
 
 -- -----------------------------------------------------
--- Table `i_shoes`.`Users`
+-- Schema mydb
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `i_shoes`.`Users` (
-  `idUsers` INT NOT NULL AUTO_INCREMENT,
+CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
+USE `mydb` ;
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Users`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Users` (
+  `idUsers` INT NOT NULL,
   `Name` VARCHAR(45) NOT NULL,
   `Username` VARCHAR(45) NOT NULL,
   `Firstname` VARCHAR(45) NOT NULL,
   `Email` VARCHAR(45) NOT NULL,
-  `Password` VARCHAR(150) NOT NULL,
+  `Password` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idUsers`),
   UNIQUE INDEX `UNIQUE_Email` (`Email` ASC) VISIBLE)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `i_shoes`.`Basket`
+-- Table `mydb`.`Basket`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `i_shoes`.`Basket` (
-  `idBasket` INT NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `mydb`.`Basket` (
+  `idBasket` INT NOT NULL,
   `Users_idUsers` INT NOT NULL,
   PRIMARY KEY (`idBasket`),
   INDEX `fk_Basket_Users1_idx` (`Users_idUsers` ASC) VISIBLE,
@@ -46,28 +49,26 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `i_shoes`.`Articles`
+-- Table `mydb`.`Articles`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `i_shoes`.`Articles` (
-  `idArticles` INT NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `mydb`.`Articles` (
+  `idArticles` INT NOT NULL,
   `Brand` VARCHAR(45) NOT NULL,
   `Name` VARCHAR(45) NOT NULL,
-  `Description` VARCHAR(1000) NOT NULL,
+  `Description` VARCHAR(45) NOT NULL,
   `Price` INT(11) NOT NULL,
   `Stock` INT(11) NOT NULL,
-  `Imagepath` VARCHAR(255) NOT NULL,
-  `Image` VARCHAR(255) NOT NULL,
- 
+  `Image` BLOB(255) NOT NULL,
   PRIMARY KEY (`idArticles`),
   UNIQUE INDEX `UNIQUE_Name` (`Name` ASC) VISIBLE)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `i_shoes`.`Purchase`
+-- Table `mydb`.`Purchase`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `i_shoes`.`Purchase` (
-  `idPurchase` INT NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `mydb`.`Purchase` (
+  `idPurchase` INT NOT NULL,
   `Date` DATE NOT NULL,
   `Total` INT(11) NOT NULL,
   `Users_idUsers` INT NOT NULL,
@@ -82,9 +83,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `i_shoes`.`Basket_has_Articles`
+-- Table `mydb`.`Basket_has_Articles`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `i_shoes`.`Basket_has_Articles` (
+CREATE TABLE IF NOT EXISTS `mydb`.`Basket_has_Articles` (
   `Basket_idBasket` INT NOT NULL,
   `Articles_idArticles` INT NOT NULL,
   `Number` INT(11) NOT NULL,
@@ -105,9 +106,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `i_shoes`.`Purchase_has_Articles`
+-- Table `mydb`.`Purchase_has_Articles`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `i_shoes`.`Purchase_has_Articles` (
+CREATE TABLE IF NOT EXISTS `mydb`.`Purchase_has_Articles` (
   `Purchase_idPurchase` INT NOT NULL,
   `Articles_idArticles` INT NOT NULL,
   PRIMARY KEY (`Purchase_idPurchase`, `Articles_idArticles`),
