@@ -2,6 +2,11 @@
 
 require_once SOURCE_DIR . "/dbconnector.php";
 
+/*
+ * PutInBasket function
+ * Do: Create iterations in the basket table
+ *
+*/
 function PutInBasket($username, $articleID, $number)
 {
     $basketQuery = "SELECT * FROM basket WHERE Username = '$username'";
@@ -47,6 +52,11 @@ function PutInBasket($username, $articleID, $number)
     }
 }
 
+/*
+ * Display function
+ * Do: load articles in basket for basket page
+ *
+*/
 function Display(): array
 {
     $id_user = $_SESSION['id_user'];
@@ -88,12 +98,15 @@ function Display(): array
     return $articleDetails;
 }
 
+/*
+ * Remove function
+ * Do: Remove articles in basket table
+ *
+*/
 function Remove($basketID, $value, $articleID):bool {
-    // Mettre à jour le stock de l'article
     $articlesQuery = "UPDATE articles SET Stock = Stock + $value WHERE id = $articleID";
     executeQueryUpdate($articlesQuery);
 
-    // Récupérer les articles restants dans le panier
     $basketQuery = "SELECT Article_ID, Number FROM basket WHERE id = $basketID";
     $basketResult = executeQuerySelect($basketQuery);
 
@@ -101,18 +114,14 @@ function Remove($basketID, $value, $articleID):bool {
         $articleIDs = explode(',', $basketResult[0]['Article_ID']);
         $numbers = explode(',', $basketResult[0]['Number']);
 
-        // Rechercher l'index de l'article à supprimer
         $index = array_search($articleID, $articleIDs);
         if ($index !== false) {
-            // Supprimer l'article et son nombre associé
             unset($articleIDs[$index]);
             unset($numbers[$index]);
 
-            // Reconstruire les listes d'articles et de nombres
             $newArticleID = implode(',', $articleIDs);
             $newNumber = implode(',', $numbers);
 
-            // Mettre à jour le panier avec les articles restants
             $updateQuery = "UPDATE basket SET Article_ID = '$newArticleID', Number = '$newNumber' WHERE id = $basketID";
             executeQueryUpdate($updateQuery);
             return true;

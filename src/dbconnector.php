@@ -40,6 +40,7 @@ function executeQueryInsert($query):bool{
             $queryResult = $statement->execute();
         }
         catch (PDOException $exception) {
+            var_dump($exception);
             error_log('Duplicate Entry: ' . $exception->getMessage() . "\r\n", 3, ERROR_LOG);
             $queryResult = false;
         }

@@ -5,9 +5,7 @@
  * Desc: new_user page for create an account.
  */
 
-// tampon de flux stocké en mémoire
-$title="IShoes - new_user page";
-?>
+$title="IShoes - new_user page"; ?>
     <div id="container">
         <form action="<?=route("users/insert_user/")?>" method="POST" enctype="multipart/form-data">
             <div class="form-group">

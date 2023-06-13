@@ -87,7 +87,17 @@ function dispatch($bag)
         $bag['handler'] = 'controllers/users/logout';
         $bag['layout'] = 'views/layout';
     }
-
+    else if (preg_match('/^\/purchases\/create_object\/$/', $bag['route'])) {
+        $bag['handler'] = 'controllers/purchases/create';
+    }
+    else if (preg_match('/^\/articles\/purchases\/$/', $bag['route'])) {
+        $bag['handler'] = 'controllers/purchases/display';
+        $bag['layout'] = 'views/layout';
+    }
+    else if (preg_match('/^\/purchases\/flag_refresh\/$/', $bag['route'])) {
+        $bag['handler'] = 'controllers/purchases/flag_refresh';
+        $bag['layout'] = 'views/layout';
+    }
     else if (preg_match('/^\/historic\/$/', $bag['route'])) {
         $bag['handler'] = 'controllers/users/logout';
         $bag['layout'] = 'views/layout';

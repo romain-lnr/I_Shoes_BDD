@@ -1,6 +1,11 @@
 <?php
 require SOURCE_DIR. "/dbconnector.php";
 
+/*
+ * isEmailUsed function
+ * Do: Verify if the email is used
+ *
+*/
 function IsEmailUsed($email) {
     $email = addslashes($email);
     $query = "SELECT COUNT(*) as count FROM users WHERE Email = '$email'";
@@ -30,7 +35,12 @@ function Insert($id_user, $name, $firstname, $email, $password): bool {
     return executeQueryInsert($query);
 }
 
-function LoginCheck($id_user, $password){
+/*
+ * LoginCheck function
+ * Do: Verify if the login is in the database
+ *
+*/
+function LoginCheck($id_user, $password):bool {
     $query = "SELECT COUNT(*) as count FROM users WHERE Username = '$id_user';";
     $result = executeQuerySelect($query);
     $count = $result[0]['count'];

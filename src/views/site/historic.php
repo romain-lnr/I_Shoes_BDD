@@ -5,8 +5,7 @@
  * Desc: historic page for show the historic of users -- ONLY for admin
  */
 
-$title="IShoes - historic page";
-    ob_start(); ?>
+$title="IShoes - historic page"; ?>
     <div class="topnav">
         <a href="index.php?action=logout">logout</a>
         <a href="#user" style="height: 10px"><?php echo $_SESSION['id_user']?></a>

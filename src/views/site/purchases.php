@@ -5,43 +5,40 @@
  * Desc: The purchase page for purchases
  */
 
-// tampon de flux stocké en mémoire
-$title="IShoes - purchase page";
-ob_start(); ?>
+$title = "IShoes - purchase page"; ?>
 <div class="topnav">
-    <img src="../media/img/logo.png" height="90">
+    <img src="/images/logo.png" height="90">
 </div>
 <br>
-<?php $topnav = ob_get_clean();
-ob_start(); ?>
 <div id="thanks">
     <h2>Merci pour votre achat !</h2>
     <h3>Votre commande va bientôt être expédiée</h3><br>
 </div>
+<?php if (isset($bag['data'])): ?>
 <h3 style="padding-left: 55px;">Récapitulatif de la commande : </h3>
-    <div id="content">
-        <div class="row">
-            <?php for ($j = 0; $j < $i; $j++) {
-                if (!$article_specs[$j][5]) {?>
-                    <div class="col-sm-3">
-                        <div class="case basket">
-                            <div id="image_article_case"><img src="<?=$article_specs[$j][0]?>" id="image_article"></div>
-                            <hr>
-                            <div class="body_case">
-                                <div id="nom_article"><?="<em>".$article_specs[$j][1]."</em>"?></div>
-                                <div id="mark_article"><?="<em>".$article_specs[$j][2]."</em>"?></div>
-                                <div id="price_article"><?="<em>".$article_specs[$j][3]." CHF"."</em>"?></div>
-                                <br>
-                                <div id="value_article"><?="<em>"."X".$article_specs[$j][4]."</em>"?></div>
-                            </div>
+<div id="content">
+    <div class="row">
+        <?php foreach ($bag['data'] as $row => $article) : ?>
+            <?php if (!$article['Flag']) { ?>
+                <div class="col-sm-3">
+                    <div class="case basket">
+                        <div id="image_article_case"><img src="<?= $article['Imagepath'] ?>" id="image_article"></div>
+                        <hr>
+                        <div class="body_case">
+                            <div id="nom_article"><?= "<em>" . $article['Name'] . "</em>" ?></div>
+                            <div id="mark_article"><?= "<em>" . $article['Mark'] . "</em>" ?></div>
+                            <div id="price_article"><?= "<em>" . $article['Price'] . " CHF" . "</em>" ?></div>
+                            <br>
+                            <div id="value_article"><?= "<em>" . "X" . $article['Quantity'] . "</em>" ?></div>
                         </div>
                     </div>
-                <?php } ?>
+                </div>
             <?php } ?>
-        </div>
+        <?php endforeach; ?>
+        <?php endif; ?>
     </div>
-<div id="container">
-    <a href="index.php?action=flag_refresh"><input type="submit" name="insert" id="insert" value="Revenir sur la page d'accueil"></a>
 </div>
-<?php $content = ob_get_clean();
-ob_start(); ?>
+<div id="container">
+    <a href="<?= route('purchases/flag_refresh/') ?>"><input type="submit" name="insert" id="insert"
+                                                            value="Revenir sur la page d'accueil"></a>
+</div>

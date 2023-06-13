@@ -7,8 +7,7 @@
 
 $title="IShoes - home page";
 
-if (!isset($_SESSION['logged']) ||  !$_SESSION['logged']) {
-    ?>
+if (!isset($_SESSION['logged']) ||  !$_SESSION['logged']) { ?>
     <div class="topnav">
         <a href="<?=route('users/login/')?>"><img src="/images/login.png" height="50"><br>login</a>
         <a href="<?=route('articles/basket/')?>"><img src="/images/basket.png" height="50"><br>Basket</a>

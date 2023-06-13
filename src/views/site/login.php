@@ -5,9 +5,7 @@
  * Desc: Login page for log in to an account.
  */
 
-// tampon de flux stocké en mémoire
-$title="IShoes - login page";
-?>
+$title="IShoes - login page"; ?>
         <div id="container">
             <form action="<?=route('users/logged/')?>" method="POST">
                 <div class="form-group">

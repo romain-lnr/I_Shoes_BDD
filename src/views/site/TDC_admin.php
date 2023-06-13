@@ -5,7 +5,6 @@
  * Desc: TDC_admin page for create an article -- ONLY for admin
  */
 
-// tampon de flux stocké en mémoire
 $title="IShoes - TDC_admin page"; ?>
 <div id="container">
     <form action="<?=route('articles/create_article/')?>" method="POST" enctype="multipart/form-data">

@@ -5,10 +5,9 @@
  * Desc: The admin page for inventory management and article creation.
  */
 
-// tampon de flux stocké en mémoire
 $title="IShoes - admin page"; ?>
     <div class="topnav">
-        <a href="#">logout</a>
+        <a href="<?=route("users/logout/")?>">logout</a>
         <a href="#user" style="height: 10px"><?php echo $_SESSION['id_user']?></a>
         <a href="<?=route("users/TDC/")?>"><img src="/images/TDC_admin.png" height="50"><br>TDC</a>
         <a href="index.php?action=historic"><img src="/images/historique.png" height="50"><br>Historic</a>
