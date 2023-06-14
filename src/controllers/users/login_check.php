@@ -12,8 +12,8 @@ if ($bag['method'] == 'POST') {
     if ($bag['data']) {
 
         $bag['layout'] = 'views/layout';
-        if ($id_user == "admin" OR "admin@cpnv.ch" && $password == "admin") $bag['view'] = header("Location: " . route("articles/admin/"));
-        else $bag['view'] = header("Location: " . route("articles/home/"));
+        if ($id_user == "admin" OR "admin@cpnv.ch" && $password == "admin") $bag['response_headers'] = ['Location' => '/articles/admin/'];
+        else $bag['response_headers'] = ['Location' => '/articles/home/'];
 
     } else {
         $bag['view'] = 'views/site/login';

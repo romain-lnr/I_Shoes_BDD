@@ -3,5 +3,5 @@
 require_once SOURCE_DIR.'/models/site/purchasesService.php';
 
 $bag['data'] = Create($_SESSION['id_user']);
-$bag['view'] = header("Location: " . route("articles/purchases/"));
+$bag['response_headers'] = ['Location' => '/articles/purchases/'];
 return $bag;

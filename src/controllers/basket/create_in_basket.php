@@ -14,6 +14,6 @@ if (!isset($_SESSION['id_user'])) {
     if (empty($bag['data'])) {
         $_SESSION['error'] = 'NotEvenStock';
     }
-    $bag['view'] = header("Location: " . route("articles/home/"));
+    $bag['response_headers'] = ['Location' => '/articles/home/'];
 }
 return $bag;
