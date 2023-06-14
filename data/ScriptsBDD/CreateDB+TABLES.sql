@@ -48,3 +48,14 @@ CREATE TABLE IF NOT EXISTS articles (
   Image VARCHAR(255) NOT NULL,
   PRIMARY KEY (id)
   );
+
+-- Dumping structure for table articles
+DROP TABLE IF EXISTS purchases;
+CREATE TABLE IF NOT EXISTS purchases (
+  id INT(11) NOT NULL AUTO_INCREMENT,
+  Username VARCHAR(15) NOT NULL,
+  Article_ID INT NOT NULL,
+  Number INT NOT NULL,
+  Flag BOOL NOT NULL,
+  PRIMARY KEY (id)
+  );
