@@ -24,7 +24,6 @@ CREATE TABLE IF NOT EXISTS users (
   UNIQUE KEY (Email)
   );
   
-  
 -- Dumping structure for table basket
 DROP TABLE IF EXISTS basket;
 CREATE TABLE IF NOT EXISTS basket (
