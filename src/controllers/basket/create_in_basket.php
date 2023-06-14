@@ -1,6 +1,6 @@
 <?php
 
-require_once SOURCE_DIR.'/models/site/basketService.php';
+require_once SOURCE_DIR. '/models/site/basketService.php';
 
 if (!isset($_SESSION['id_user'])) {
     $bag['view'] = 'views/site/login';
