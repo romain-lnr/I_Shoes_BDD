@@ -5,21 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55021f64-2d06-4d8e-b522-ff5d1ee43f4e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/articles/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/articles/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/articles/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/articles/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/articles/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/articles/delete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/articles/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/articles/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/articles/review.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/articles/review.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/articles/show.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/articles/show.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/basket/create_in_basket.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/basket/create_in_basket.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/basket/display.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/basket/display.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/basket/remove.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/basket/remove.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/purchases/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/purchases/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/purchases/display.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/purchases/display.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/purchases/flag_refresh.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/purchases/flag_refresh.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/users/insert_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/users/insert_user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/users/login_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/users/login_check.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/site/new_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/new_user.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +179,7 @@
       <workItem from="1686598508036" duration="2087000" />
       <workItem from="1686658891057" duration="4284000" />
       <workItem from="1686723029820" duration="6384000" />
-      <workItem from="1686742574240" duration="5872000" />
+      <workItem from="1686742574240" duration="6216000" />
     </task>
     <servers />
   </component>
