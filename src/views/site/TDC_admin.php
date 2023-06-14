@@ -23,9 +23,9 @@ $title="IShoes - TDC_admin page"; ?>
             <input type="submit" class="form-control" name="insert" value='AJOUTER' >
 
             <?php
-            if(isset($_GET['error'])){
-                $error = $_GET['error'];
-                if($error == "ext_article") echo "<p style='color:red'>Votre extension de fichier cible n'est pas appropriée</p>";
+            if(isset($bag['data']['error'])){
+                $error = $bag['data']['error'];
+                if($error == "ImgNotGood") echo "<p style='color:red'>Erreur : Votre extension de fichier cible n'est pas appropriée</p>";
             }
             ?>
         </div>

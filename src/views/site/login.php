@@ -20,11 +20,10 @@ $title="IShoes - login page"; ?>
                 <a href="<?=route("users/home/")?>" style="float: left;"><b>Retour</b></a>
 
 		    <?php
-                if(isset($_GET['error'])){
-                    $error = $_GET['error'];
-                    if($error == "user_not_correct") echo "<br><p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
-                    if($error == "password_not_correct") echo "<br><p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
-                    if($error == "not_login") echo "<br><p style='color:red'>Veuillez vous connecter</p>";
+                if(isset($bag['data']['error'])){
+                    $error = $bag['data']['error'];
+                    if($error == "LogNotTrue") echo "<br><p style='color:red'>Erreur : Vos coordonnéess sont incorrectes</p>";
+                    if($error == "NotLog") echo "<br><p style='color:red'>Erreur : Veuillez vous connecter</p>";
                 }
                 ?>
             </form>

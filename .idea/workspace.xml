@@ -5,30 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55021f64-2d06-4d8e-b522-ff5d1ee43f4e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/controllers/purchases/create.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/purchases/display.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/purchases/flag_refresh.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/site/purchasesService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/error404.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ScriptsBDD/CreateDB+TABLES.sql" beforeDir="false" afterPath="$PROJECT_DIR$/data/ScriptsBDD/CreateDB+TABLES.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ScriptsBDD/INSERT.sql" beforeDir="false" afterPath="$PROJECT_DIR$/data/ScriptsBDD/INSERT.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/public/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dbconnector.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbconnector.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/articles/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/articles/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/basket/create_in_basket.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/basket/create_in_basket.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/users/insert_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/users/insert_user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/users/login_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/users/login_check.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dispatcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/dispatcher.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/site/articlesService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/site/articlesService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/site/basketService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/site/basketService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/site/usersService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/site/usersService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/site/TDC_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/TDC_admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/site/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/site/basket.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/basket.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/site/historic.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/historic.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/site/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/site/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/site/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/site/lost.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/site/new_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/new_user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/site/purchases.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/purchases.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/site/show_article.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/show_article.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -202,6 +192,8 @@
       <workItem from="1686550150643" duration="4077000" />
       <workItem from="1686598508036" duration="2087000" />
       <workItem from="1686658891057" duration="4284000" />
+      <workItem from="1686723029820" duration="6384000" />
+      <workItem from="1686742574240" duration="3775000" />
     </task>
     <servers />
   </component>

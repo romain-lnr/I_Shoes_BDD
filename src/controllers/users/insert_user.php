@@ -10,6 +10,12 @@ if ($bag['method'] == 'POST') {
     $password = $_POST['password'];
 
     $bag['data'] = Insert($id_user, $name, $firstname, $email, $password);
+
+    if (!$bag['data']) {
+        $bag['data'] = array('error' => 'UserNotUnique');
+        $bag['view'] = 'views/site/new_user';
+    } else {
+        $bag['view'] = 'views/site/login';
+    }
 }
-$bag['view'] = 'views/site/login';
 return $bag;

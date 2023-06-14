@@ -102,6 +102,10 @@ function dispatch($bag)
         $bag['handler'] = 'controllers/users/logout';
         $bag['layout'] = 'views/layout';
     }
+    else {
+        $bag['status_code'] = 404;
+        $bag['layout'] = 'views/layout';
+    }
 
     return $bag;
 }

@@ -14,13 +14,15 @@ function IsEmailUsed($email) {
     return $count;
 }
 
+/*
+ * Insert function
+ * Do: Insert the user in the users table
+ *
+*/
 function Insert($id_user, $name, $firstname, $email, $password): bool {
 
-    // Vérifier si l'email est unique
     if (IsEmailUsed($email)) {
-
-        // Erreur ici
-        echo "YESS";
+        return false;
     }
 
     // To avoid special characters
@@ -41,15 +43,14 @@ function Insert($id_user, $name, $firstname, $email, $password): bool {
  *
 */
 function LoginCheck($id_user, $password):bool {
-    $query = "SELECT COUNT(*) as count FROM users WHERE Username = '$id_user';";
+    $query = "SELECT COUNT(*) as count FROM users WHERE Username = '$id_user' OR Email = '$id_user';";
     $result = executeQuerySelect($query);
     $count = $result[0]['count'];
 
     if (!$count) {
         $result = false;
-        // Erreur ici
     } else {
-        $query = "SELECT Password FROM users WHERE Username = '$id_user';";
+        $query = "SELECT Password FROM users WHERE Username = '$id_user' OR Email = '$id_user';";
         $password_true = executeQuerySelectSingle($query);
 
         if (password_verify($password, $password_true)) {
@@ -65,7 +66,6 @@ function LoginCheck($id_user, $password):bool {
             $result = true;
         } else {
             $result = false;
-            // Erreur ici
         }
     }
     return $result;

@@ -11,10 +11,17 @@ if ($bag['method'] == 'POST') {
     if (is_array($_FILES)) {
         $file = $_FILES['image']['tmp_name'];
         $sourceProperties = getimagesize($file);
-        $fileNewName = $name;
-        $folderPath = "../public/images/articles/"; // Chemin correct vers le dossier des images
-        $ext = pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION);
-        $imageType = $sourceProperties[2];
+        if (isset($sourceProperties[2])) {
+            $fileNewName = $name;
+            $folderPath = "../public/images/articles/"; // Chemin correct vers le dossier des images
+            $ext = pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION);
+            $imageType = $sourceProperties[2];
+        } else {
+            $bag['data'] = array('error' => 'ImgNotGood');
+            $bag['layout'] = 'views/layout_form';
+            $bag['view'] = 'views/site/TDC_admin';
+            return $bag;
+        }
     }
     switch ($imageType) {
         case IMAGETYPE_PNG:
@@ -22,8 +29,10 @@ if ($bag['method'] == 'POST') {
         case IMAGETYPE_JPEG:
             break;
         default:
-            header("Location:index.php?error=ext_article");
-            return;
+            $bag['data'] = array('error' => 'ImgNotGood');
+            $bag['layout'] = 'views/layout_form';
+            $bag['view'] = 'views/site/TDC_admin';
+            return $bag;
     }
     $imagepath = $folderPath . $fileNewName . "." . $ext;
     $filename = $fileNewName . "." . $ext;
