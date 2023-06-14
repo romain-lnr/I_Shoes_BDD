@@ -30,22 +30,22 @@ function PutInBasket($username, $articleID, $number)
         $newArticleID = implode(',', $existingArticleIDs);
         $newNumber = implode(',', $existingNumbers);
 
-        if ($articleResult > $number) {
+        if ($articleResult >= $number) {
             $removeStock = "UPDATE articles SET Stock = Stock - $number WHERE id = '$articleID'";
             executeQueryUpdate($removeStock);
 
             $updateQuery = "UPDATE basket SET Number = '$newNumber', Article_ID = '$newArticleID' WHERE Username = '$username'";
-            return executeQueryUpdate($updateQuery);
+            executeQueryUpdate($updateQuery);
         } else {
             return null;
         }
     } else {
-        if ($articleResult > $number) {
+        if ($articleResult >= $number) {
             $removeStock = "UPDATE articles SET Stock = Stock - $number WHERE id = '$articleID'";
             executeQueryUpdate($removeStock);
 
             $insertQuery = "INSERT INTO basket (Username, Article_ID, Number) VALUES ('$username', '$articleID', '$number')";
-            return executeQueryUpdate($insertQuery);
+            executeQueryUpdate($insertQuery);
         } else {
             return null;
         }
@@ -85,7 +85,7 @@ function Display(): array
                         'BasketID' => $basketID,
                         'Image' => $articleDetailsResult[0]['Imagepath'],
                         'Name' => $articleDetailsResult[0]['Name'],
-                        'Mark' => $articleDetailsResult[0]['Mark'],
+                        'Brand' => $articleDetailsResult[0]['Brand'],
                         'Description' => $articleDetailsResult[0]['Description'],
                         'Price' => $articleDetailsResult[0]['Price'],
                         'Quantity' => $number

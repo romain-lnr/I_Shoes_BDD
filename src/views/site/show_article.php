@@ -40,7 +40,7 @@ $title = "IShoes - show_article page"; ?>
                     <hr>
                     <div class="body_case">
                         <div id="nom_article"><?= "<em>" . $article['Name']  . "</em>" ?></div>
-                        <div id="mark_article"><?= "<em>" . $article['Mark']  . "</em>" ?></div>
+                        <div id="mark_article"><?= "<em>" . $article['Brand']  . "</em>" ?></div>
                         <div id="price_article"><?= "<em>" . $article['Price']  . " CHF" . "</em>" ?></div>
                     </div>
                 </div>

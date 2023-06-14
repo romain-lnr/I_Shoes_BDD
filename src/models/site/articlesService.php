@@ -7,7 +7,7 @@ require SOURCE_DIR. "/dbconnector.php";
  *
 */
 function GetArticlesForHome() {
-    $articlesQuery = 'SELECT id, Name, Mark, Price, Imagepath FROM articles;';
+    $articlesQuery = 'SELECT id, Name, Brand, Price, Imagepath FROM articles;';
     return executeQuerySelect($articlesQuery);
 }
 
@@ -17,7 +17,7 @@ function GetArticlesForHome() {
  *
 */
 function GetArticlesForAdmin() {
-    $articlesQuery = 'SELECT id, Name, Mark, Price, Stock, Imagepath FROM articles;';
+    $articlesQuery = 'SELECT id, Name, Brand, Price, Stock, Imagepath FROM articles;';
     return executeQuerySelect($articlesQuery);
 }
 
@@ -27,7 +27,7 @@ function GetArticlesForAdmin() {
  *
 */
 function ShowArticle($id) {
-    $articlesQuery = "SELECT Name, Mark, Price, Description, Imagepath FROM articles WHERE id='$id';";
+    $articlesQuery = "SELECT Name, Brand, Price, Description, Imagepath FROM articles WHERE id='$id';";
     return executeQuerySelect($articlesQuery);
 }
 
@@ -48,7 +48,7 @@ function UpdateArticlesStockInDatabase($id, $newStock):bool {
 */
 function Create($name, $mark, $desc, $price, $image):bool {
     $stock = 0;
-    $articlesQuery = "INSERT INTO articles (Name, Mark, Description, Price, Stock, Imagepath, Image) VALUES ('$name', '$mark', '$desc', '$price', '$stock', '/images/articles/$image', '$image');";
+    $articlesQuery = "INSERT INTO articles (Name, Brand, Description, Price, Stock, Imagepath, Image) VALUES ('$name', '$mark', '$desc', '$price', '$stock', '/images/articles/$image', '$image');";
     return executeQueryInsert($articlesQuery);
 }
 

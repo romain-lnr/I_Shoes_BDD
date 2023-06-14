@@ -5,7 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55021f64-2d06-4d8e-b522-ff5d1ee43f4e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/controllers/purchases/show_historic.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ScriptsBDD/CreateDB+TABLES.sql" beforeDir="false" afterPath="$PROJECT_DIR$/data/ScriptsBDD/CreateDB+TABLES.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ScriptsBDD/INSERT.sql" beforeDir="false" afterPath="$PROJECT_DIR$/data/ScriptsBDD/INSERT.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/public/error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dispatcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/dispatcher.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/site/articlesService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/site/articlesService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/site/basketService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/site/basketService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/site/purchasesService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/site/purchasesService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/site/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/site/basket.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/basket.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/site/historic.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/historic.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/site/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/site/purchases.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/purchases.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/site/show_article.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/show_article.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,6 +194,7 @@
       <workItem from="1686658891057" duration="4284000" />
       <workItem from="1686723029820" duration="6384000" />
       <workItem from="1686742574240" duration="6418000" />
+      <workItem from="1686755234367" duration="3997000" />
     </task>
     <servers />
   </component>

@@ -60,6 +60,10 @@ function dispatch($bag)
         $bag['handler'] = 'controllers/articles/create';
         $bag['layout'] = 'views/layout';
     }
+    else if (preg_match('/^\/purchases\/historic\/$/', $bag['route'])) {
+        $bag['handler'] = 'controllers/purchases/show_historic';
+        $bag['layout'] = 'views/layout';
+    }
     else if (preg_match('/^\/users\/basket\/$/', $bag['route'])) {
         $bag['handler'] = 'controllers/basket/display';
         $bag['layout'] = 'views/layout';

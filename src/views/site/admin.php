@@ -10,7 +10,7 @@ $title="IShoes - admin page"; ?>
         <a href="<?=route("users/logout/")?>">logout</a>
         <a href="#user" style="height: 10px"><?php echo $_SESSION['id_user']?></a>
         <a href="<?=route("users/TDC/")?>"><img src="/images/TDC_admin.png" height="50"><br>TDC</a>
-        <a href="index.php?action=historic"><img src="/images/historique.png" height="50"><br>Historic</a>
+        <a href="<?=route('purchases/historic/')?>"><img src="/images/historique.png" height="50"><br>Historic</a>
         <a href="<?=route('articles/home/')?>"> <img src="/images/home.png" height="50"><br>Home</a>
 
         <img src="/images/logo.png" height="90">
@@ -31,7 +31,7 @@ $title="IShoes - admin page"; ?>
                             <hr>
                             <div class="body_case">
                                 <div id="nom_article"><?="<em>".$article['Name']."</em>";?></div>
-                                <div id="mark_article"><?="<em>".$article['Mark']."</em>";?></div>
+                                <div id="mark_article"><?="<em>".$article['Brand']."</em>";?></div>
                                 <div id="price_article"><?="<em>".$article['Price']." CHF"."</em>";?></div><br><br>
                                 <div class="stock"><h3>Stock : </h3><input name="<?=$stock_number[$row]?>" type="number" class="form-control" value="<?=$article['Stock'];?>" style="background-color: #8F8F8F;" id="<?=$stock_number[$row]?>" readonly></div>
                                 <input type="number" class="form-control" id="<?=$number[$row]?>">

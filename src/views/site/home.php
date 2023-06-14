@@ -34,18 +34,20 @@ if (!isset($_SESSION['logged']) || !$_SESSION['logged']) { ?>
     <div id="content">
         <?php if (isset($_SESSION['error'])) {
             $error = $_SESSION['error'];
-            if ($error == "NotEvenStock") echo "<br><p style='color:red'>Erreur : Pas assez de stock</p>";
+            if ($error == "NotEvenStock") {
+                echo "<br><p style='color:red'>Erreur : Pas assez de stock</p>";
+                unset($_SESSION['error']);
+            }
         } ?>
         <div class="row">
             <?php foreach ($bag['data'] as $row => $article) : ?>
-                <?php $row++; ?>
                 <div class="col-sm-3">
                     <div class="case" onclick="RedirectWithID(<?= $article['id'] ?>)">
                         <div id="image_article_case"><img src="<?= $article['Imagepath']; ?>" id="image_article"></div>
                         <hr>
                         <div class="body_case">
                             <div id="nom_article"><?= "<em>" . $article['Name'] . "</em>"; ?></div>
-                            <div id="mark_article"><?= "<em>" . $article['Mark'] . "</em>"; ?></div>
+                            <div id="mark_article"><?= "<em>" . $article['Brand'] . "</em>"; ?></div>
                             <div id="price_article"><?= "<em>" . $article['Price'] . " CHF" . "</em>"; ?></div>
                         </div>
                     </div>

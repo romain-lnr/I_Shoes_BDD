@@ -28,7 +28,7 @@ if (!empty($bag['data'])) { ?>
                             <hr>
                             <div class="body_case">
                                 <div id="nom_article"><?= "<em>" . $article['Name'] . "</em>" ?></div>
-                                <div id="mark_article"><?= "<em>" . $article['Mark'] . "</em>" ?></div>
+                                <div id="mark_article"><?= "<em>" . $article['Brand'] . "</em>" ?></div>
                                 <div id="price_article"><?= "<em>" . $article['Price'] . " CHF" . "</em>" ?></div>
                                 <br>
                                 <div id="value_article"><?= "<em>" . "X" . $article['Quantity'] . "</em>" ?></div>

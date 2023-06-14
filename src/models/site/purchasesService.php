@@ -55,7 +55,7 @@ function Display($username):array {
                 'Imagepath' => $resultQuery[0]['Imagepath'],
                 'Name' => $resultQuery[0]['Name'],
                 'Price' => $resultQuery[0]['Price'],
-                'Mark' => $resultQuery[0]['Mark'],
+                'Brand' => $resultQuery[0]['Brand'],
                 'Quantity' => $number,
                 'Flag' => $flag
             );
@@ -81,6 +81,11 @@ function Refresh($username) {
         $flag_replaceQuery = "UPDATE purchases SET Flag = true WHERE id = '$purchasesID'";
         executeQueryUpdate($flag_replaceQuery);
     }
+}
+
+function ShowHistoric() {
+    $purchasesQuery = 'SELECT Username, Article_ID, Number FROM purchases';
+    return executeQuerySelect($purchasesQuery);
 }
 
 

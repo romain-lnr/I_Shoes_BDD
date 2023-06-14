@@ -7,19 +7,18 @@
 
 $title="IShoes - historic page"; ?>
     <div class="topnav">
-        <a href="index.php?action=logout">logout</a>
+        <a href="<?=route('users/logout/')?>">logout</a>
         <a href="#user" style="height: 10px"><?php echo $_SESSION['id_user']?></a>
-        <a href="index.php?action=basket"><img src="../media/img/basket.png" height="50"><br>Basket</a>
+        <a href="<?=route('users/basket/')?>"><img src="/images/basket.png" height="50"><br>Basket</a>
         <?php if (isset($_SESSION['admin_logged']) && $_SESSION['admin_logged']) { ?>
-            <a href="index.php?action=admin"><img src="../media/img/admin.png" height="50"><br>Admin</a>
+            <a href="<?=route('articles/admin/')?>"><img src="/images/admin.png" height="50"><br>Admin</a>
         <?php } ?>
-        <img src="../media/img/logo.png" height="90">
+        <img src="/images/logo.png" height="90">
     </div>
     <br>
-    <?php $topnav = ob_get_clean();
-    ob_start();
-    for ($j = 0; $j < $i; $j++) {
-        echo "<h1>".$msg[$j]."</h1>";
-    }
-    $content = ob_get_clean();
-    ob_start(); ?>
+<?php
+if (isset($bag['data'])):
+    foreach ($bag['data'] as $article) :
+        echo "<h1>"."L'utilisateur { ". $article['Username']. " } a acheté l'article numéro ". $article['Article_ID']. ", ". $article['Number']. " fois.". "</h1>";
+       endforeach;
+       endif;
