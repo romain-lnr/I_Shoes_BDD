@@ -15,7 +15,7 @@ $title = "IShoes - show_article page"; ?>
     </div>
     <br>
     <?php
-} else { ?>?
+} else { ?>
     <div class="topnav">
         <a href="<?=route('users/logout/')?>">logout</a>
         <a href="#user" style="height: 10px"><?php echo $_SESSION['id_user'] ?></a>
@@ -28,20 +28,19 @@ $title = "IShoes - show_article page"; ?>
     <br>
     <?php
 } ?>
-<?php if(isset($bag['data'])):?>
+<?php if(isset($bag['data']['article'])):?>
 <div id="content">
     <form action="<?=route('articles/create_basket/article='). $bag['articleID']?>" method="POST">
         <div class="row">
-            <?php foreach ($bag['data'] as $row => $article) : ?>
-            <?php $row++; ?>
+            <?php foreach ($bag['data']['article'] as $article) : ?>
             <div class="col-sm-3">
                 <div class="case">
-                    <div id="image_article_case"><img src="<?= $article['Imagepath'] ?>" id="image_article"></div>
+                    <div class="image_article_case"><img src="<?= $article['Imagepath'] ?>" class="image_article"></div>
                     <hr>
                     <div class="body_case">
-                        <div id="nom_article"><?= "<em>" . $article['Name']  . "</em>" ?></div>
-                        <div id="mark_article"><?= "<em>" . $article['Brand']  . "</em>" ?></div>
-                        <div id="price_article"><?= "<em>" . $article['Price']  . " CHF" . "</em>" ?></div>
+                        <div class="name_article"><?= "<em>" . $article['Name']  . "</em>" ?></div>
+                        <div class="brand_article"><?= "<em>" . $article['Brand']  . "</em>" ?></div>
+                        <div class="price_article"><?= "<em>" . $article['Price']  . " CHF" . "</em>" ?></div>
                     </div>
                 </div>
             </div>

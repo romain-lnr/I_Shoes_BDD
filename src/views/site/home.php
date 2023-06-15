@@ -30,34 +30,27 @@ if (!isset($_SESSION['logged']) || !$_SESSION['logged']) { ?>
     <?php
 }
 ?>
-<?php if (isset($bag['data'])): ?>
+<?php if (isset($bag['data']['article'])): ?>
     <div id="content">
-        <?php if (isset($_SESSION['error'])) {
-            $error = $_SESSION['error'];
-            if ($error == "NotEvenStock") {
-                echo "<br><p style='color:red'>Erreur : Pas assez de stock</p>";
-                unset($_SESSION['error']);
-            }
-        } ?>
         <div class="row">
-            <?php foreach ($bag['data'] as $row => $article) : ?>
+            <?php foreach ($bag['data']['article'] as $article) : ?>
                 <div class="col-sm-3">
                     <div class="case" onclick="RedirectWithID(<?= $article['id'] ?>)">
-                        <div id="image_article_case"><img src="<?= $article['Imagepath']; ?>" id="image_article"></div>
+                        <div class="image_article_case"><img src="<?= $article['Imagepath']; ?>" class="image_article"></div>
                         <hr>
                         <div class="body_case">
-                            <div id="nom_article"><?= "<em>" . $article['Name'] . "</em>"; ?></div>
-                            <div id="mark_article"><?= "<em>" . $article['Brand'] . "</em>"; ?></div>
-                            <div id="price_article"><?= "<em>" . $article['Price'] . " CHF" . "</em>"; ?></div>
+                            <div class="name_article"><?= "<em>" . $article['Name'] . "</em>"; ?></div>
+                            <div class="brand_article"><?= "<em>" . $article['Brand'] . "</em>"; ?></div>
+                            <div class="price_article"><?= "<em>" . $article['Price'] . " CHF" . "</em>"; ?></div>
                         </div>
                     </div>
                 </div>
+            <?php endforeach ?>
                 <script>
                     function RedirectWithID($id) {
                         window.location.href = "<?=route("articles/show/article=")?>" + $id;
                     }
                 </script>
-            <?php endforeach ?>
         </div>
     </div>
 <?php endif ?>

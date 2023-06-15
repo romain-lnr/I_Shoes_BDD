@@ -7,7 +7,7 @@ if ($bag['method'] == 'POST') {
     $id_user = $_POST['id_user'];
     $password = $_POST['password'];
 
-    $bag['data'] = LoginCheck($id_user, $password);
+    $bag['data'] = ['purchases' => LoginCheck($id_user, $password)];
 
     if ($bag['data']) {
 

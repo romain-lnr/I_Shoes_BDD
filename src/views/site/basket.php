@@ -18,23 +18,23 @@ $title = "IShoes - basket page"; ?>
 </div>
 <br>
 <?php
-if (!empty($bag['data'])) { ?>
-        <?php foreach ($bag['data'] as $row => $article) { ?>
+if (!empty($bag['data']['basket'])) { ?>
+        <?php foreach ($bag['data']['basket'] as $article) { ?>
             <div id="content">
                 <div class="row">
                     <div class="col-sm-3">
                         <div class="case basket">
-                            <div id="image_article_case"><img src="<?= $article['Image'] ?>" id="image_article"></div>
+                            <div class="image_article_case"><img src="<?= $article['Image'] ?>" class="image_article"></div>
                             <hr>
                             <div class="body_case">
-                                <div id="nom_article"><?= "<em>" . $article['Name'] . "</em>" ?></div>
-                                <div id="mark_article"><?= "<em>" . $article['Brand'] . "</em>" ?></div>
-                                <div id="price_article"><?= "<em>" . $article['Price'] . " CHF" . "</em>" ?></div>
+                                <div class="name_article"><?= "<em>" . $article['Name'] . "</em>" ?></div>
+                                <div class="brand_article"><?= "<em>" . $article['Brand'] . "</em>" ?></div>
+                                <div class="price_article"><?= "<em>" . $article['Price'] . " CHF" . "</em>" ?></div>
                                 <br>
-                                <div id="value_article"><?= "<em>" . "X" . $article['Quantity'] . "</em>" ?></div>
-                                <div id="remove_object"><a
+                                <div class="value_article"><?= "<em>" . "X" . $article['Quantity'] . "</em>" ?></div>
+                                <div class="remove_object" style="float: right;"><a
                                             href="<?= route("basket/remove_object/basketID=" . $article['BasketID'] . "/value=" . $article['Quantity'] . "/articleID=" . $article['ArticleID']) ?>">
-                                        <input type="button" class="form-control" value="Supprimer"></a></div>
+                                        <span type="button" class="form-control form-remove">Supprimer</span></a></div>
                             </div>
                         </div>
                     </div>
@@ -52,7 +52,6 @@ if (!empty($bag['data'])) { ?>
 <?php } else { ?>
     <h3 style="text-align: center">Vous n'avez pas d'article dans votre panier...</h3><br>
     <div id="container">
-        <a href="<?= route('articles/home/') ?>"><input type="submit" name="insert" id="insert"
-                                                        value="revenir sur la page d'accueil"></a>
+        <a href="<?= route('articles/home/') ?>"><input type="submit" name="insert" id="insert" value="revenir sur la page d'accueil"></a>
     </div>
 <?php } ?>

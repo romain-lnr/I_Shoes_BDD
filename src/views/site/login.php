@@ -22,7 +22,7 @@ $title="IShoes - login page"; ?>
 		    <?php
                 if(isset($bag['data']['error'])){
                     $error = $bag['data']['error'];
-                    if($error == "LogNotTrue") echo "<br><p style='color:red'>Erreur : Vos coordonnéess sont incorrectes</p>";
+                    if($error == "LogNotTrue") echo "<br><p style='color:red'>Erreur : Vos identifiants sont incorrectes</p>";
                     if($error == "NotLog") echo "<br><p style='color:red'>Erreur : Veuillez vous connecter</p>";
                 }
                 ?>
