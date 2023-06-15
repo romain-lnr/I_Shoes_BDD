@@ -8,7 +8,6 @@ require_once SOURCE_DIR. "/dbconnector.php";
 */
 function Create($username) {
 
-    // Récupérer les articles du panier
     $basketQuery = "SELECT Article_ID, Number FROM basket WHERE Username = '$username'";
     $basketResult = executeQuerySelect($basketQuery);
 

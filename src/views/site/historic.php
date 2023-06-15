@@ -18,7 +18,7 @@ $title="IShoes - historic page"; ?>
     <br>
 <?php
 if (isset($bag['data'])):
-    foreach ($bag['data'] as $article) :
-        echo "<h1>"."L'utilisateur { ". $article['Username']. " } a acheté l'article numéro ". $article['Article_ID']. ", ". $article['Number']. " fois.". "</h1>";
+    foreach ($bag['data'] as $purchases) :
+        echo "<h1>"."L'utilisateur { ". $purchases['Username']. " } a acheté l'article numéro ". $purchases['Article_ID']. ", ". $purchases['Number']. " fois.". "</h1>";
        endforeach;
        endif;
