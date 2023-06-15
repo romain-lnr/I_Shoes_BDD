@@ -16,27 +16,29 @@ $title="IShoes - admin page"; ?>
         <img src="/images/logo.png" height="90">
     </div>
     <br>
-<?php if(isset($bag['data'])):?>
+<?php if(isset($bag['data']['article'])):?>
     <form action="<?=route('articles/stock_review/')?>" method="POST">
         <div id="content">
             <div class="row">
-                <?php foreach ($bag['data'] as $row => $article) : ?>
+                <?php foreach ($bag['data']['article'] as $row => $article) : ?>
                 <?php $row++; ?>
                     <?php $stock_number[$row] = "stock_number_".strval($article['id']);
                     $button[$row] = "button_".strval($article['id']);
                     $number[$row] = "number_".strval($article['id']);?>
                     <div class="col-sm-3">
                         <div class="case case_admin">
-                            <div id="image_article_case"><img src="<?=$article['Imagepath'];?>" id="image_article"></div>
+                            <div class="image_article_case"><img src="<?=$article['Imagepath'];?>" class="image_article"></div>
                             <hr>
                             <div class="body_case">
-                                <div id="nom_article"><?="<em>".$article['Name']."</em>";?></div>
-                                <div id="mark_article"><?="<em>".$article['Brand']."</em>";?></div>
-                                <div id="price_article"><?="<em>".$article['Price']." CHF"."</em>";?></div><br><br>
+                                <div class="name_article"><?="<em>".$article['Name']."</em>";?></div>
+                                <div class="brand_article"><?="<em>".$article['Brand']."</em>";?></div>
+                                <div class="price_article"><?="<em>".$article['Price']." CHF"."</em>";?></div><br><br>
                                 <div class="stock"><h3>Stock : </h3><input name="<?=$stock_number[$row]?>" type="number" class="form-control" value="<?=$article['Stock'];?>" style="background-color: #8F8F8F;" id="<?=$stock_number[$row]?>" readonly></div>
-                                <input type="number" class="form-control" id="<?=$number[$row]?>">
-                                <div id="submit_case"><input type="button" class="btn btn-info" onclick="document.querySelector('#<?=$stock_number[$row]?>').value = document.querySelector('#<?=$number[$row]?>').value" id=<?=$button[$row]?> value="Submit"></div>
-                                <div id="remove_object" style="float: right;"><a href="<?=route("articles/delete/article="). $article['id']?>"><input type="button" class="form-control" value="Supprimer"></a></div>
+                                <input type="number" class="form-control" id="<?=$number[$row]?>" >
+                                <div class="remove_object">
+                                    <span class="btn btn-info" onclick="document.querySelector('#<?=$stock_number[$row]?>').value = document.querySelector('#<?=$number[$row]?>').value" id=<?=$button[$row]?>>Submit</span>
+                                    <a href="<?=route('articles/delete/article='). $article['id']?>" class="form-control form-remove">Supprimer</a>
+                                </div>
                             </div>
                         </div>
                     </div>

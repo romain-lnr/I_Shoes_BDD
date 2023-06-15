@@ -6,7 +6,7 @@ require_once SOURCE_DIR. "/dbconnector.php";
  * Do: Create iterations in the purchases table
  *
 */
-function Create($username) {
+function Add($username) {
 
     $basketQuery = "SELECT Article_ID, Number FROM basket WHERE Username = '$username'";
     $basketResult = executeQuerySelect($basketQuery);

@@ -9,11 +9,10 @@ if (!isset($_SESSION['id_user'])) {
 } else {
 
     $value = $_POST['value'];
-    $bag['data'] = PutInBasket($_SESSION['id_user'], $bag['articleID'], $value);
+    $bag['data'] = ['basket' => PutInBasket($_SESSION['id_user'], $bag['articleID'], $value)];
 
-    if (empty($bag['data'])) {
-        $_SESSION['error'] = 'NotEvenStock';
-    }
-    $bag['response_headers'] = ['Location' => '/articles/home/'];
+    if (empty($bag['data']['basket'])) {
+        $bag['response_headers'] = ['Location' => '/articles/NotEvenStock/'];
+    } else $bag['response_headers'] = ['Location' => '/articles/home/'];
 }
 return $bag;

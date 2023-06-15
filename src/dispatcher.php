@@ -45,6 +45,10 @@ function dispatch($bag)
         $bag['handler'] = 'controllers/basket/create_in_basket';
         $bag['layout'] = 'views/layout';
     }
+    else if (preg_match('/^\/articles\/NotEvenStock\/$/', $bag['route'])) {
+        $bag['view'] = 'views/error_stock';
+        $bag['layout'] = 'views/layout';
+    }
     else if (preg_match('/^\/basket\/remove_object\/basketID=(\d+)\/value=(\d+)\/articleID=(\d+)$/', $bag['route'], $matches)) {
         $bag['basketID'] = $matches[1];
         $bag['value'] = $matches[2];

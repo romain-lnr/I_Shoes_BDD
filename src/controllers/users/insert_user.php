@@ -9,7 +9,7 @@ if ($bag['method'] == 'POST') {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $bag['data'] = Insert($id_user, $name, $firstname, $email, $password);
+    $bag['data'] = ['users' => Insert($id_user, $name, $firstname, $email, $password)];
 
     if (!$bag['data']) {
         $bag['data'] = array('error' => 'UserNotUnique');

@@ -134,7 +134,20 @@ img {vertical-align: middle;}
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
 }
+/* Remove */
+.form-remove {
+    width: auto !important;
+    background-color: red !important;
+    border-color: darkred !important;
+    text-decoration: none;
 
+}
+.remove_object {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
 /* Caption text */
 .text {
     color: #f2f2f2;
@@ -223,36 +236,29 @@ footer {
     padding: 30px;
     text-align: justify;
 }
-#image_article {
+.image_article {
     height: 300px;
     width: 100%;
 }
-#nom_article {
+.name_article {
     font-size: 31px;
 }
-#mark_article {
+.brand_article {
     font-size: 20px;
     color: ghostwhite;
 }
-#price_article {
+.price_article {
     float: right;
     font-size: 40px;
     color: grey;
     font-style: italic;
 }
-#submit_case {
-    float: left;
+.submit_case {
+    width: 100%;
 }
 #number_case {
     float: right;
     width: 50px;
-}
-#remove_object input {
-    background-color: #c21a1a;
-    width: 100px;
-}
-#remove_object input:hover {
-    background-color: white;
 }
 #thanks {
     text-align: center;

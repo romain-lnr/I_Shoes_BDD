@@ -9,7 +9,7 @@ if ($bag['method'] == 'POST') {
             echo ">";
             $articleId++;
             $newStock = $_POST['stock_number_' . $articleId];
-            UpdateArticlesStockInDatabase($articleId, $newStock);
+            $bag['data'] = ['article' => UpdateArticlesStockInDatabase($articleId, $newStock)];
         }
     }
 }

@@ -38,7 +38,7 @@ if ($bag['method'] == 'POST') {
     $filename = $fileNewName . "." . $ext;
     move_uploaded_file($file, $folderPath . $filename); // Utilisation du chemin complet pour le déplacement du fichier
 
-    $bag['data'] = Create($name, $mark, $description, $price, $filename);
+    $bag['data'] = ['article' => Create($name, $mark, $description, $price, $filename)];
 }
 $bag['response_headers'] = ['Location' => '/articles/admin/'];
 return $bag;
