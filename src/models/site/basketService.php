@@ -7,7 +7,7 @@ require_once SOURCE_DIR . "/dbconnector.php";
  * Do: Create iterations in the basket table
  *
 */
-function PutInBasket($username, $articleID, $number)
+function PutInBasket($username, $articleID, $number):bool
 {
     $basketQuery = "SELECT * FROM basket WHERE Username = '$username'";
     $result = executeQuerySelect($basketQuery);
@@ -36,8 +36,9 @@ function PutInBasket($username, $articleID, $number)
 
             $updateQuery = "UPDATE basket SET Number = '$newNumber', Article_ID = '$newArticleID' WHERE Username = '$username'";
             executeQueryUpdate($updateQuery);
+            return true;
         } else {
-            return null;
+            return false;
         }
     } else {
         if ($articleResult >= $number) {
@@ -46,8 +47,9 @@ function PutInBasket($username, $articleID, $number)
 
             $insertQuery = "INSERT INTO basket (Username, Article_ID, Number) VALUES ('$username', '$articleID', '$number')";
             executeQueryUpdate($insertQuery);
+            return true;
         } else {
-            return null;
+            return false;
         }
     }
 }

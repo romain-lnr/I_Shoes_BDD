@@ -11,7 +11,7 @@ if ($bag['method'] == 'POST') {
 
     $bag['data'] = ['users' => Insert($id_user, $name, $firstname, $email, $password)];
 
-    if (!$bag['data']) {
+    if (!$bag['data']['users']) {
         $bag['data'] = array('error' => 'UserNotUnique');
         $bag['view'] = 'views/site/new_user';
     } else {

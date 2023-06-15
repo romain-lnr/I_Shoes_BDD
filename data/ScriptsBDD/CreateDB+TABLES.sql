@@ -20,8 +20,9 @@ CREATE TABLE IF NOT EXISTS users (
   Firstname VARCHAR(15) NOT NULL,
   Email VARCHAR(30) NOT NULL,
   Password VARCHAR(150) NOT NULL,
-  TYPE INT(11) NOT NULL,
+  Type BOOL NOT NULL,
   PRIMARY KEY (id),
+  UNIQUE KEY (Username),
   UNIQUE KEY (Email)
   );
   

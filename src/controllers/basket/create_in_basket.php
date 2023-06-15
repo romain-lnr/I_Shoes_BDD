@@ -11,8 +11,7 @@ if (!isset($_SESSION['id_user'])) {
     $value = $_POST['value'];
     $bag['data'] = ['basket' => PutInBasket($_SESSION['id_user'], $bag['articleID'], $value)];
 
-    if (empty($bag['data']['basket'])) {
-        $bag['response_headers'] = ['Location' => '/articles/NotEvenStock/'];
-    } else $bag['response_headers'] = ['Location' => '/articles/home/'];
+    if (!($bag['data']['basket'])) $bag['response_headers'] = ['Location' => '/articles/NotEvenStock/'];
+    else $bag['response_headers'] = ['Location' => '/articles/home/'];
 }
 return $bag;

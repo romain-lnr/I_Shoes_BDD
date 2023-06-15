@@ -14,19 +14,19 @@ $title = "IShoes - purchase page"; ?>
     <h2>Merci pour votre achat !</h2>
     <h3>Votre commande va bientôt être expédiée</h3><br>
 </div>
-<?php if (isset($bag['data']['article'])): ?>
+<?php if (isset($bag['data']['purchases'])): ?>
 <h3 style="padding-left: 55px;">Récapitulatif de la commande : </h3>
 <div id="content">
     <div class="row">
-        <?php foreach ($bag['data']['article'] as $article) : ?>
+        <?php foreach ($bag['data']['purchases'] as $article) : ?>
             <?php if (!$article['Flag']) { ?>
                 <div class="col-sm-3">
                     <div class="case basket">
-                        <div class="image_article_case"><img src="<?= $article['Imagepath'] ?>" id="image_article"></div>
+                        <div class="image_article_case"><img src="<?= $article['Imagepath'] ?>" class="image_article"></div>
                         <hr>
                         <div class="body_case">
-                            <div class="nom_article"><?= "<em>" . $article['Name'] . "</em>" ?></div>
-                            <div class="mark_article"><?= "<em>" . $article['Brand'] . "</em>" ?></div>
+                            <div class="name_article"><?= "<em>" . $article['Name'] . "</em>" ?></div>
+                            <div class="brand_article"><?= "<em>" . $article['Brand'] . "</em>" ?></div>
                             <div class="price_article"><?= "<em>" . $article['Price'] . " CHF" . "</em>" ?></div>
                             <br>
                             <div class="value_article"><?= "<em>" . "X" . $article['Quantity'] . "</em>" ?></div>

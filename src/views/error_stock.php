@@ -21,3 +21,6 @@
 <?php } ?>
 <h1>Erreur</h1>
 <p>Désolé, nous n'avons plus ce produit en stock !</p>
+<div id="container">
+    <a href="<?= route('articles/home/') ?>"><input type="submit" name="insert" id="insert" value="revenir sur la page d'accueil"></a>
+</div>
