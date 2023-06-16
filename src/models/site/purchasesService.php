@@ -81,7 +81,7 @@ function Refresh($username) {
 
 /*
  * ShowHistoric function
- * Do: Load articles for historic page
+ * Do: Load logs of every purchases for the historic page
  *
 */
 function ShowHistoric() {
