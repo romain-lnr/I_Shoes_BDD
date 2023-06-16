@@ -15,16 +15,13 @@ function Add($username) {
         $articleIDs = explode(',', $basketResult[0]['Article_ID']);
         $numbers = explode(',', $basketResult[0]['Number']);
 
-        // Insérer chaque article dans la table purchases
         foreach ($articleIDs as $index => $articleID) {
             $quantity = $numbers[$index];
 
-            // Insérer l'article dans la table purchases
             $insertQuery = "INSERT INTO purchases (Username, Article_ID, Number, Flag) VALUES ('$username', $articleID, $quantity, false)";
             executeQueryInsert($insertQuery);
         }
 
-        // Supprimer toutes les données du panier de l'utilisateur
         $deleteQuery = "DELETE FROM basket WHERE Username = '$username'";
         executeQueryUpdate($deleteQuery);
 
@@ -82,6 +79,11 @@ function Refresh($username) {
     }
 }
 
+/*
+ * ShowHistoric function
+ * Do: Load articles for historic page
+ *
+*/
 function ShowHistoric() {
     $purchasesQuery = 'SELECT Username, Article_ID, Number FROM purchases';
     return executeQuerySelect($purchasesQuery);

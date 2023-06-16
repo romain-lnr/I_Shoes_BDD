@@ -77,7 +77,6 @@ function Display(): array
                 $articleID = $articleIDs[$i];
                 $number = $numbers[$i];
 
-                // Récupérer les détails de l'article à partir de la table des articles
                 $articleDetailsQuery = "SELECT * FROM articles WHERE id = '$articleID'";
                 $articleDetailsResult = executeQuerySelect($articleDetailsQuery);
 
