@@ -27,7 +27,6 @@ function Insert($id_user, $name, $firstname, $email, $password): bool
         return false;
     }
 
-    // To avoid special characters
     $name = addslashes($name);
     $firstname = addslashes($firstname);
     $email = addslashes($email);
@@ -68,6 +67,11 @@ function LoginCheck($id_user, $password): bool
     return $result;
 }
 
+/*
+ * IsAdmin function
+ * Do: Verify if the logged user is an administrator
+ *
+*/
 function IsAdmin($username): bool
 {
     $selectQuery = "SELECT Type FROM users WHERE Username = '$username' OR Email = '$username'";

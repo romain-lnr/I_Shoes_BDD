@@ -6,19 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="55021f64-2d06-4d8e-b522-ff5d1ee43f4e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ScriptsBDD/CreateDB+TABLES.sql" beforeDir="false" afterPath="$PROJECT_DIR$/data/ScriptsBDD/CreateDB+TABLES.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/public/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/basket/create_in_basket.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/basket/create_in_basket.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/users/insert_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/users/insert_user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/users/login_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/users/login_check.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/site/basketService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/site/basketService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/site/usersService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/site/usersService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/error404.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/error404.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/error_stock.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/error_stock.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/site/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/site/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/site/purchases.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/purchases.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/site/show_article.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/site/show_article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/site/purchasesService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/site/purchasesService.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +34,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sacha.JACCARD/Desktop/Nouveau dossier/ExaBlanc-master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sacha.JACCARD/Documents/GitHub/I_Shoes_BDD&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -196,6 +184,8 @@
       <workItem from="1686755234367" duration="3997000" />
       <workItem from="1686810343505" duration="201000" />
       <workItem from="1686828993274" duration="8038000" />
+      <workItem from="1686905444198" duration="93000" />
+      <workItem from="1686905545663" duration="572000" />
     </task>
     <servers />
   </component>
