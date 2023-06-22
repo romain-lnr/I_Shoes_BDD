@@ -30,7 +30,7 @@ function PutInBasket($username, $articleID, $number):bool
         $newArticleID = implode(',', $existingArticleIDs);
         $newNumber = implode(',', $existingNumbers);
 
-        if ($articleResult >= $number) {
+        if ($articleResult >= $number && $number > 0) {
             $removeStock = "UPDATE articles SET Stock = Stock - $number WHERE id = '$articleID'";
             executeQueryUpdate($removeStock);
 
@@ -41,7 +41,7 @@ function PutInBasket($username, $articleID, $number):bool
             return false;
         }
     } else {
-        if ($articleResult >= $number) {
+        if ($articleResult >= $number && $number > 0) {
             $removeStock = "UPDATE articles SET Stock = Stock - $number WHERE id = '$articleID'";
             executeQueryUpdate($removeStock);
 

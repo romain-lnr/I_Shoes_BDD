@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55021f64-2d06-4d8e-b522-ff5d1ee43f4e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/MCD-MLD/MCD.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/doc/MCD-MLD/MCD.drawio" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/MCD-MLD/MLD.mwb" beforeDir="false" afterPath="$PROJECT_DIR$/doc/MCD-MLD/MLD.mwb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/MCD-MLD/MLD.mwb.bak" beforeDir="false" afterPath="$PROJECT_DIR$/doc/MCD-MLD/MLD.mwb.bak" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/MCD-MLD/MLD.png" beforeDir="false" afterPath="$PROJECT_DIR$/doc/MCD-MLD/MLD.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/public/error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/site/basketService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/site/basketService.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,26 +32,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/alex-/Documents/GitHub/I_Shoes_BDD/src",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/alex-/Documents/GitHub/I_Shoes_BDD/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Sacha.JACCARD\Documents\GitHub\I_Shoes_BDD\src\controllers\users" />
@@ -196,6 +195,7 @@
       <workItem from="1686905444198" duration="93000" />
       <workItem from="1686905545663" duration="572000" />
       <workItem from="1687435171223" duration="153000" />
+      <workItem from="1687439030726" duration="130000" />
     </task>
     <servers />
   </component>
